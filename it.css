@@ -3,10 +3,9 @@
    * ========================================================================== */
 /* Colors */
 :root {
-  --primary: #004282;
+  --primary: #6f23cb;
   --secondary: #f37835;
 }
-
 
 /* ==========================================================================
    * ALLIGNMENTS
@@ -1930,7 +1929,7 @@
   ._primary {
     color: var(--primary) !important;
   }
-  
+
   ._secondary {
     color: var(--secundary) !important;
   }
@@ -1947,6 +1946,92 @@
     color: #a94442 !important;
   }
 
+  /* ==============================================================================================
+   /* CSS FILL UTILITIES
+   */
+  ._fbase {
+    fill: #525252 !important;
+  }
+
+  ._fwhite {
+    fill: #fff !important;
+  }
+
+  ._fblue {
+    fill: #004282 !important;
+  }
+
+  ._flightBlue {
+    fill: #00aff0 !important;
+  }
+
+  ._fblueParceiro {
+    fill: #0062dc !important;
+  }
+
+  ._forange {
+    fill: #f37835 !important;
+  }
+
+  ._fgreen {
+    fill: #008000 !important;
+  }
+
+  ._flightGreen {
+    fill: #92d100 !important;
+  }
+
+  ._fyellow {
+    fill: #ffc845 !important;
+  }
+
+  ._fred {
+    fill: #ff0000 !important;
+  }
+
+  ._ftextGray {
+    fill: #525252 !important;
+  }
+
+  ._fmediumGray {
+    fill: #999999 !important;
+  }
+
+  ._fstrokeGray {
+    fill: #cccccc !important;
+  }
+
+  ._flightGray {
+    fill: #f2f3f2 !important;
+  }
+
+  ._fblack {
+    fill: #000 !important;
+  }
+
+  ._fwhite {
+    fill: #fff !important;
+  }
+
+  ._fprimary {
+    fill: var(--primary) !important;
+  }
+
+  ._fsecondary {
+    fill: var(--secundary) !important;
+  }
+
+  ._falertBorder {
+    fill: #ebccd1 !important;
+  }
+
+  ._falertBg {
+    fill: #f2dede !important;
+  }
+
+  ._falertText {
+    fill: #a94442 !important;
+  }
   /* Links
      ============================================================================================== */
   ._whiteLink {
