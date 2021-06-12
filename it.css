@@ -1,4 +1,5 @@
-/* Utilities */
+/* UTILITIES */
+
 ._vabl {
   vertical-align: baseline !important;
 }
@@ -23,9 +24,7 @@
   vertical-align: super !important;
 }
 
-/**
-   * Horizontal alignment
-   */
+/* Horizontal alignment */
 ._center {
   margin-right: auto !important;
   margin-left: auto !important;
@@ -34,9 +33,7 @@
 /* ==========================================================================
  * CLEARFIX UTILITY
  * ========================================================================== */
-/**
- * Attach our clearfix mixin to a utility class.
- */
+/* Attach our clearfix mixin to a utility class. */
 ._clearfix:after {
   content: "" !important;
   display: block !important;
@@ -50,10 +47,8 @@
  *
  * https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
  * ========================================================================== */
-/**
-   * Hide only visually, but have it available for screen readers:
-   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   */
+/* Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 ._hidden {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
@@ -145,9 +140,7 @@
  * Shadows based on Google Material shadows
  * https://github.com/prestopasto/SCSS-Material-Shadows/blob/master/src/md-material-shadows.scss
  * ========================================================================== */
-/**
- * CSS md-elevation-z# classes
- */
+/* CSS md-elevation-z# classes */
 ._elevation1 {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -681,9 +674,7 @@
  *   ._pvlg {}
  * ========================================================================== */
 /* stylelint-disable string-quotes, max-nesting-depth */
-/**
- * A series of spacing helper classes that you can use to give spacing.
- * Use these in your markup:
+/* A series of spacing helper classes that you can use to give spacing. * Use these in your markup:
  *
  * <div class="_plxs">
  *
@@ -2170,7 +2161,7 @@
     max-width: none;
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--flush\@tabletV {
     margin: 0;
   }
@@ -2179,15 +2170,13 @@
     padding-left: 0;
   }
   /* Auto Width
-   * --------------------------- */
-  /**
-   * Cause layout items to take up a non-explicit amount of width.
-   */
+  * --------------------------- */
+  /* Cause layout items to take up a non-explicit amount of width. */
   .o-layout--auto\@tabletV > .o-layout__item {
     width: auto;
   }
   /* Spacing
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--xxs\@tabletV {
     margin: 0 -4px;
   }
@@ -2231,54 +2220,40 @@
     padding-left: 64px;
   }
   /* Vertical Alignment
-   * --------------------------- */
-  /**
-   * Align all grid items to the tops of each other.
-   */
+  * --------------------------- */
+  /* Align all grid items to the tops of each other. */
   .o-layout--top\@tabletV > .o-layout__item {
     vertical-align: top;
   }
-  /**
-   * Align all grid items to the middles of each other.
-   */
+  /* Align all grid items to the middles of each other. */
   .o-layout--middle\@tabletV > .o-layout__item {
     vertical-align: middle;
   }
-  /**
-   * Align all grid items to the bottoms of each other.
-   */
+  /* Align all grid items to the bottoms of each other. */
   .o-layout--bottom\@tabletV > .o-layout__item {
     vertical-align: bottom;
   }
   /* Horizontal Alignment
-   * --------------------------- */
-  /**
-   * Fill up the layout system from the left.
-   */
+  * --------------------------- */
+  /* Fill up the layout system from the left. */
   .o-layout--left\@tabletV {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the center.
-   */
+  /* Fill up the layout system from the center. */
   .o-layout--center\@tabletV {
     text-align: center;
   }
   .o-layout--center\@tabletV > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the right.
-   */
+  /* Fill up the layout system from the right. */
   .o-layout--right\@tabletV {
     text-align: right;
   }
   .o-layout--right\@tabletV > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Reverse the rendered order of the grid system.
-   */
+  /* Reverse the rendered order of the grid system. */
   .o-layout--reverse\@tabletV {
     direction: rtl;
   }
@@ -2286,32 +2261,28 @@
     direction: ltr;
     text-align: left;
   }
-  /**
-   * Bring back rendered order of the grid system.
-   */
+  /* Bring back rendered order of the grid system. */
   .o-layout--forward\@tabletV {
     direction: ltr;
   }
   /* Inset
-   * --------------------------- */
-  /**
-   * 1. Reset negative margins on the layout object to zero so that inner grid
+  * --------------------------- */
+  /* 1. Reset negative margins on the layout object to zero so that inner grid
    *    items are inset from the edges of the wrapping layout object, i.e. the
    *    layout object will include both inner and outer gutters around grid
    *    items. Note: when using the inset modifier, you'd like use a wrapper
-   *    object with the flush modifier.
-   */
+   *    object with the flush modifier. */
   .o-layout--inset {
     margin: 0;
     /* [1] */
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--flush\@tabletV {
     max-width: none;
   }
   /* Size Variants
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--xxs\@tabletV {
     padding-right: 4px;
     padding-left: 4px;
@@ -2336,9 +2307,7 @@
     padding-right: 64px;
     padding-left: 64px;
   }
-  /**
-   * Vertical alignment classes.
-   */
+  /* Vertical alignment classes. */
   ._vabl\@tabletV {
     vertical-align: baseline !important;
   }
@@ -2357,17 +2326,13 @@
   ._vap\@tabletV {
     vertical-align: super !important;
   }
-  /**
-   * Horizontal alignment
-   */
+  /* Horizontal alignment */
   ._center\@tabletV {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  /**
-   * Hide only visually, but have it available for screen readers:
-   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   */
+  /* Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   ._hidden\@tabletV {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -3417,7 +3382,7 @@
     max-width: none;
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--flush\@tabletH {
     margin: 0;
   }
@@ -3426,15 +3391,13 @@
     padding-left: 0;
   }
   /* Auto Width
-   * --------------------------- */
-  /**
-   * Cause layout items to take up a non-explicit amount of width.
-   */
+  * --------------------------- */
+  /* Cause layout items to take up a non-explicit amount of width. */
   .o-layout--auto\@tabletH > .o-layout__item {
     width: auto;
   }
   /* Spacing
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--xxs\@tabletH {
     margin: 0 -4px;
   }
@@ -3478,54 +3441,40 @@
     padding-left: 64px;
   }
   /* Vertical Alignment
-   * --------------------------- */
-  /**
-   * Align all grid items to the tops of each other.
-   */
+  * --------------------------- */
+  /* Align all grid items to the tops of each other. */
   .o-layout--top\@tabletH > .o-layout__item {
     vertical-align: top;
   }
-  /**
-   * Align all grid items to the middles of each other.
-   */
+  /* Align all grid items to the middles of each other. */
   .o-layout--middle\@tabletH > .o-layout__item {
     vertical-align: middle;
   }
-  /**
-   * Align all grid items to the bottoms of each other.
-   */
+  /* Align all grid items to the bottoms of each other. */
   .o-layout--bottom\@tabletH > .o-layout__item {
     vertical-align: bottom;
   }
   /* Horizontal Alignment
-   * --------------------------- */
-  /**
-   * Fill up the layout system from the left.
-   */
+  * --------------------------- */
+  /* Fill up the layout system from the left. */
   .o-layout--left\@tabletH {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the center.
-   */
+  /* Fill up the layout system from the center. */
   .o-layout--center\@tabletH {
     text-align: center;
   }
   .o-layout--center\@tabletH > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the right.
-   */
+  /* Fill up the layout system from the right. */
   .o-layout--right\@tabletH {
     text-align: right;
   }
   .o-layout--right\@tabletH > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Reverse the rendered order of the grid system.
-   */
+  /* Reverse the rendered order of the grid system. */
   .o-layout--reverse\@tabletH {
     direction: rtl;
   }
@@ -3533,32 +3482,28 @@
     direction: ltr;
     text-align: left;
   }
-  /**
-   * Bring back rendered order of the grid system.
-   */
+  /* Bring back rendered order of the grid system. */
   .o-layout--forward\@tabletH {
     direction: ltr;
   }
   /* Inset
-   * --------------------------- */
-  /**
-   * 1. Reset negative margins on the layout object to zero so that inner grid
+  * --------------------------- */
+  /* 1. Reset negative margins on the layout object to zero so that inner grid
    *    items are inset from the edges of the wrapping layout object, i.e. the
    *    layout object will include both inner and outer gutters around grid
    *    items. Note: when using the inset modifier, you'd like use a wrapper
-   *    object with the flush modifier.
-   */
+   *    object with the flush modifier. */
   .o-layout--inset {
     margin: 0;
     /* [1] */
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--flush\@tabletH {
     max-width: none;
   }
   /* Size Variants
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--xxs\@tabletH {
     padding-right: 4px;
     padding-left: 4px;
@@ -3583,9 +3528,7 @@
     padding-right: 64px;
     padding-left: 64px;
   }
-  /**
-   * Vertical alignment classes.
-   */
+  /* Vertical alignment classes. */
   ._vabl\@tabletH {
     vertical-align: baseline !important;
   }
@@ -3604,17 +3547,13 @@
   ._vap\@tabletH {
     vertical-align: super !important;
   }
-  /**
-   * Horizontal alignment
-   */
+  /* Horizontal alignment */
   ._center\@tabletH {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  /**
-   * Hide only visually, but have it available for screen readers:
-   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   */
+  /* Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   ._hidden\@tabletH {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -4664,7 +4603,7 @@
     max-width: none;
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--flush\@laptop {
     margin: 0;
   }
@@ -4673,15 +4612,13 @@
     padding-left: 0;
   }
   /* Auto Width
-   * --------------------------- */
-  /**
-   * Cause layout items to take up a non-explicit amount of width.
-   */
+  * --------------------------- */
+  /* Cause layout items to take up a non-explicit amount of width. */
   .o-layout--auto\@laptop > .o-layout__item {
     width: auto;
   }
   /* Spacing
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--xxs\@laptop {
     margin: 0 -4px;
   }
@@ -4725,54 +4662,40 @@
     padding-left: 64px;
   }
   /* Vertical Alignment
-   * --------------------------- */
-  /**
-   * Align all grid items to the tops of each other.
-   */
+  * --------------------------- */
+  /* Align all grid items to the tops of each other. */
   .o-layout--top\@laptop > .o-layout__item {
     vertical-align: top;
   }
-  /**
-   * Align all grid items to the middles of each other.
-   */
+  /* Align all grid items to the middles of each other. */
   .o-layout--middle\@laptop > .o-layout__item {
     vertical-align: middle;
   }
-  /**
-   * Align all grid items to the bottoms of each other.
-   */
+  /* Align all grid items to the bottoms of each other. */
   .o-layout--bottom\@laptop > .o-layout__item {
     vertical-align: bottom;
   }
   /* Horizontal Alignment
-   * --------------------------- */
-  /**
-   * Fill up the layout system from the left.
-   */
+  * --------------------------- */
+  /* Fill up the layout system from the left. */
   .o-layout--left\@laptop {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the center.
-   */
+  /* Fill up the layout system from the center. */
   .o-layout--center\@laptop {
     text-align: center;
   }
   .o-layout--center\@laptop > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the right.
-   */
+  /* Fill up the layout system from the right. */
   .o-layout--right\@laptop {
     text-align: right;
   }
   .o-layout--right\@laptop > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Reverse the rendered order of the grid system.
-   */
+  /* Reverse the rendered order of the grid system. */
   .o-layout--reverse\@laptop {
     direction: rtl;
   }
@@ -4780,32 +4703,28 @@
     direction: ltr;
     text-align: left;
   }
-  /**
-   * Bring back rendered order of the grid system.
-   */
+  /* Bring back rendered order of the grid system. */
   .o-layout--forward\@laptop {
     direction: ltr;
   }
   /* Inset
-   * --------------------------- */
-  /**
-   * 1. Reset negative margins on the layout object to zero so that inner grid
+  * --------------------------- */
+  /* 1. Reset negative margins on the layout object to zero so that inner grid
    *    items are inset from the edges of the wrapping layout object, i.e. the
    *    layout object will include both inner and outer gutters around grid
    *    items. Note: when using the inset modifier, you'd like use a wrapper
-   *    object with the flush modifier.
-   */
+   *    object with the flush modifier. */
   .o-layout--inset {
     margin: 0;
     /* [1] */
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--flush\@laptop {
     max-width: none;
   }
   /* Size Variants
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--xxs\@laptop {
     padding-right: 4px;
     padding-left: 4px;
@@ -4830,9 +4749,7 @@
     padding-right: 64px;
     padding-left: 64px;
   }
-  /**
-   * Vertical alignment classes.
-   */
+  /* Vertical alignment classes. */
   ._vabl\@laptop {
     vertical-align: baseline !important;
   }
@@ -4851,17 +4768,13 @@
   ._vap\@laptop {
     vertical-align: super !important;
   }
-  /**
-   * Horizontal alignment
-   */
+  /* Horizontal alignment */
   ._center\@laptop {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  /**
-   * Hide only visually, but have it available for screen readers:
-   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   */
+  /* Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   ._hidden\@laptop {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -5903,7 +5816,7 @@
 
 @media (min-width: 100em) {
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--flush\@desktop {
     margin: 0;
   }
@@ -5912,15 +5825,13 @@
     padding-left: 0;
   }
   /* Auto Width
-   * --------------------------- */
-  /**
-   * Cause layout items to take up a non-explicit amount of width.
-   */
+  * --------------------------- */
+  /* Cause layout items to take up a non-explicit amount of width. */
   .o-layout--auto\@desktop > .o-layout__item {
     width: auto;
   }
   /* Spacing
-   * --------------------------- */
+  * --------------------------- */
   .o-layout--xxs\@desktop {
     margin: 0 -4px;
   }
@@ -5964,54 +5875,40 @@
     padding-left: 64px;
   }
   /* Vertical Alignment
-   * --------------------------- */
-  /**
-   * Align all grid items to the tops of each other.
-   */
+  * --------------------------- */
+  /* Align all grid items to the tops of each other. */
   .o-layout--top\@desktop > .o-layout__item {
     vertical-align: top;
   }
-  /**
-   * Align all grid items to the middles of each other.
-   */
+  /* Align all grid items to the middles of each other. */
   .o-layout--middle\@desktop > .o-layout__item {
     vertical-align: middle;
   }
-  /**
-   * Align all grid items to the bottoms of each other.
-   */
+  /* Align all grid items to the bottoms of each other. */
   .o-layout--bottom\@desktop > .o-layout__item {
     vertical-align: bottom;
   }
   /* Horizontal Alignment
-   * --------------------------- */
-  /**
-   * Fill up the layout system from the left.
-   */
+  * --------------------------- */
+  /* Fill up the layout system from the left. */
   .o-layout--left\@desktop {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the center.
-   */
+  /* Fill up the layout system from the center. */
   .o-layout--center\@desktop {
     text-align: center;
   }
   .o-layout--center\@desktop > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Fill up the layout system from the right.
-   */
+  /* Fill up the layout system from the right. */
   .o-layout--right\@desktop {
     text-align: right;
   }
   .o-layout--right\@desktop > .o-layout__item {
     text-align: left;
   }
-  /**
-   * Reverse the rendered order of the grid system.
-   */
+  /* Reverse the rendered order of the grid system. */
   .o-layout--reverse\@desktop {
     direction: rtl;
   }
@@ -6019,32 +5916,28 @@
     direction: ltr;
     text-align: left;
   }
-  /**
-   * Bring back rendered order of the grid system.
-   */
+  /* Bring back rendered order of the grid system. */
   .o-layout--forward\@desktop {
     direction: ltr;
   }
   /* Inset
-   * --------------------------- */
-  /**
-   * 1. Reset negative margins on the layout object to zero so that inner grid
+  * --------------------------- */
+  /* 1. Reset negative margins on the layout object to zero so that inner grid
    *    items are inset from the edges of the wrapping layout object, i.e. the
    *    layout object will include both inner and outer gutters around grid
    *    items. Note: when using the inset modifier, you'd like use a wrapper
-   *    object with the flush modifier.
-   */
+   *    object with the flush modifier. */
   .o-layout--inset {
     margin: 0;
     /* [1] */
   }
   /* Flush
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--flush\@desktop {
     max-width: none;
   }
   /* Size Variants
-   * --------------------------- */
+  * --------------------------- */
   .o-wrapper--xxs\@desktop {
     padding-right: 4px;
     padding-left: 4px;
@@ -6069,9 +5962,7 @@
     padding-right: 64px;
     padding-left: 64px;
   }
-  /**
-   * Vertical alignment classes.
-   */
+  /* Vertical alignment classes. */
   ._vabl\@desktop {
     vertical-align: baseline !important;
   }
@@ -6090,17 +5981,13 @@
   ._vap\@desktop {
     vertical-align: super !important;
   }
-  /**
-   * Horizontal alignment
-   */
+  /* Horizontal alignment */
   ._center\@desktop {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-  /**
-   * Hide only visually, but have it available for screen readers:
-   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-   */
+  /* Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   ._hidden\@desktop {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
