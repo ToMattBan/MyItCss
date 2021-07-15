@@ -3,8 +3,9 @@
    * ========================================================================== */
 /* Colors */
 :root {
-  --primary: #6f23cb;
-  --secondary: #f37835;
+  --primary: #8a31ff;
+  --secondary: #5103b8;
+  --terciary: #21004e;
 }
 
 /* ==========================================================================
@@ -1389,7 +1390,7 @@
   height: 100vh;
 }
 
-.wh100 {
+._wh100 {
   width: 100vw;
   height: 100vh;
 }
@@ -1931,7 +1932,11 @@
   }
 
   ._secondary {
-    color: var(--secundary) !important;
+    color: var(--secondary) !important;
+  }
+
+  ._terciary {
+    color: var(--terciary) !important;
   }
 
   ._alertBorder {
@@ -2018,7 +2023,11 @@
   }
 
   ._fsecondary {
-    fill: var(--secundary) !important;
+    fill: var(--secondary) !important;
+  }
+
+  ._fterciary {
+    fill: var(--terciary) !important;
   }
 
   ._falertBorder {
@@ -2116,7 +2125,11 @@
   }
 
   ._bgsecondary {
-    background-color: var(--secundary) !important;
+    background-color: var(--secondary) !important;
+  }
+
+  ._bgterciary {
+    background-color: var(--terciary) !important;
   }
 
   ._bgalertBorder {
@@ -2233,7 +2246,12 @@
   }
 
   ._bdsecondary {
-    border-color: var(--secundary) !important;
+    border-color: var(--secondary) !important;
+    border: solid 1px;
+  }
+
+  ._bdterciary {
+    border-color: var(--terciary) !important;
     border: solid 1px;
   }
 
@@ -3391,6 +3409,16 @@
   ._mvnxxl\@tabletV {
     margin-top: -128px !important;
     margin-bottom: -128px !important;
+  }
+  ._w100\@tabletV {
+    width: 100vw;
+  }
+  ._h100\@tabletV {
+    height: 100vh;
+  }
+  ._wh100\@tabletV {
+    width: 100vw;
+    height: 100vh;
   }
   /* Font Sizes
      * ======================================================================== */
@@ -4613,6 +4641,16 @@
     margin-top: -128px !important;
     margin-bottom: -128px !important;
   }
+  ._w100\@tabletH {
+    width: 100vw;
+  }
+  ._h100\@tabletH {
+    height: 100vh;
+  }
+  ._wh100\@tabletH {
+    width: 100vw;
+    height: 100vh;
+  }
   /* Font Sizes
      * ======================================================================== */
   ._fz48\@tabletH {
@@ -5834,6 +5872,16 @@
     margin-top: -128px !important;
     margin-bottom: -128px !important;
   }
+  ._w100\@laptop {
+    width: 100vw;
+  }
+  ._h100\@laptop {
+    height: 100vh;
+  }
+  ._wh100\@laptop {
+    width: 100vw;
+    height: 100vh;
+  }
   /* Font Sizes
      * ======================================================================== */
   ._fz48\@laptop {
@@ -7046,6 +7094,16 @@
   ._mvnxxl\@desktop {
     margin-top: -128px !important;
     margin-bottom: -128px !important;
+  }
+  ._w100\@desktop {
+    width: 100vw;
+  }
+  ._h100\@desktop {
+    height: 100vh;
+  }
+  ._wh100\@desktop {
+    width: 100vw;
+    height: 100vh;
   }
   /* Font Sizes
      * ======================================================================== */
