@@ -1,0 +1,172 @@
+/* =========================================================================
+ * FORM COMPONENT
+ * ========================================================================= */
+
+//.o-form {}
+
+.o-form__fields {
+  margin: 0 ($globalSpacingXs * -1);
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+
+  @include mq($from: "tabletH") {
+    margin: 0 ($globalSpacing * -1);
+  }
+}
+
+.o-form__field {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: $globalSpacingXs;
+  font-size: getFontSize(16);
+  padding: $globalSpacingXxs + 3px;
+  border-radius: $globalBorderRadius;
+  border: solid 1px getColor("strokeGray");
+}
+
+.o-form__field--center {
+  text-align: center;
+}
+
+.o-form__label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: getColor("black");
+  cursor: text;
+}
+
+.o-form__required {
+  display: inline-block;
+  font-style: normal;
+  color: getColor("secondary");
+  margin-left: 4px;
+}
+
+.o-form__field--checkbox {
+  width: auto;
+}
+
+/* Labels
+   ===================================================================== */
+
+.o-form__label {
+  font-weight: 500;
+}
+
+/* Inputs
+   ========================================================================= */
+
+.o-form__input,
+.o-form__textarea {
+  padding: 9px 16px;
+  width: 100%;
+  background-color: getColor("gray");
+  border: 1px solid getColor("gray");
+  font-family: $baseFontFamily;
+  font-size: getFontSize(16);
+  line-height: 18px;
+  color: getColor("black");
+  border-radius: $globalBorderRadius;
+
+  &:focus {
+    border-color: getColor("black");
+  }
+}
+
+.o-form__input {
+  &:focus {
+    outline: 0;
+    border-color: getColor("primary");
+  }
+}
+
+.o-form__textarea:focus {
+  outline: 0;
+}
+
+/* Checkbox
+   ========================================================================= */
+
+.o-form__checkbox,
+.o-form__radio {
+  display: none;
+}
+
+.o-form__label--checkbox,
+.o-form__label--radio {
+  cursor: pointer;
+
+  &:before {
+    content: "\f0c8";
+    display: inline-block;
+    color: getColor("gray");
+    vertical-align: baseline;
+    width: 22px;
+    transition: color 0.1s;
+
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.o-form__checkbox:checked + .o-form__label--checkbox:before {
+  content: "\f14a";
+  color: getColor("secondary");
+}
+
+.o-form__label--radio:before {
+  content: "\f111";
+}
+
+.o-form__radio:checked + .o-form__label--radio:before {
+  content: "\f058";
+  color: getColor("secondary");
+}
+
+/* Validation
+   ========================================================================= */
+
+.o-form__formValidationMessage {
+  margin-bottom: $globalSpacingXs;
+  font-size: getFontSize(16);
+  color: getColor("secondary");
+}
+
+.o-form__fieldValidationMessage {
+  font-size: getFontSize(16);
+  color: getColor("secondary");
+}
+
+.o-form__confirmationMessage {
+  padding: $globalSpacingSm $globalSpacingXs;
+  background: getColor("primary");
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+/* Footer
+   ========================================================================= */
+
+.o-form__footer {
+  text-align: left;
+}
+
+/* Cadastro 
+	========================================================================= */
+
+.o-form--cadastro .o-form__field {
+  border: solid 2px getColor("strokeGray");
+  padding: 14px 11px;
+
+  &::placeholder {
+    color: getColor("mediumGray");
+  }
+}

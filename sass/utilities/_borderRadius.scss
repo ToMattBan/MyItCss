@@ -1,0 +1,23 @@
+/* =========================================================================
+ * BORDER RADIUS UTILITIES
+ * ========================================================================= */
+
+.#{$utilityPrefix}bdrs#{$utilityValueSeparator}2 {
+  border-radius: 2px;
+}
+
+.#{$utilityPrefix}bdrs#{$utilityValueSeparator}3 {
+  border-radius: 3px;
+}
+
+.#{$utilityPrefix}bdrs#{$utilityValueSeparator}4 {
+  border-radius: 4px;
+}
+
+.#{$utilityPrefix}bdrs#{$utilityValueSeparator}6 {
+  border-radius: 6px;
+}
+
+.#{$utilityPrefix}bdrs#{$utilityValueSeparator}50p {
+  border-radius: 50%;
+}

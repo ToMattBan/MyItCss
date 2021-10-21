@@ -1,0 +1,15 @@
+/* ==========================================================================
+ * CLEARFIX UTILITY
+ * ========================================================================== */
+
+/**
+ * Attach our clearfix mixin to a utility class.
+ */
+
+@mixin clearfixUtility($breakpoint: null) {
+  .#{$utilityPrefix}clearfix#{$breakpoint} {
+    @include clearfix();
+  }
+}
+
+@include clearfixUtility();

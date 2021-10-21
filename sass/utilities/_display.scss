@@ -1,0 +1,91 @@
+/* ==========================================================================
+ * DISPLAY UTILITY
+ *
+ * Display utility classes
+ *
+ * https://github.com/tachyons-css/tachyons/blob/master/src/_display.css
+ * ========================================================================== */
+
+@mixin displayUtility($breakpoint: null) {
+  /**
+   * Hide only visually, but have it available for screen readers:
+   * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   */
+  .#{$utilityPrefix}hidden#{$breakpoint} {
+    @include hide();
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}n#{$breakpoint} {
+    display: none !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}i#{$breakpoint} {
+    display: inline !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}b#{$breakpoint} {
+    display: block !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}li#{$breakpoint} {
+    display: list-item !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}ib#{$breakpoint} {
+    display: inline-block !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}it#{$breakpoint} {
+    display: inline-table !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}t#{$breakpoint} {
+    display: table !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tc#{$breakpoint} {
+    display: table-cell !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tcl#{$breakpoint} {
+    display: table-column !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tcg#{$breakpoint} {
+    display: table-column-group !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tfg#{$breakpoint} {
+    display: table-footer-group !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}thg#{$breakpoint} {
+    display: table-header-group !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}tr#{$breakpoint} {
+    display: table-row !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}trg#{$breakpoint} {
+    display: table-row-group !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}f#{$breakpoint} {
+    display: flex !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}if#{$breakpoint} {
+    display: inline-flex !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}g#{$breakpoint} {
+    display: grid !important;
+  }
+
+  .#{$utilityPrefix}d#{$utilityValueSeparator}ig#{$breakpoint} {
+    display: inline-grid !important;
+  }
+}
+
+@include displayUtility();

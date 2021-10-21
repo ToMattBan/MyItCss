@@ -1,0 +1,17 @@
+/* ==========================================================================
+ * IMAGE ELEMENT
+ * ========================================================================== */
+
+/**
+ * 1. Responsive settings for images
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  max-width: 100%; /* [1] */
+  height: auto;
+  font-style: italic; /* [2] */
+  vertical-align: middle; /* [3] */
+}

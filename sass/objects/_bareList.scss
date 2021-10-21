@@ -1,0 +1,11 @@
+/* ==========================================================================
+ * BARE LIST OBJECT
+ *
+ * Strip list-like appearance from lists by removing their bullets, and any
+ * indentation.
+ * ========================================================================== */
+
+.o-bareList {
+  list-style: none;
+  margin-left: 0;
+}

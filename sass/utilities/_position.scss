@@ -1,0 +1,68 @@
+/* ======================================================================
+ * POSITION UTILITY
+ *
+ * A series of spacing helper classes that you can use to give spacing.
+ * Use these in your markup:
+ *
+ * <div class="_rxs">
+ * ====================================================================== */
+
+$positionDirections: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left",
+) !default;
+
+$positionFactors: $globalSpacingFactors !default;
+
+@mixin positionUtility($breakpoint: null) {
+  .#{$utilityPrefix}po#{$utilityValueSeparator}s#{$breakpoint} {
+    position: static !important;
+  }
+
+  .#{$utilityPrefix}po#{$utilityValueSeparator}r#{$breakpoint} {
+    position: relative !important;
+  }
+
+  .#{$utilityPrefix}po#{$utilityValueSeparator}a#{$breakpoint} {
+    position: absolute !important;
+  }
+
+  .#{$utilityPrefix}po#{$utilityValueSeparator}f#{$breakpoint} {
+    position: fixed !important;
+  }
+
+  .#{$utilityPrefix}po#{$utilityValueSeparator}t#{$breakpoint} {
+    position: sticky !important; /* [1] */
+  }
+
+  // Add zero and null modifiers to the factor list so classes like `_b0` and
+  // `_b` are created automatically
+  $factors: map-merge(
+    (
+      "0": 0,
+      null: 1,
+    ),
+    $positionFactors
+  );
+
+  @each $directionNamespace, $directionRules in $positionDirections {
+    @each $factorNamespace, $factor in $factors {
+      // Add a hyphen before the namespace if it's not null
+      // `xs` = `_lxs`
+      // null = `_l`
+      @if ($factorNamespace != null) {
+        $factorNamespace: "#{$utilityValueSeparator}#{$factorNamespace}";
+      }
+
+      .#{$utilityPrefix}#{$directionNamespace}#{$factorNamespace}#{$breakpoint} {
+        @each $direction in $directionRules {
+          #{$direction}: ($factor * $globalSpacing) !important;
+        }
+      }
+    }
+  }
+}
+
+@include positionUtility();

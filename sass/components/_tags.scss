@@ -1,0 +1,54 @@
+.tags__mini {
+  display: inline-block;
+  background-color: #ccc;
+  font-size: 12px;
+  margin-top: 14px;
+  padding: 4px 37px;
+  border-radius: 4px;
+
+  &--Fretis {
+    color: #fff;
+    padding: 4px 16px;
+    background-color: getColor("green");
+  }
+
+  &--Lannto {
+    padding: 4px 14px;
+    background-color: getColor("yellow");
+  }
+
+  &--Novdes {
+    padding: 4px 14px;
+    background-color: getColor("yellow");
+  }
+
+  &--Salale {
+    color: #fff;
+    padding: 4px 37px;
+    background-color: getColor("pink");
+  }
+
+  &--Proção {
+    color: #fff;
+    padding: 4px 37px;
+    background-color: getColor("pink");
+  }
+
+  &--Bladay {
+    color: #fff;
+    padding: 4px 37px;
+    font-weight: bold;
+    background-color: getColor("black");
+  }
+
+  &--Blaeek {
+    color: #fff;
+    padding: 4px 37px;
+    font-weight: bold;
+    background-color: getColor("black");
+  }
+}
+
+.tags__mini--Novdes {
+  display: none;
+}

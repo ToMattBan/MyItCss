@@ -1,0 +1,80 @@
+/* ==========================================================================
+ * TYPOGRAPHY SETTINGS
+ * ========================================================================== */
+
+/* Base Typographical Styles
+ * --------------------------- */
+
+$baseFontSize: 16px !default;
+$baseLineHeight: 1.5 !default;
+
+$baseFontFamily: "Open Sans", Arial, sans-serif;
+
+/* Font Size Variants
+ * --------------------------- */
+
+$fontSizes: (
+  48: 48px,
+  40: 40px,
+  36: 36px,
+  34: 34px,
+  30: 30px,
+  28: 28px,
+  26: 26px,
+  24: 24px,
+  22: 22px,
+  20: 20px,
+  18: 18px,
+  16: 16px,
+  14: 14px,
+  12: 12px,
+);
+
+/* Measure Widths
+ * --------------------------- */
+
+$measureWidths: (
+  "narrow": 20em,
+  // ~45 characters
+  null: 30em,
+  // ~66 characters
+  "wide": 34em,
+  // ~80 characters
+) !default;
+
+/* Line-height
+ * --------------------------- */
+
+$lineHeights: (
+  "solid": 1,
+  "title": 1.25,
+  "copy": $baseLineHeight,
+) !default;
+
+/* Letter-spacing
+ * --------------------------- */
+
+$letterSpacings: (
+  "tight": -0.05em,
+  null: normal,
+  "loose": 0.25em,
+) !default;
+
+/* Accessors
+ * ========================================================================== */
+
+@function getFontSize($key) {
+  @return map-get($fontSizes, $key);
+}
+
+@function getMeasure($key) {
+  @return map-get($measureWidths, $key);
+}
+
+@function getLineHeight($key) {
+  @return map-get($lineHeights, $key);
+}
+
+@function getLetterSpacing($key) {
+  @return map-get($letterSpacings, $key);
+}

@@ -1,0 +1,191 @@
+/* ==========================================================================
+ * TYPOGRAPHY UTILITY
+ * ========================================================================== */
+
+@mixin typographyUtility($breakpoint: null) {
+  /* Font Sizes
+   * ======================================================================== */
+
+  @each $fontSizeName, $fontSize in $fontSizes {
+    .#{$utilityPrefix}fz#{$utilityValueSeparator}#{$fontSizeName}#{$breakpoint} {
+      font-size: getFontSize($fontSizeName) !important;
+    }
+  }
+
+  /* Text Align
+   * ======================================================================== */
+
+  .#{$utilityPrefix}ta#{$utilityValueSeparator}l#{$breakpoint} {
+    text-align: left !important;
+  }
+
+  .#{$utilityPrefix}ta#{$utilityValueSeparator}r#{$breakpoint} {
+    text-align: right !important;
+  }
+
+  .#{$utilityPrefix}ta#{$utilityValueSeparator}c#{$breakpoint} {
+    text-align: center !important;
+  }
+
+  /* Font Style
+   * ======================================================================== */
+
+  .#{$utilityPrefix}normal#{$breakpoint} {
+    font-style: italic !important;
+    font-weight: normal !important;
+  }
+
+  .#{$utilityPrefix}fs#{$utilityValueSeparator}i#{$breakpoint} {
+    font-style: italic !important;
+  }
+
+  /* Font Weight
+   * ======================================================================== */
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}1#{$breakpoint} {
+    font-weight: 100 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}2#{$breakpoint} {
+    font-weight: 200 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}3#{$breakpoint} {
+    font-weight: 300 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}4#{$breakpoint} {
+    font-weight: 400 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}5#{$breakpoint} {
+    font-weight: 500 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}6#{$breakpoint} {
+    font-weight: 600 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}7#{$breakpoint} {
+    font-weight: 700 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}8#{$breakpoint} {
+    font-weight: 800 !important;
+  }
+
+  .#{$utilityPrefix}fw#{$utilityValueSeparator}9#{$breakpoint} {
+    font-weight: 900 !important;
+  }
+
+  /* Text Transform
+   * ======================================================================== */
+
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}c#{$breakpoint} {
+    text-transform: capitalize !important;
+  }
+
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}l#{$breakpoint} {
+    text-transform: lowercase !important;
+  }
+
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}u#{$breakpoint} {
+    text-transform: uppercase !important;
+  }
+
+  .#{$utilityPrefix}tt#{$utilityValueSeparator}n#{$breakpoint} {
+    text-transform: none !important;
+  }
+
+  /* Text Decoration
+   * ======================================================================== */
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}l#{$breakpoint} {
+    text-decoration: line-through !important;
+  }
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}n#{$breakpoint} {
+    text-decoration: none !important;
+  }
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}o#{$breakpoint} {
+    text-decoration: overline !important;
+  }
+
+  .#{$utilityPrefix}td#{$utilityValueSeparator}u#{$breakpoint} {
+    text-decoration: underline !important;
+  }
+
+  /* Line Height
+   * ======================================================================== */
+
+  @each $lineHeightVariant, $lineHeightSize in $lineHeights {
+    // line-height values are always preceded by a hyphen
+    @if ($lineHeightVariant != null) {
+      $lineHeightVariant: "-#{$lineHeightVariant}";
+    }
+
+    .#{$utilityPrefix}lh#{$lineHeightVariant}#{$breakpoint} {
+      line-height: $lineHeightSize !important;
+    }
+  }
+
+  /* Letter Spacing
+   * ======================================================================== */
+
+  @each $letterSpacingVariant, $letterSpacingSize in $letterSpacings {
+    // letter-spacing values are always preceded by a hyphen
+    @if ($letterSpacingVariant != null) {
+      $letterSpacingVariant: "-#{$letterSpacingVariant}";
+    }
+
+    .#{$utilityPrefix}ls#{$letterSpacingVariant}#{$breakpoint} {
+      letter-spacing: $letterSpacingSize !important;
+    }
+  }
+
+  /* Truncate
+   * ======================================================================== */
+
+  // Combine this class with a width to truncate text (or just leave as
+  // is to truncate at width of containing element.
+  .#{$utilityPrefix}truncate#{$breakpoint} {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* Word Break
+   * ======================================================================== */
+
+  .#{$utilityPrefix}wbba#{$breakpoint} {
+    word-break: break-all !important;
+    white-space: nowrap !important;
+  }
+
+  /* Measure
+   *
+   * Measure refers to the length of a line of text. It is one of the most
+   * important aspects of readability.
+   *
+   * Provide 3 classes for setting measure:
+   *  ._measure = line lengths ~66 characters
+   *  ._measure-narrow = line lengths ~45 characters
+   *  ._measure-wide = line lengths ~80 characters
+   *
+   * http://tachyons.io/docs/typography/measure/
+   * ======================================================================== */
+
+  @each $measureVariant, $measureWidth in $measureWidths {
+    // measure values are always preceded by a hyphen
+    @if ($measureVariant != null) {
+      $measureVariant: "-#{$measureVariant}";
+    }
+
+    .#{$utilityPrefix}measure#{$measureVariant}#{$breakpoint} {
+      max-width: $measureWidth !important;
+    }
+  }
+}
+
+@include typographyUtility();

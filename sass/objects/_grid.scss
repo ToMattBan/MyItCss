@@ -1,0 +1,63 @@
+//
+// s-breakpoints.scss
+// Simply defines a key and min-width for each dimension to respond at
+//
+// $breakpoints: (sm: 480px, md: 640px, lg: 960px);
+
+//
+// o-grid.scss
+// Defines our grid object, no styling beyond layout
+//
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  &__item {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+
+    @mixin grid-size($numerator, $denominator) {
+      $min-width: (100% / (($denominator + 1) / $numerator)) + 1%;
+      $max-width: 100% / ($denominator / $numerator);
+      min-width: $min-width;
+      max-width: $max-width;
+      flex-basis: $max-width;
+    }
+
+    $fractions: (1, 2), (1, 3), (2, 3), (3, 4), (1, 4);
+    @each $numerator, $denominator in $fractions {
+      &--#{$numerator}\/#{$denominator} {
+        @include grid-size($numerator, $denominator);
+
+        @each $key, $size in $mq-breakpoints {
+          @media (min-width: $size) {
+            &\@#{$key} {
+              @include grid-size($numerator, $denominator);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// u-order.scss
+// Defines our order utility classes to re-order columns for different browser sizes
+//
+@for $number from 1 through 10 {
+  ._order-#{$number} {
+    order: $number;
+
+    @each $key, $size in $mq-breakpoints {
+      @media (min-width: $size) {
+        &\@#{$key} {
+          order: $number;
+        }
+      }
+    }
+  }
+}

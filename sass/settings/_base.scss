@@ -1,0 +1,12 @@
+/* =========================================================================
+ * BASE PROJECT SETTINGS
+ * ========================================================================= */
+
+// Enable markup fix because we use the spaceless tag in twig
+$enableLayoutMarkupFix: true;
+
+// Enable responsive layout
+$enableResponsiveLayout: true;
+
+// border radius
+$globalBorderRadius: 4px;

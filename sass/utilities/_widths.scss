@@ -1,0 +1,102 @@
+/* =========================================================================
+ * WIDTHS
+ *
+ * generates a series of utility classes that give a fluid width to
+ * whichever element they’re applied, e.g.:
+ *
+ *   <img src="" alt="" class="_1/2" />
+ *
+ * These classes are most commonly used in conjunction with our layout system,
+ * e.g.:
+ *
+ *   <div class="o-layout__item  _1/2">
+ *
+ * By default, will also generate responsive variants of each of these
+ * classes by using your Sass MQ configuration, e.g.:
+ *
+ *   <div class="o-layout__item  _1/1  _1/2@tablet  _1/3@desktop">
+ *
+ * Optionally, can generate offset classes which can push and pull
+ * elements left and right by a specified amount, e.g.:
+ *
+ *   <div class="o-layout__item  _2/3  _pull1/3">
+ *
+ * This is useful for making very granular changes to the rendered order of
+ * items in a layout.
+ * ========================================================================= */
+
+// Which fractions would you like in your grid system(s)? By default,
+// provides you fractions of one whole, halves, thirds, quarters and fifths,
+// e.g.:
+//
+//   ._1/2
+//   ._2/5
+//   ._3/4
+//   ._2/3
+$widthFractions: 1 2 3 4 5 12 !default;
+
+// Optionally, can generate classes to offset items by a certain width.
+// Would you like to generate these types of class as well? E.g.:
+//
+//   ._push1/3
+//   ._pull2/4
+//   ._pull1/5
+//   ._push2/3
+$widthEnableOffsets: false !default;
+
+// By default, uses fractions-like classes like `<div class="_1/4">`.
+// You can change the `/` to whatever you fancy with this variable.
+$widthDelimiter: \/ !default;
+
+// A mixin to spit out our width classes.
+@mixin widthsUtility($breakpoint: null) {
+  // Loop through the number of columns for each denominator of our fractions.
+  @each $denominator in $widthFractions {
+    // Begin creating a numerator for our fraction up until we hit the
+    // denominator.
+    @for $numerator from 1 through $denominator {
+      @if ($numerator != $denominator) {
+        // Build a class in the format `._3/4[@<breakpoint>]`.
+        .#{$utilityPrefix}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
+          width: ($numerator / $denominator) * 100% !important;
+        }
+      }
+
+      @if ($widthEnableOffsets == true) {
+        // Build a class in the format `._push1/2[@<breakpoint>]`.
+        .#{$utilityPrefix}push#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
+          position: relative !important;
+          margin-left: ($numerator / $denominator) * 100% !important;
+        }
+
+        // Build a class in the format `._pull5/6[@<breakpoint>]`.
+        .#{$utilityPrefix}pull#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
+          position: relative !important;
+          margin-right: ($numerator / $denominator) * 100% !important;
+        }
+      }
+    }
+  }
+
+  .#{$utilityPrefix}1#{$widthDelimiter}1#{$breakpoint} {
+    width: 100% !important;
+  }
+
+  .#{$utilityPrefix}auto#{$breakpoint} {
+    width: auto !important;
+  }
+
+  @if ($widthEnableOffsets == true) {
+    .#{$utilityPrefix}push#{$utilityValueSeparator}0#{$breakpoint} {
+      position: relative;
+      margin-left: 0 !important;
+    }
+
+    .#{$utilityPrefix}pull#{$utilityValueSeparator}0#{$breakpoint} {
+      position: relative;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+@include widthsUtility();

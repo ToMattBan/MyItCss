@@ -1,0 +1,75 @@
+/* ==========================================================================
+ * WRAPPER OBJECT
+
+ * Page-level constraining and wrapping elements.
+ * ========================================================================== */
+
+$wrapperMaxWidth: 1360px !default;
+
+/* stylelint-disable */
+@if (type-of($wrapperMaxWidth) != number) {
+  @error "`#{$wrapperMaxWidth}` needs to be a number.";
+}
+/* stylelint-enable */
+
+.o-wrapper {
+  @include clearfix();
+  padding-right: ($globalSpacing / 2);
+  padding-left: ($globalSpacing / 2);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $wrapperMaxWidth;
+}
+
+/* Modifiers
+ * ========================================================================= */
+
+@mixin wrapperModifiers($breakpoint: null) {
+  /* Flush
+   * --------------------------- */
+
+  .o-wrapper--flush#{$breakpoint} {
+    max-width: none;
+  }
+
+  /* Size Variants
+   * --------------------------- */
+
+  @each $spacingName, $spacingFactor in $globalSpacingFactors {
+    .o-wrapper--#{$spacingName}#{$breakpoint} {
+      padding-right: (($globalSpacing * $spacingFactor) / 2);
+      padding-left: (($globalSpacing * $spacingFactor) / 2);
+    }
+  }
+}
+
+@include wrapperModifiers();
+
+/* =========================================================================
+ * WRAPPER OBJECT MEDIA QUERIES
+ * ========================================================================= */
+
+$customWrapperSpacing: (
+  null: $globalSpacingXs,
+  "tabletV": $globalSpacing,
+  "tabletH": $globalSpacingXl,
+  "laptop": $globalSpacingXl,
+);
+
+@mixin customWrapperSpacing($breakpoint: null, $breakpointName: null) {
+  $spacing: map-get($customWrapperSpacing, $breakpointName);
+
+  @if ($spacing != null) {
+    .o-wrapper {
+      padding-right: $spacing;
+      padding-left: $spacing;
+      max-width: $wrapperMaxWidth + ($spacing * 2);
+    }
+
+    .o-wrapper.o-wrapper--flush {
+      max-width: none;
+    }
+  }
+}
+
+@include customWrapperSpacing();

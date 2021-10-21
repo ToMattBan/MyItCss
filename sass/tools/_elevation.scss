@@ -1,0 +1,204 @@
+/* ==========================================================================
+ * ELEVATION TOOLS
+ * ========================================================================== */
+
+/**
+ * Shadow colors.
+ * http://codepen.io/shyndman/pen/ojxmdY
+ */
+
+$elevationKeyUmbra: rgba(0, 0, 0, 0.1) !default;
+$elevationKeyPenumbra: rgba(0, 0, 0, 0.02) !default;
+$elevationAmbient: rgba(0, 0, 0, 0.1) !default;
+
+/**
+ * The hand-designed reference shadow sets.
+ * Source: http://codepen.io/shyndman/pen/ojxmdY
+ */
+
+$elevationReferenceShadows: (
+  (
+    elevation: 0,
+    shadows: (
+      (0, 0, 0, 0, $elevationKeyUmbra),
+      (0, 0, 0, 0, $elevationKeyPenumbra),
+      (0, 0, 0, 0, $elevationAmbient),
+    ),
+  ),
+  (
+    elevation: 2,
+    shadows: (
+      (0, 3, 1, -2, $elevationKeyUmbra),
+      (0, 2, 2, 0, $elevationKeyPenumbra),
+      (0, 1, 5, 0, $elevationAmbient),
+    ),
+  ),
+  (
+    elevation: 3,
+    shadows: (
+      (0, 3, 3, -2, $elevationKeyUmbra),
+      (0, 3, 4, 0, $elevationKeyPenumbra),
+      (0, 1, 8, 0, $elevationAmbient),
+    ),
+  ),
+  (
+    elevation: 4,
+    shadows: (
+      (0, 2, 4, -1, $elevationKeyUmbra),
+      (0, 4, 5, 0, $elevationKeyPenumbra),
+      (0, 1, 10, 0, $elevationAmbient),
+    ),
+  ),
+  (
+    elevation: 6,
+    shadows: (
+      (0, 3, 5, -1, $elevationKeyUmbra),
+      (0, 6, 10, 0, $elevationKeyPenumbra),
+      (0, 1, 18, 0, $elevationAmbient),
+    ),
+  ),
+  (
+    elevation: 8,
+    shadows: (
+      (0, 5, 5, -3, $elevationKeyUmbra),
+      (0, 8, 10, 1, $elevationKeyPenumbra),
+      (0, 3, 14, 2, $elevationAmbient),
+    ),
+  ),
+  (
+    elevation: 16,
+    shadows: (
+      (0, 8, 10, -5, $elevationKeyUmbra),
+      (0, 16, 24, 2, $elevationKeyPenumbra),
+      (0, 6, 30, 5, $elevationAmbient),
+    ),
+  )
+) !default;
+
+/**
+ * Animation durations.
+ */
+
+$elevationMinAnimationLength: 250ms !default;
+$elevationMaxAnimationLength: 400ms !default;
+
+/**
+* Returns the two reference shadows whose elevations bound the specified
+* elevation. In the case where the supplied elevation exceeds the maximum
+* reference elevation, the last two reference shadows are returned.
+*/
+
+@function _findBoundingShadowSets($elevation) {
+  @if $elevation < 0 {
+    @warn "Elevation is less than zero";
+  }
+
+  @for $i from 1 to length($elevationReferenceShadows) {
+    $lower: nth($elevationReferenceShadows, $i);
+    $upper: nth($elevationReferenceShadows, $i + 1);
+    @if (map-get($lower, "elevation") <= $elevation) and
+      (map-get($upper, "elevation") > $elevation)
+    {
+      @return ($lower, $upper);
+    }
+  }
+
+  $lower: nth(
+    $elevationReferenceShadows,
+    length($elevationReferenceShadows) - 1
+  );
+  $upper: nth($elevationReferenceShadows, length($elevationReferenceShadows));
+
+  @return ($lower, $upper);
+}
+
+/**
+ * Performs linear interpolation between values a and b. Returns the value
+ * between a and b proportional to x (when x is between 0 and 1. When x is
+ * outside this range, the return value is a linear extrapolation).
+ */
+@function _lerp($x, $a, $b) {
+  @return $a + $x * ($b - $a);
+}
+
+/**
+ * Performs linear interpolation between shadows by interpolating each property
+ * individually. Returns the value between shadow1 and shadow2 proportional to x
+ * (when x is between 0 and 1. When x is outside this range, the return value is
+ * a linear extrapolation).
+ */
+@function _lerpShadow($x, $shadow1, $shadow2) {
+  // Round all parameters, as shadow definitions do not support subpixels
+  $newX: round(_lerp($x, nth($shadow1, 1), nth($shadow2, 1))) + 0px;
+  $newY: round(_lerp($x, nth($shadow1, 2), nth($shadow2, 2))) + 0px;
+  $newBlur: round(_lerp($x, nth($shadow1, 3), nth($shadow2, 3))) + 0px;
+  $newSpread: round(_lerp($x, nth($shadow1, 4), nth($shadow2, 4))) + 0px;
+  $newColor: nth($shadow1, 5); // No need to lerp the shadow color
+
+  @return ($newX $newY $newBlur $newSpread $newColor);
+}
+
+/**
+ * Calculates the set of shadows at a given elevation.
+ */
+@function _calculateShadowSetAtDepth($elevation) {
+  $bounds: _findBoundingShadowSets($elevation);
+  $min: nth($bounds, 1);
+  $max: nth($bounds, 2);
+  $x: ($elevation - map-get($min, "elevation")) /
+    (map-get($max, "elevation") - map-get($min, "elevation"));
+  $elevationShadows: ();
+
+  @for $i from 1 to length(map-get($min, "shadows")) + 1 {
+    $newShadow: _lerpShadow(
+      $x,
+      nth(map-get($min, "shadows"), $i),
+      nth(map-get($max, "shadows"), $i)
+    );
+    $elevationShadows: append($elevationShadows, $newShadow, comma);
+  }
+
+  @return $elevationShadows;
+}
+
+/**
+ * Generates the transition for a change between 2 elevations
+ * The larger the elevation change the longer the animation takes
+ */
+@mixin _elevationTransition(
+  $elevation-change: 6,
+  $easing: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  $duration: _lerp(
+    $elevation-change / 24,
+    $elevationMinAnimationLength,
+    $elevationMaxAnimationLength
+  );
+  transition: box-shadow $duration $easing;
+}
+
+/**
+ * Generates box-shadow and the transition for a given elevation
+ * A single elevation will generate a single box-shadow set
+ * Two elevations and a state will generate a default box-shadow set
+ * and another set that is activated by the state
+ * tested with :hover and :active
+ */
+@mixin elevation($elevation1, $elevation2: null, $state: null) {
+  @if $elevation1 == none {
+    box-shadow: none !important;
+  } @else {
+    box-shadow: _calculateShadowSetAtDepth($elevation1);
+  }
+
+  @if ($elevation2 != null) and ($state != null) {
+    @include _elevationTransition($elevation2 - $elevation2);
+    &:#{$state} {
+      @if $elevation1 == none {
+        box-shadow: none !important;
+      } @else {
+        box-shadow: _calculateShadowSetAtDepth($elevation2);
+      }
+    }
+  }
+}

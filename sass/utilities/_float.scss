@@ -1,0 +1,19 @@
+/* ==========================================================================
+ * FLOAT UTILITY
+ * ========================================================================== */
+
+@mixin floatUtility($breakpoint: null) {
+  .#{$utilityPrefix}f#{$utilityValueSeparator}l#{$breakpoint} {
+    float: left !important;
+  }
+
+  .#{$utilityPrefix}f#{$utilityValueSeparator}r#{$breakpoint} {
+    float: right !important;
+  }
+
+  .#{$utilityPrefix}f#{$utilityValueSeparator}n#{$breakpoint} {
+    float: none !important;
+  }
+}
+
+@include floatUtility();

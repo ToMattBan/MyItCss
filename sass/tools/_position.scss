@@ -1,0 +1,64 @@
+/* ==========================================================================
+ * POSITION TOOLS
+ * ========================================================================== */
+
+/*
+ * Reference:
+ * http://www.sitepoint.com/centering-with-sass/
+ */
+
+// Vertically center element inside first non-static parent.
+@mixin verticalCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Horizontally center element inside first non-static parent.
+@mixin horizontalCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Absolutely center element inside first non-static parent.
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Absolutely fill element inside first non-static parent.
+@mixin fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// Horizontal fill element inside first non-static parent and fix top.
+@mixin fixedTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  @extend .#{$utilityPrefix}z#{$utilityValueSeparator}5;
+}
+
+// Horizontal fill element inside first non-static parent and fix bottom.
+@mixin fixedBottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @extend .#{$utilityPrefix}z#{$utilityValueSeparator}5;
+}
+
+// Sticky element top.
+@mixin stickyTop {
+  position: sticky;
+  top: 0;
+  @extend .#{$utilityPrefix}z#{$utilityValueSeparator}5;
+}

@@ -1,0 +1,17 @@
+/* ==========================================================================
+ * BREAKPOINT SETTINGS
+ * ========================================================================== */
+
+$mq-breakpoints: (
+  "tabletV": 600px,
+  "tabletH": 900px,
+  "laptop": 1200px,
+  "desktop": 1600px,
+) !default;
+
+// If using Sass-MQ for breakpoints, define the separator for breakpoints
+// in class names. Default separator for breakpoint classes is an '@'
+// symbol. For example:
+// <div class="_plg@desktop">
+
+$breakpointSeparator: \@ !default;

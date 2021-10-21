@@ -1,0 +1,42 @@
+/* ==========================================================================
+ * ALIGNMENT UTILITY
+ * ========================================================================== */
+
+@mixin alignUtility($breakpoint: null) {
+  /**
+   * Vertical alignment classes.
+   */
+  .#{$utilityPrefix}va#{$utilityValueSeparator}bl#{$breakpoint} {
+    vertical-align: baseline !important;
+  }
+
+  .#{$utilityPrefix}va#{$utilityValueSeparator}b#{$breakpoint} {
+    vertical-align: bottom !important;
+  }
+
+  .#{$utilityPrefix}va#{$utilityValueSeparator}m#{$breakpoint} {
+    vertical-align: middle !important;
+  }
+
+  .#{$utilityPrefix}va#{$utilityValueSeparator}t#{$breakpoint} {
+    vertical-align: top !important;
+  }
+
+  .#{$utilityPrefix}va#{$utilityValueSeparator}s#{$breakpoint} {
+    vertical-align: sub !important;
+  }
+
+  .#{$utilityPrefix}va#{$utilityValueSeparator}p#{$breakpoint} {
+    vertical-align: super !important;
+  }
+
+  /**
+   * Horizontal alignment
+   */
+  .#{$utilityPrefix}center#{$breakpoint} {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+@include alignUtility();

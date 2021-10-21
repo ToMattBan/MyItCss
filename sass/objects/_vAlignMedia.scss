@@ -1,0 +1,134 @@
+/* ==========================================================================
+ * MEDIA V-ALIGN OBJECT
+ *
+ * The vAlignMedia object is a design pattern similar to the media object,
+ * however it utilises 'display: table[-cell];' to give us control over the
+ * vertical alignments of the text and image.
+ *
+ * http://csswizardry.com/2013/05/the-flag-object/
+ *
+ * <div class="o-vAlignMedia">
+ *   <div class="o-vAlignMedia__img">
+ *     <img />
+ *   </div>
+ *   <div class="o-vAlignMedia__body">
+ *     <p>Body Content</p>
+ *   </div>
+ * </div>
+ *
+ * 1. Apply table properties to control vertical alignments.
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-'display: block;' manner.
+ * 3. Reset inherited 'border-spacing' declarations.
+ * ========================================================================== */
+
+.o-vAlignMedia {
+  display: table; /* [1] */
+  width: 100%; /* [2] */
+  border-spacing: 0; /* [3] */
+}
+
+/**
+ * Items within a vAlignMedia object. Can only contain one of each.
+ *
+ * 1. Default valign to middle, otherwise just use o-media instead.
+ */
+.o-vAlignMedia__img,
+.o-vAlignMedia__body {
+  display: table-cell;
+  vertical-align: middle; /* [1] */
+}
+
+/**
+ * Add space between image and the body.
+ *
+ * 1. Forces `.vAlignMedia__img` cell to shrink-wrap the image:
+ *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
+ */
+.o-vAlignMedia__img {
+  width: 1px; /* [1] */
+  padding-right: $globalSpacing;
+
+  /**
+   * 1. Fix for responsive images shrinking to 1px cell size.
+   */
+  > img {
+    max-width: none; /* [1] */
+  }
+}
+
+/**
+ * The container for the body content of the vAlignMedia object.
+ *
+ * 1. Forces '.vAlignMedia__body' cell to fill remaining horizontal space.
+ */
+.o-vAlignMedia__body {
+  width: auto; /* [1] */
+
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Reversed modifier.
+ * ========================================================================== */
+
+/**
+ * 1. Swap the rendered direction of child items.
+ * 2. Reset rendered direction of child item inner content.
+ * 3. Reassign margins to the correct sides.
+ */
+.o-vAlignMedia--reverse {
+  direction: rtl; /* [1] */
+
+  > .o-vAlignMedia__img,
+  > .o-vAlignMedia__body {
+    direction: ltr; /* [2] */
+  }
+
+  > .o-vAlignMedia__img {
+    padding-right: 0; /* [3] */
+    padding-left: $globalSpacing; /* [3] */
+  }
+}
+
+/* Alignment variants.
+ *
+ * Vertically align the image and body-content. Defaults to middle.
+ * ========================================================================== */
+
+.o-vAlignMedia--top {
+  > .o-vAlignMedia__img,
+  > .o-vAlignMedia__body {
+    vertical-align: top;
+  }
+}
+
+.o-vAlignMedia--bottom {
+  > .o-vAlignMedia__img,
+  > .o-vAlignMedia__body {
+    vertical-align: bottom;
+  }
+}
+
+/* Spacing modifiers (padding-horizontal).
+ *
+ * Modify the amount of space between the image and body. Also include
+ * the reverse modifier for all size variants.
+ * ========================================================================== */
+
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
+  .o-vAlignMedia--#{$spacingName} {
+    > .o-vAlignMedia__img {
+      padding-right: ($globalSpacing * $spacingFactor);
+    }
+
+    &.o-vAlignMedia--reverse {
+      > .o-vAlignMedia__img {
+        padding-right: 0;
+        padding-left: ($globalSpacing * $spacingFactor);
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+ * CORE SETTINGS
+ * ========================================================================== */
+
+// Base spacing value
+// Each component has its own spacing variable, which default to this value.
+
+$globalSpacing: 32px !default;
+
+// Global spacing factors
+
+$globalSpacingFactors: (
+  "xxxs": 0.125,
+  "xxs": 0.25,
+  "xs": 0.5,
+  "sm": 0.75,
+  "lg": 1.5,
+  "xl": 2,
+  "xxl": 4,
+) !default;
+
+// Utility classes prefix and value separator
+
+$utilityPrefix: "_";
+$utilityValueSeparator: "";
+
+/* Framework-only checks and reassignment. Do not alter anything below.
+ * ========================================================================== */
+
+/**
+ * Validate base-font/spacing values as px numbers
+ */
+
+@each $_pxValue in $baseFontSize $globalSpacing {
+  @if (type-of($_pxValue) == number) {
+    @if (unit($_pxValue) != "px") {
+      @error "`#{$_pxValue}` requires a px value.";
+    }
+  } @else {
+    @error "`#{$_pxValue}` requires a number.";
+  }
+}
+
+/**
+ * Spacing variables
+ *
+ * These variables are just helpers in case you need specific spacing values
+ * in your components. You may want to create similar variables if you customize
+ * `$globalSpacingFactors` to add new factors.
+ */
+
+$globalSpacingXxs: round(
+  $globalSpacing * map_get($globalSpacingFactors, "xxs")
+);
+$globalSpacingXs: round($globalSpacing * map_get($globalSpacingFactors, "xs"));
+$globalSpacingSm: round($globalSpacing * map_get($globalSpacingFactors, "sm"));
+$globalSpacingLg: round($globalSpacing * map_get($globalSpacingFactors, "lg"));
+$globalSpacingXl: round($globalSpacing * map_get($globalSpacingFactors, "xl"));
+$globalSpacingXxl: round(
+  $globalSpacing * map_get($globalSpacingFactors, "xxl")
+);

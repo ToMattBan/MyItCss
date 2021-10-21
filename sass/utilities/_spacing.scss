@@ -1,0 +1,78 @@
+/* ==========================================================================
+ * SPACING UTILITY
+ *
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   ._mt {}
+ *   ._plxs {}
+ *   ._mrsm {}
+ *   ._p {}
+ *   ._pr0 {}
+ *   ._ph {}
+ *   ._pvlg {}
+ * ========================================================================== */
+
+/* stylelint-disable string-quotes, max-nesting-depth */
+
+$spacingDirections: (
+  null: null,
+  "t": "-top",
+  "r": "-right",
+  "b": "-bottom",
+  "l": "-left",
+  "h": "-left" "-right",
+  "v": "-top" "-bottom",
+) !default;
+
+$spacingProperties: (
+  "p": "padding",
+  "m": "margin",
+) !default;
+
+$spacingFactors: $globalSpacingFactors !default;
+
+@mixin spacingUtility($breakpoint: null) {
+  // Add zero and null modifiers to the factor list so classes like `_ph-0` and
+  // `_pl` are created automatically
+  $factors: map-merge(
+    (
+      "0": 0,
+      null: 1,
+    ),
+    $spacingFactors
+  );
+
+  @each $propertyNamespace, $property in $spacingProperties {
+    @each $directionNamespace, $directionRules in $spacingDirections {
+      @each $factorNamespace, $factor in $factors {
+        // do not print negative padding rules
+        @if ($factor >= 0) or ($property != "padding") {
+          // Add a hyphen before the namespace if it's not null
+          // `xs` = `_pxs`
+          // null = `_p`
+          @if ($factorNamespace != null) {
+            $factorNamespace: "#{$utilityValueSeparator}#{$factorNamespace}";
+          }
+
+          .#{$utilityPrefix}#{$propertyNamespace}#{$directionNamespace}#{$factorNamespace}#{$breakpoint} {
+            @each $direction in $directionRules {
+              #{$property}#{$direction}: ($factor * $globalSpacing) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * A series of spacing helper classes that you can use to give spacing.
+ * Use these in your markup:
+ *
+ * <div class="_plxs">
+ *
+ * The following will generate spacing helper classes.
+ */
+
+@include spacingUtility();

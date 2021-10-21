@@ -1,0 +1,21 @@
+/* ==========================================================================
+ * ELEVATION UTILITY
+ *
+ * Shadows based on Google Material shadows
+ * https://github.com/prestopasto/SCSS-Material-Shadows/blob/master/src/md-material-shadows.scss
+ * ========================================================================== */
+
+$elevationAvailableDepths: 1, 2, 4, 8, 16, 24 !default;
+
+/**
+ * CSS md-elevation-z# classes
+ */
+@mixin elevationUtility($breakpoint: null) {
+  @each $zValue in $elevationAvailableDepths {
+    .#{$utilityPrefix}elevation#{$utilityValueSeparator}#{$zValue}#{$breakpoint} {
+      @include elevation($zValue);
+    }
+  }
+}
+
+@include elevationUtility();

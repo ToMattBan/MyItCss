@@ -1,0 +1,80 @@
+/* ==========================================================================
+ * MEDIA OBJECT
+ *
+ * Place image and body content side-by-side:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ * Examples: http://v4-alpha.getbootstrap.com/layout/media-object/
+ *
+ * <div class="o-media">
+ *   <img class="o-media__img">
+ *   <div class="o-media__body">
+ *     <p>Body Content</p>
+ *   </div>
+ * </div>
+ * ========================================================================== */
+
+.o-media {
+  @include clearfix();
+  display: block;
+}
+
+.o-media__img {
+  float: left;
+  margin-right: $globalSpacing;
+
+  > img {
+    display: block;
+  }
+}
+
+.o-media__body {
+  overflow: hidden;
+  display: block;
+
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Reversed media objects
+ * ========================================================================== */
+
+.o-media--reverse {
+  > .o-media__img {
+    float: right;
+    margin-right: 0;
+    margin-left: $globalSpacing;
+  }
+}
+
+/* Gutterless media objects
+ * ========================================================================== */
+
+.o-media--flush {
+  > .o-media__img {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+/* Size variants
+ *
+ * Modify the amount of space between our image and our text. We also have
+ * reversible options for all available sizes.
+ * ========================================================================== */
+
+@each $spacingName, $spacingFactor in $globalSpacingFactors {
+  .o-media--#{$spacingName} {
+    > .o-media__img {
+      padding-right: ($globalSpacing * $spacingFactor);
+    }
+
+    &.o-media--reverse {
+      > .o-media__img {
+        padding-right: 0;
+        padding-left: ($globalSpacing * $spacingFactor);
+      }
+    }
+  }
+}

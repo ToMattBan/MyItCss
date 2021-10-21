@@ -1,0 +1,14 @@
+{
+    "name": "my-itcss",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "node-sass sass/main.scss ./main.css",
+        "watch-sass": "node-sass --watch sass -o ./"
+    },
+    "type": "module",
+    "dependencies": {
+        "node-sass": "^6.0.1",
+        "sass-mq": "^5.0.1"
+    }
+}

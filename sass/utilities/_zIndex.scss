@@ -1,0 +1,45 @@
+/* =========================================================================
+ * Z-INDEX
+ *
+ * Base
+ *  z = z-index
+ * Modifiers
+ *  0 = literal value 0
+ *  1 = literal value 1
+ *  2 = literal value 2
+ *  3 = literal value 3
+ *  4 = literal value 4
+ *  5 = literal value 5
+ *  999 = literal value 999
+ *  -inherit = string value inherit
+ *  -initial = string value initial
+ *  -unset = string value unset
+ *
+ * MDN: https://developer.mozilla.org/en/docs/Web/CSS/z-index
+ * Spec: http://www.w3.org/TR/CSS2/zindex.html
+ * Article: https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
+ * ========================================================================= */
+
+$zIndexDepths: 0 1 2 3 4 5 10 20 30 40 50 60 70 80 90 100 !default;
+
+@mixin zIndexUtility($breakpoint: null) {
+  @each $depth in $zIndexDepths {
+    .#{$utilityPrefix}z#{$utilityValueSeparator}#{$depth}#{$breakpoint} {
+      z-index: $depth !important;
+    }
+  }
+
+  .#{$utilityPrefix}z#{$utilityValueSeparator}inh#{$breakpoint} {
+    z-index: inherit !important;
+  }
+
+  .#{$utilityPrefix}z#{$utilityValueSeparator}ini#{$breakpoint} {
+    z-index: initial !important;
+  }
+
+  .#{$utilityPrefix}z#{$utilityValueSeparator}uns#{$breakpoint} {
+    z-index: unset !important;
+  }
+}
+
+@include zIndexUtility();

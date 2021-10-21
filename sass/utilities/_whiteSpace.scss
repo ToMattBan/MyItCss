@@ -1,0 +1,27 @@
+/* ==========================================================================
+ * WHITE SPACE UTILITY
+ * ========================================================================== */
+
+@mixin whiteSpaceUtility($breakpoint: null) {
+  .#{$utilityPrefix}ws#{$utilityValueSeparator}n#{$breakpoint} {
+    white-space: normal !important;
+  }
+
+  .#{$utilityPrefix}ws#{$utilityValueSeparator}p#{$breakpoint} {
+    white-space: pre !important;
+  }
+
+  .#{$utilityPrefix}ws#{$utilityValueSeparator}nw#{$breakpoint} {
+    white-space: nowrap !important;
+  }
+
+  .#{$utilityPrefix}ws#{$utilityValueSeparator}pw#{$breakpoint} {
+    white-space: pre-wrap !important;
+  }
+
+  .#{$utilityPrefix}ws#{$utilityValueSeparator}pl#{$breakpoint} {
+    white-space: pre-line !important;
+  }
+}
+
+@include whiteSpaceUtility();

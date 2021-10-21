@@ -1,0 +1,32 @@
+/* =========================================================================
+ * COLOR SETTINGS
+ * ========================================================================= */
+
+$_colorCache: (
+  "pink": #ff5563,
+  "green": #2bc7c0,
+  "hardBlue": #7281a0,
+  "blue": #6e7d9d,
+  "yellow": #ffe000,
+);
+
+$colors: (
+  "pink": map_get($_colorCache, "pink"),
+  "green": map_get($_colorCache, "green"),
+  "hardBlue": map_get($_colorCache, "hardBlue"),
+  "blue": map_get($_colorCache, "blue"),
+  "yellow": map_get($_colorCache, "yellow"),
+  "textGray": #555555,
+  "mediumGray": #707070,
+  "strokeGray": #d8d8d8,
+  "lightGray": #f3f3f3,
+  "black": #333,
+  "white": #fff,
+  "primary": map_get($_colorCache, "pink"),
+  "secondary": map_get($_colorCache, "green"),
+  "tertiary": map_get($_colorCache, "hardBlue"),
+);
+
+@function getColor($key) {
+  @return map_get($colors, $key);
+}

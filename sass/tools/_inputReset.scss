@@ -1,0 +1,18 @@
+/* ==========================================================================
+ * INPUT RESET TOOL
+ * ========================================================================== */
+
+/**
+ * A simple mixin for resetting form buttons and inputs. Can be used on
+ * inputs and buttons.
+ */
+
+@mixin inputReset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}

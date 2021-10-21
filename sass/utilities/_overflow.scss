@@ -1,0 +1,55 @@
+/* ==========================================================================
+ * OVERFLOW UTILITY
+ * ========================================================================== */
+
+@mixin overflowUtility($breakpoint: null) {
+  .#{$utilityPrefix}ov#{$utilityValueSeparator}a#{$breakpoint} {
+    overflow: auto !important;
+  }
+
+  .#{$utilityPrefix}ovx#{$utilityValueSeparator}a#{$breakpoint} {
+    overflow-x: auto !important;
+  }
+
+  .#{$utilityPrefix}ovy#{$utilityValueSeparator}a#{$breakpoint} {
+    overflow-y: auto !important;
+  }
+
+  .#{$utilityPrefix}ov#{$utilityValueSeparator}h#{$breakpoint} {
+    overflow: hidden !important;
+  }
+
+  .#{$utilityPrefix}ovx#{$utilityValueSeparator}h#{$breakpoint} {
+    overflow-x: hidden !important;
+  }
+
+  .#{$utilityPrefix}ovy#{$utilityValueSeparator}h#{$breakpoint} {
+    overflow-y: hidden !important;
+  }
+
+  .#{$utilityPrefix}ov#{$utilityValueSeparator}s#{$breakpoint} {
+    overflow: scroll !important;
+  }
+
+  .#{$utilityPrefix}ovx#{$utilityValueSeparator}s#{$breakpoint} {
+    overflow-x: scroll !important;
+  }
+
+  .#{$utilityPrefix}ovy#{$utilityValueSeparator}s#{$breakpoint} {
+    overflow-y: scroll !important;
+  }
+
+  .#{$utilityPrefix}ov#{$utilityValueSeparator}v#{$breakpoint} {
+    overflow: visible !important;
+  }
+
+  .#{$utilityPrefix}ovx#{$utilityValueSeparator}v#{$breakpoint} {
+    overflow-x: visible !important;
+  }
+
+  .#{$utilityPrefix}ovy#{$utilityValueSeparator}v#{$breakpoint} {
+    overflow-y: visible !important;
+  }
+}
+
+@include overflowUtility();

@@ -1,0 +1,208 @@
+/* ==========================================================================
+ * BUTTON COMPONENT
+ *
+ * Button
+ *
+ * Classes that can be used on an `<a>`, `<button>` or `<input>` element.
+ *
+ * .c-btn--primary - Use this class to indicate that the button is the primary
+ *                   feature of this form.
+ * .c-btn--remove  - Use this class to indicate that the button will remove a
+ *                   feature, or other negative connotations.
+ * ========================================================================== */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+.c-btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  font: inherit;
+  /* [3] */
+  text-align: center;
+  /* [4] */
+  margin: 0;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  padding: $globalSpacingXxs $globalSpacingXs;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  // @include elevation(2);
+}
+
+/* Style variants
+ * ========================================================================== */
+
+.c-btn--primary {
+  background-color: getColor("primary");
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    /* [4] */
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: mix(getColor("primary"), #000, 80%);
+  }
+}
+
+.c-btn--secondary {
+  background-color: getColor("secondary");
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: getColor("black");
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor("secondary");
+  }
+}
+
+.c-btn--tertiary {
+  background-color: getColor("black");
+  color: getColor("primary");
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: getColor("primary");
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor("black");
+  }
+}
+
+.c-btn--primary.c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px getColor("primary");
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    /* [4] */
+    color: getColor("primary");
+    font-weight: normal;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor("primary");
+    color: getColor("white");
+    font-weight: normal;
+  }
+}
+
+.c-btn--secondary.c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px getColor("secondary");
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    /* [4] */
+    color: getColor("secondary");
+    font-weight: normal;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor("secondary");
+    color: getColor("black");
+    font-weight: normal;
+  }
+}
+
+/* Size variants
+ * ========================================================================== */
+
+.c-btn--small {
+  padding: 4px 12px;
+}
+
+.c-btn--large {
+  padding: $globalSpacingXs $globalSpacing;
+}
+
+/* Ghost buttons
+ *
+ * Ghost buttons have see-through backgrounds and are bordered.
+ * ========================================================================== */
+
+$btnGhostBorderWidth: 2px;
+
+.c-btn--ghost {
+  border: $btnGhostBorderWidth solid currentColor;
+  padding: ($globalSpacingSm - $btnGhostBorderWidth)
+    ($globalSpacing - $btnGhostBorderWidth);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+  &.c-btn--small {
+    padding: ($globalSpacingXs - $btnGhostBorderWidth)
+      ($globalSpacingSm - $btnGhostBorderWidth);
+  }
+
+  &.c-btn--large {
+    padding: ($globalSpacing - $btnGhostBorderWidth)
+      ($globalSpacingLg - $btnGhostBorderWidth);
+  }
+
+  &.c-btn--primary {
+    color: #4a8ec2;
+
+    &:hover,
+    &:focus {
+      color: #3774a2;
+    }
+  }
+
+  &.c-btn--secondary {
+    color: #2f4054;
+
+    &:hover,
+    &:focus {
+      color: #1d2733;
+    }
+  }
+
+  &.c-btn--tertiary {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}

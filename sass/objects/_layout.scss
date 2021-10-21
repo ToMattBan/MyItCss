@@ -1,0 +1,239 @@
+/* ==========================================================================
+ * LAYOUT
+ *
+ * Grid-like layout system.
+ *
+ * The layout object provides us with a column-style layout system. This file
+ * contains the basic structural elements, but classes should be complemented
+ * with width utilities, for example:
+ *
+ *   <div class="o-layout">
+ *     <div class="o-layout__item  _1/2">
+ *     </div>
+ *     <div class="o-layout__item  _1/2">
+ *     </div>
+ *   </div>
+ *
+ * The above will create a two-column structure in which each column will
+ * fluidly fill half of the width of the parent. We can have more complex
+ * systems:
+ *
+ *   <div class="o-layout">
+ *     <div class="o-layout__item  _1/1  _1/3@medium">
+ *     </div>
+ *     <div class="o-layout__item  _1/2  _1/3@medium">
+ *     </div>
+ *     <div class="o-layout__item  _1/2  _1/3@medium">
+ *     </div>
+ *   </div>
+ *
+ * The above will create a system in which the first item will be 100% width
+ * until we enter our medium breakpoint, when it will become 33.333% width. The
+ * second and third items will be 50% of their parent, until they also become
+ * 33.333% width at the medium breakpoint.
+ *
+ * We can also manipulate entire layout systems by adding a series of modifiers
+ * to the `.o-layout` block. For example:
+ *
+ *   <div class="o-layout  o-layout--reverse">
+ *
+ * This will reverse the displayed order of the system so that it runs in the
+ * opposite order to our source, effectively flipping the system over.
+ *
+ *   <div class="o-layout  o-layout--[right|center]">
+ *
+ * This will cause the system to fill up from either the centre or the right
+ * hand side. Default behaviour is to fill up the layout system from the left.
+ *
+ * There are plenty more options available to us: explore them below.
+ * ========================================================================== */
+
+// By default we use the `font-size: 0;` trick to remove whitespace between
+// items. Set this to true in order to use a markup-based strategy like
+// commenting out whitespace or minifying HTML.
+$enableLayoutMarkupFix: false !default;
+
+/* Default/mandatory Classes
+ * ========================================================================== */
+
+/**
+ * 1. Allows us to use the layout object on any type of element.
+ * 2. We need to defensively reset any box-model properties.
+ * 3. The layout object and child items include padded gutters equal to half
+ *    a spacing unit because they sit up against each other resulting in a
+ *    gutter of a full spacing unit both for inner and outer gutters:
+ *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
+ * 4. Use negative margins on the layout object to cause the inner grid
+ *    items to sit flush against the edges of the wrapping layout object,
+ *    i.e. the outer gutters are set to bleed by default leaving only inner
+ *    gutters between grid items.
+ * 5. Use `font-size: 0;` trick to remove whitespace between items
+ */
+.o-layout {
+  display: block; /* [1] */
+  margin: 0 (($globalSpacing / 2) * -1); /* [2] [4] */
+  padding: 0; /* [2] */
+  list-style: none; /* [1] */
+
+  @if ($enableLayoutMarkupFix == false) {
+    font-size: 0; /* [5] */
+  }
+}
+
+/**
+ * 1. Required in order to combine fluid widths with fixed gutters.
+ * 2. Allows us to manipulate grids vertically, with text-level properties,
+ *    etc.
+ * 3. Default item alignment is with the tops of each other, like most
+ *    traditional grid/layout systems.
+ * 4. By default, all layout items are full-width (mobile first).
+ * 5. The layout object and child items include padded gutters equal to half
+ *    a spacing unit because they sit up against each other resulting in a
+ *    gutter of a full spacing unit both for inner and outer gutters:
+ *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
+ * 6. Set base font size to revert 'font-size: 0;' setting above
+ */
+.o-layout__item {
+  box-sizing: border-box; /* [1] */
+  display: inline-block; /* [2] */
+  vertical-align: top; /* [3] */
+  width: 100%; /* [4] */
+  padding-right: ($globalSpacing / 2); /* [5] */
+  padding-left: ($globalSpacing / 2); /* [5] */
+
+  @if ($enableLayoutMarkupFix == false) {
+    font-size: 1rem; /* [6] */
+  }
+}
+
+/* Modifiers
+ * ========================================================================== */
+
+@mixin layoutModifiers($breakpoint: null) {
+  /* Flush
+   * --------------------------- */
+
+  .o-layout--flush#{$breakpoint} {
+    margin: 0;
+
+    > .o-layout__item {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  /* Auto Width
+   * --------------------------- */
+
+  /**
+   * Cause layout items to take up a non-explicit amount of width.
+   */
+  .o-layout--auto#{$breakpoint} > .o-layout__item {
+    width: auto;
+  }
+
+  /* Spacing
+   * --------------------------- */
+
+  @each $spacingName, $spacingFactor in $globalSpacingFactors {
+    .o-layout--#{$spacingName}#{$breakpoint} {
+      margin: (0 (($globalSpacing * $spacingFactor) / 2) * -1);
+
+      > .o-layout__item {
+        padding-right: (($globalSpacing * $spacingFactor) / 2);
+        padding-left: (($globalSpacing * $spacingFactor) / 2);
+      }
+    }
+  }
+
+  /* Vertical Alignment
+   * --------------------------- */
+
+  /**
+   * Align all grid items to the tops of each other.
+   */
+  .o-layout--top#{$breakpoint} > .o-layout__item {
+    vertical-align: top;
+  }
+
+  /**
+   * Align all grid items to the middles of each other.
+   */
+  .o-layout--middle#{$breakpoint} > .o-layout__item {
+    vertical-align: middle;
+  }
+
+  /**
+   * Align all grid items to the bottoms of each other.
+   */
+  .o-layout--bottom#{$breakpoint} > .o-layout__item {
+    vertical-align: bottom;
+  }
+
+  /* Horizontal Alignment
+   * --------------------------- */
+
+  /**
+   * Fill up the layout system from the left.
+   */
+  .o-layout--left#{$breakpoint} {
+    text-align: left;
+  }
+
+  /**
+   * Fill up the layout system from the center.
+   */
+  .o-layout--center#{$breakpoint} {
+    text-align: center;
+
+    > .o-layout__item {
+      text-align: left;
+    }
+  }
+
+  /**
+   * Fill up the layout system from the right.
+   */
+  .o-layout--right#{$breakpoint} {
+    text-align: right;
+
+    > .o-layout__item {
+      text-align: left;
+    }
+  }
+
+  /**
+   * Reverse the rendered order of the grid system.
+   */
+  .o-layout--reverse#{$breakpoint} {
+    direction: rtl;
+
+    > .o-layout__item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+
+  /**
+   * Bring back rendered order of the grid system.
+   */
+  .o-layout--forward#{$breakpoint} {
+    direction: ltr;
+  }
+
+  /* Inset
+   * --------------------------- */
+
+  /**
+   * 1. Reset negative margins on the layout object to zero so that inner grid
+   *    items are inset from the edges of the wrapping layout object, i.e. the
+   *    layout object will include both inner and outer gutters around grid
+   *    items. Note: when using the inset modifier, you'd like use a wrapper
+   *    object with the flush modifier.
+   */
+  .o-layout--inset {
+    margin: 0; /* [1] */
+  }
+}
+
+@include layoutModifiers();

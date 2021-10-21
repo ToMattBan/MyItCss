@@ -1,0 +1,13 @@
+/* =========================================================================
+ * BACKGROUND COLOR UTILITIES
+ * ========================================================================= */
+
+.#{$utilityPrefix}bg#{$utilityValueSeparator}white {
+  background-color: #fff !important;
+}
+
+@each $colorName, $colorHex in $colors {
+  .#{$utilityPrefix}bg#{$utilityValueSeparator}#{$colorName} {
+    background-color: $colorHex !important;
+  }
+}

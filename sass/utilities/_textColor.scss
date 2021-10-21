@@ -1,0 +1,40 @@
+/* ==============================================================================================
+ * TEXT COLOR UTILITIES
+ * ============================================================================================== */
+
+.#{$utilityPrefix}base {
+  color: getColor("black") !important;
+}
+
+.#{$utilityPrefix}white {
+  color: #fff !important;
+}
+
+@each $colorName, $colorHex in $colors {
+  .#{$utilityPrefix}#{$colorName} {
+    color: $colorHex !important;
+  }
+}
+
+/* Links
+   ============================================================================================== */
+
+.#{$utilityPrefix}whiteLink {
+  color: #fff !important;
+
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    text-decoration: underline !important;
+  }
+}
+
+// Link hover color
+// ---------------------------
+
+.#{$utilityPrefix}hoverInherit {
+  &:hover *,
+  &:focus * {
+    color: inherit !important;
+  }
+}

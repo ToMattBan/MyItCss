@@ -1,0 +1,155 @@
+/* =========================================================================
+ * FLEX UTILITY
+ * ========================================================================= */
+
+@mixin flexUtility($breakpoint: null) {
+  /* Align Items
+	 * --------------------------- */
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}n#{$breakpoint} {
+    align-items: normal !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}sh#{$breakpoint} {
+    align-items: stretch !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}c#{$breakpoint} {
+    align-items: center !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}st#{$breakpoint} {
+    align-items: start !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}e#{$breakpoint} {
+    align-items: end !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}fs#{$breakpoint} {
+    align-items: flex-start !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}fe#{$breakpoint} {
+    align-items: flex-end !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}ss#{$breakpoint} {
+    align-items: self-start !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}se#{$breakpoint} {
+    align-items: self-end !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}bl#{$breakpoint} {
+    align-items: baseline !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}fb#{$breakpoint} {
+    align-items: first baseline !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}lb#{$breakpoint} {
+    align-items: last baseline !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}sc#{$breakpoint} {
+    align-items: safe center !important;
+  }
+
+  .#{$utilityPrefix}ai#{$utilityValueSeparator}uc#{$breakpoint} {
+    align-items: unsafe center !important;
+  }
+
+  /* Justify Content
+	 * --------------------------- */
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}c#{$breakpoint} {
+    justify-content: center !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}s#{$breakpoint} {
+    justify-content: start !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}e#{$breakpoint} {
+    justify-content: end !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}fs#{$breakpoint} {
+    justify-content: flex-start !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}fe#{$breakpoint} {
+    justify-content: flex-end !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}l#{$breakpoint} {
+    justify-content: left !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}r#{$breakpoint} {
+    justify-content: right !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}sb#{$breakpoint} {
+    justify-content: space-between !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}sa#{$breakpoint} {
+    justify-content: space-around !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}se#{$breakpoint} {
+    justify-content: space-evenly !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}st#{$breakpoint} {
+    justify-content: stretch !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}sc#{$breakpoint} {
+    justify-content: safe center !important;
+  }
+
+  .#{$utilityPrefix}jc#{$utilityValueSeparator}uc#{$breakpoint} {
+    justify-content: unsafe center !important;
+  }
+
+  /* Flex-wrap
+	 * --------------------------- */
+
+  .#{$utilityPrefix}fxw#{$utilityValueSeparator}nw#{$breakpoint} {
+    flex-wrap: nowrap !important;
+  }
+
+  .#{$utilityPrefix}fxw#{$utilityValueSeparator}w#{$breakpoint} {
+    flex-wrap: wrap !important;
+  }
+
+  .#{$utilityPrefix}fxw#{$utilityValueSeparator}wr#{$breakpoint} {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  /* Flex-direction
+	 * --------------------------- */
+
+  .#{$utilityPrefix}fxd#{$utilityValueSeparator}c#{$breakpoint} {
+    flex-direction: column !important;
+  }
+
+  .#{$utilityPrefix}fxd#{$utilityValueSeparator}cr#{$breakpoint} {
+    flex-direction: column-reverse !important;
+  }
+
+  .#{$utilityPrefix}fxd#{$utilityValueSeparator}r#{$breakpoint} {
+    flex-direction: row !important;
+  }
+
+  .#{$utilityPrefix}fxd#{$utilityValueSeparator}rr#{$breakpoint} {
+    flex-direction: row-reverse !important;
+  }
+}
+
+@include flexUtility();
