@@ -18,6 +18,7 @@
       // ---------------------------
 
       @include alignUtility($breakpoint);
+      @include cursorUtility($breakpoint);
       //@include clearfixUtility($breakpoint);
       @include displayUtility($breakpoint);
       //@include overflowUtility($breakpoint);

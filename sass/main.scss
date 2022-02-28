@@ -100,17 +100,18 @@
  * --------------------------- */
 
 @import "components/buttons";
-@import "components/carousel";
-@import "components/tags";
-@import "components/loading";
-@import "components/colorBall";
+//@import "components/carousel";
+//@import "components/tags";
+//@import "components/loading";
+//@import "components/colorBall";
 @import "components/override";
-@import "components/promotions";
+//@import "components/promotions";
 
 /* Utilities
  * --------------------------- */
 
 @import "utilities/align";
+@import "utilities/cursor";
 @import "utilities/clearfix";
 @import "utilities/display";
 @import "utilities/elevation";

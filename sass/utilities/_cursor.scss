@@ -1,0 +1,52 @@
+@mixin cursorUtility($breakpoint: null) {
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}a#{$breakpoint} {
+    cursor: auto;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}c#{$breakpoint} {
+    cursor: copy;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}d#{$breakpoint} {
+    cursor: default;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}g#{$breakpoint} {
+    cursor: grab;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}gb#{$breakpoint} {
+    cursor: grabbing;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}h#{$breakpoint} {
+    cursor: help;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}n#{$breakpoint} {
+    cursor: none;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}na#{$breakpoint} {
+    cursor: not-allowed;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}p#{$breakpoint} {
+    cursor: pointer;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}pg#{$breakpoint} {
+    cursor: progress;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}zi#{$breakpoint} {
+    cursor: zoom-in;
+  }
+
+  .#{$utilityPrefix}c#{$utilityValueSeparator}zo#{$breakpoint} {
+    cursor: zoom-out;
+  }
+}
+
+@include cursorUtility();
