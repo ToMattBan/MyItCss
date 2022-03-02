@@ -77,24 +77,6 @@
   }
 }
 
-.c-btn--tertiary {
-  background-color: getColor("black");
-  color: getColor("primary");
-
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: getColor("primary");
-  }
-
-  &:hover,
-  &:focus {
-    color: getColor("black");
-  }
-}
-
 .c-btn--primary.c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("primary");
@@ -194,15 +176,6 @@ $btnGhostBorderWidth: 2px;
     &:hover,
     &:focus {
       color: #1d2733;
-    }
-  }
-
-  &.c-btn--tertiary {
-    color: #fff;
-
-    &:hover,
-    &:focus {
-      color: #fff;
     }
   }
 }

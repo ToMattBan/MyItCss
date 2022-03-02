@@ -24,7 +24,6 @@ $colors: (
   "white": #fff,
   "primary": map_get($_colorCache, "blue"),
   "secondary": map_get($_colorCache, "green"),
-  "tertiary": map_get($_colorCache, "hardBlue"),
 );
 
 @function getColor($key) {
