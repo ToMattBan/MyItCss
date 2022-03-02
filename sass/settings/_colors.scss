@@ -6,7 +6,7 @@ $_colorCache: (
   "pink": #ff5563,
   "green": #2bc7c0,
   "hardBlue": #7281a0,
-  "blue": #6e7d9d,
+  "blue": #2196f3,
   "yellow": #ffe000,
 );
 
@@ -22,7 +22,7 @@ $colors: (
   "lightGray": #f3f3f3,
   "black": #333,
   "white": #fff,
-  "primary": map_get($_colorCache, "pink"),
+  "primary": map_get($_colorCache, "blue"),
   "secondary": map_get($_colorCache, "green"),
   "tertiary": map_get($_colorCache, "hardBlue"),
 );
