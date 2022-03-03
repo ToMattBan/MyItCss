@@ -1,11 +1,7 @@
 # MyItCss
 
-Para buildar: `npm run build`, verifique o package.json
+O MyItCss é uma ferramenta cosntruída para facilitar a vida dos front-ends
 
-Para mais comandos acesse o site da [node-sass na npm](https://www.npmjs.com/package/node-sass)
+Diferente das bibliotecas convencionais, aqui você terá o controle de seus componentes, objetos, configurações e tudo.
 
-Parar criar mais utilities, altere os arquivos dentro da pasta sass
-
-Para mudar o nome do arquivo de saída, altere o comando em package.json, ou rode um novo no seguinte formato:
-
-`npx node-modules sass/main.scss [Path para arquivo de saída]`
+O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lhe dará escalibilidade, fácil manutenção e organização no seu CSS.
