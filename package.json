@@ -1,18 +1,36 @@
 {
-    "name": "my-itcss",
-    "version": "1.0.0",
-    "description": "",
-    "scripts": {
-        "build": "node-sass sass/main.scss public/main.css && npm run minify",
-        "minify": "minify public/main.css > public/main.min.css",
-        "watch-sass": "node-sass --watch sass -o ./public"
-    },
-    "type": "module",
-    "dependencies": {
-        "node-sass": "^6.0.1",
-        "sass-mq": "^5.0.1"
-    },
-    "devDependencies": {
-        "minify": "^8.0.4"
-    }
+  "name": "my-itcss",
+  "version": "1.0.0",
+  "description": "Para buildar: `npm run build`, verifique o package.json",
+  "scripts": {
+    "build": "node-sass sass/main.scss public/main.css && npm run minify",
+    "minify": "minify public/main.css > public/main.min.css",
+    "watch-sass": "node-sass --watch sass -o ./public"
+  },
+  "type": "module",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "sass-mq": "^5.0.1"
+  },
+  "devDependencies": {
+    "minify": "^8.0.4"
+  },
+  "main": "public/main.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myrp-cleyton/MyItCss.git"
+  },
+  "files": ["public/main.min.css"],
+  "keywords": [
+    "css",
+    "it",
+    "myit",
+    "sass"
+  ],
+  "author": "ToMatt <jogodtd@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myrp-cleyton/MyItCss/issues"
+  },
+  "homepage": "https://github.com/myrp-cleyton/MyItCss#readme"
 }
