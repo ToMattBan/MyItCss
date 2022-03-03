@@ -9,11 +9,9 @@
   },
   "type": "module",
   "dependencies": {
+    "csso-cli": "^3.0.0",
     "node-sass": "^6.0.1",
     "sass-mq": "^5.0.1"
-  },
-  "devDependencies": {
-    "csso-cli": "^3.0.0"
   },
   "main": "public/main.min.css",
   "repository": {
