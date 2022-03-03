@@ -9,7 +9,8 @@ jobs:
         with:
           node-version: 10
       - run: npm install
-      - run: npm run build
+      - run: npx node-sass sass/main.scss public/main.css
+      - run: npx minify public/main.css > public/main.min.css
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
