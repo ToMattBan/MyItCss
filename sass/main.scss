@@ -55,27 +55,27 @@
 @import "tools/clearfix";
 @import "tools/elevation";
 @import "tools/hide";
-@import "tools/inputReset";
-@import "tools/position";
-@import "tools/fontAwesome";
+//@import "tools/inputReset";
+//@import "tools/position";
+//@import "tools/fontAwesome";
 @import "node_modules/sass-mq/mq";
 
 /* Generic
  * --------------------------- */
 
-@import "generic/normalize";
-@import "generic/reset";
-@import "generic/backgroundImages";
-@import "generic/boxSizing";
-@import "generic/margins";
-@import "generic/base";
+//@import "generic/normalize";
+//@import "generic/reset";
+//@import "generic/backgroundImages";
+//@import "generic/boxSizing";
+//@import "generic/margins";
+//@import "generic/base";
 
 /* Elements
  * --------------------------- */
 
-@import "elements/headings";
-@import "elements/images";
-@import "elements/tables";
+//@import "elements/headings";
+//@import "elements/images";
+//@import "elements/tables";
 
 /* Objects
  * --------------------------- */
@@ -84,17 +84,7 @@
 @import "objects/layout";
 @import "objects/grid";
 @import "objects/bareList";
-// @import "objects/box";
-// @import "objects/crop";
-// @import "objects/inlineList";
-// @import "objects/media";
-// @import "objects/pack";
-// @import "objects/ratio";
-// @import "objects/stackedMedia";
-// @import "objects/table";
-// @import "objects/vAlignMedia";
-// @import "objects/form";
-// @import "objects/tabs";
+
 
 /* Components
  * --------------------------- */
