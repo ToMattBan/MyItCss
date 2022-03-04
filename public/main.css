@@ -1456,13 +1456,13 @@ table {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 100;
-  border: none; }
+  z-index: 100; }
   .c-floatBtn button {
     width: 56px;
     height: 56px;
     background-color: #2196f3;
     padding: 0;
+    border: none;
     border-radius: 50%;
     transition: 0.3s;
     cursor: pointer;
