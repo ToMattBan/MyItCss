@@ -2421,6 +2421,9 @@ input[type="number"] {
 ._pink {
   color: #ff5563 !important; }
 
+._red {
+  color: #f44336 !important; }
+
 ._green {
   color: #4caf50 !important; }
 
@@ -2474,6 +2477,9 @@ input[type="number"] {
 
 ._bgpink {
   background-color: #ff5563 !important; }
+
+._bgred {
+  background-color: #f44336 !important; }
 
 ._bggreen {
   background-color: #4caf50 !important; }
@@ -2531,6 +2537,10 @@ input[type="number"] {
  * ========================================================================= */
 ._bdpink {
   border-color: #ff5563 !important;
+  border: solid 1px; }
+
+._bdred {
+  border-color: #f44336 !important;
   border: solid 1px; }
 
 ._bdgreen {

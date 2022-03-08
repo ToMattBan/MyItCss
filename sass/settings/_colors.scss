@@ -4,6 +4,7 @@
 
 $_colorCache: (
   "pink": #ff5563,
+  "red": #f44336,
   "green": #4caf50,
   "blue": #2196f3,
   "yellow": #ffe000,
@@ -11,6 +12,7 @@ $_colorCache: (
 
 $colors: (
   "pink": map_get($_colorCache, "pink"),
+  "red": map_get($_colorCache, "red"),
   "green": map_get($_colorCache, "green"),
   "blue": map_get($_colorCache, "blue"),
   "yellow": map_get($_colorCache, "yellow"),
