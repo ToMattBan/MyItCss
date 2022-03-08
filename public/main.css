@@ -744,6 +744,8 @@
   border: none;
   border-radius: 4px;
   transition: all 0.2s ease; }
+  .c-btn:hover, .c-btn:focus {
+    filter: brightness(0.8); }
 
 /* Style variants
  * ========================================================================== */
@@ -753,16 +755,23 @@
     text-decoration: none;
     /* [4] */
     color: #fff; }
-  .c-btn--primary:hover, .c-btn--primary:focus {
-    background-color: #1a78c2; }
 
 .c-btn--secondary {
   background-color: #4caf50; }
   .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
     text-decoration: none;
     color: #333; }
-  .c-btn--secondary:hover, .c-btn--secondary:focus {
-    background-color: #4caf50; }
+
+.c-btn--confirm {
+  background-color: #4caf50;
+  color: white; }
+
+.c-btn--deny {
+  background-color: #f44336;
+  color: white; }
+
+.c-btn--inverted:hover, .c-btn--inverted:focus {
+  filter: brightness(1); }
 
 .c-btn--primary.c-btn--inverted {
   background-color: transparent;
@@ -790,13 +799,29 @@
     color: #333;
     font-weight: normal; }
 
+.c-btn--confirm.c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px #4caf50;
+  color: #4caf50; }
+  .c-btn--confirm.c-btn--inverted:hover, .c-btn--confirm.c-btn--inverted:focus {
+    background-color: #4caf50;
+    color: #fff; }
+
+.c-btn--deny.c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px #f44336;
+  color: #f44336; }
+  .c-btn--deny.c-btn--inverted:hover, .c-btn--deny.c-btn--inverted:focus {
+    background-color: #f44336;
+    color: #fff; }
+
 /* Size variants
  * ========================================================================== */
 .c-btn--small {
   padding: 4px 12px; }
 
 .c-btn--large {
-  padding: 16px 32px; }
+  padding: 16px 64px; }
 
 /* Ghost buttons
  *
@@ -2425,6 +2450,9 @@ input[type="number"] {
 ._red {
   color: #f44336 !important; }
 
+._lightGreen {
+  color: #8bc34a !important; }
+
 ._green {
   color: #4caf50 !important; }
 
@@ -2481,6 +2509,9 @@ input[type="number"] {
 
 ._bgred {
   background-color: #f44336 !important; }
+
+._bglightGreen {
+  background-color: #8bc34a !important; }
 
 ._bggreen {
   background-color: #4caf50 !important; }
@@ -2542,6 +2573,10 @@ input[type="number"] {
 
 ._bdred {
   border-color: #f44336 !important;
+  border: solid 1px; }
+
+._bdlightGreen {
+  border-color: #8bc34a !important;
   border: solid 1px; }
 
 ._bdgreen {

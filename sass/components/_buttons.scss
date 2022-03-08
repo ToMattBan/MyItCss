@@ -38,6 +38,11 @@
   border-radius: 4px;
   transition: all 0.2s ease;
   // @include elevation(2);
+
+  &:hover,
+  &:focus {
+    filter: brightness(0.8);
+  }
 }
 
 /* Style variants
@@ -54,11 +59,6 @@
     /* [4] */
     color: #fff;
   }
-
-  &:hover,
-  &:focus {
-    background-color: mix(getColor("primary"), #000, 80%);
-  }
 }
 
 .c-btn--secondary {
@@ -71,10 +71,22 @@
     text-decoration: none;
     color: getColor("black");
   }
+}
 
+.c-btn--confirm {
+  background-color: getColor("green");
+  color: white;
+}
+
+.c-btn--deny {
+  background-color: getColor("red");
+  color: white;
+}
+
+.c-btn--inverted {
   &:hover,
   &:focus {
-    background-color: getColor("secondary");
+    filter: brightness(1);
   }
 }
 
@@ -122,6 +134,30 @@
   }
 }
 
+.c-btn--confirm.c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px getColor("green");
+  color: getColor("green");
+
+  &:hover,
+  &:focus {
+    background-color: getColor("green");
+    color: getColor("white");
+  }
+}
+
+.c-btn--deny.c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px getColor("red");
+  color: getColor("red");
+
+  &:hover,
+  &:focus {
+    background-color: getColor("red");
+    color: getColor("white");
+  }
+}
+
 /* Size variants
  * ========================================================================== */
 
@@ -130,7 +166,7 @@
 }
 
 .c-btn--large {
-  padding: $globalSpacingXs $globalSpacing;
+  padding: $globalSpacingXs $globalSpacingXl;
 }
 
 /* Ghost buttons
