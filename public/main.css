@@ -1,43 +1,4 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    #MAIN
-\*------------------------------------*/
-/**
- * SETTINGS
- * Config...............Project-level config.
- * Global...............Project-specific, globally available settings.
- *
- * TOOLS
- * Mixins...............Global mixins.
- *
- * GENERIC
- * Normalize.css........Normalise browser defaults…
- * Reset................…and zero them out.
- * Box-sizing...........More manageable box-model.
- * Shared...............Share certain high-level styles as broadly as possible.
- *
- * ELEMENTS
- * Headings.............H1–H6
- * Forms................Element-level form styling.
- *
- * OBJECTS
- * Layout...............Simple Layout abstraction tool.
- * List-bare............‘Unstyled’ lists: bullets and indent removed.
- * List-pair............Simple key–value pair list.
- * Pack.................Force elements to pack up into all available space.
- *
- * COMPONENTS
- * Forms................Component-level form styling.
- * Buttons..............Element-agnostic button styles.
- * Comments.............Comment styles.
- * Messaging............User feedback messaging.
- *
- * TRUMPS
- * Typography...........Utilities for manipulating text.
- * Display..............Helper classes for showing or hiding content.
- * Widths...............Width helper classes for use with our Layout system.
- *
- */
 /* Settings
  * --------------------------- */
 /* =========================================================================
@@ -795,12 +756,12 @@
     background-color: #1a78c2; }
 
 .c-btn--secondary {
-  background-color: #2bc7c0; }
+  background-color: #4caf50; }
   .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
     text-decoration: none;
     color: #333; }
   .c-btn--secondary:hover, .c-btn--secondary:focus {
-    background-color: #2bc7c0; }
+    background-color: #4caf50; }
 
 .c-btn--primary.c-btn--inverted {
   background-color: transparent;
@@ -817,14 +778,14 @@
 
 .c-btn--secondary.c-btn--inverted {
   background-color: transparent;
-  border: solid 1px #2bc7c0; }
+  border: solid 1px #4caf50; }
   .c-btn--secondary.c-btn--inverted, .c-btn--secondary.c-btn--inverted:hover, .c-btn--secondary.c-btn--inverted:active, .c-btn--secondary.c-btn--inverted:focus {
     text-decoration: none;
     /* [4] */
-    color: #2bc7c0;
+    color: #4caf50;
     font-weight: normal; }
   .c-btn--secondary.c-btn--inverted:hover, .c-btn--secondary.c-btn--inverted:focus {
-    background-color: #2bc7c0;
+    background-color: #4caf50;
     color: #333;
     font-weight: normal; }
 
@@ -1222,6 +1183,8 @@ input[type="number"] {
 ._fxdrr {
   flex-direction: row-reverse !important; }
 
+/* Gap
+	 * --------------------------- */
 /* ==========================================================================
  * OVERFLOW UTILITY
  * ========================================================================== */
@@ -2459,10 +2422,7 @@ input[type="number"] {
   color: #ff5563 !important; }
 
 ._green {
-  color: #2bc7c0 !important; }
-
-._hardBlue {
-  color: #7281a0 !important; }
+  color: #4caf50 !important; }
 
 ._blue {
   color: #2196f3 !important; }
@@ -2492,7 +2452,7 @@ input[type="number"] {
   color: #2196f3 !important; }
 
 ._secondary {
-  color: #2bc7c0 !important; }
+  color: #4caf50 !important; }
 
 /* Links
    ============================================================================================== */
@@ -2516,10 +2476,7 @@ input[type="number"] {
   background-color: #ff5563 !important; }
 
 ._bggreen {
-  background-color: #2bc7c0 !important; }
-
-._bghardBlue {
-  background-color: #7281a0 !important; }
+  background-color: #4caf50 !important; }
 
 ._bgblue {
   background-color: #2196f3 !important; }
@@ -2549,7 +2506,7 @@ input[type="number"] {
   background-color: #2196f3 !important; }
 
 ._bgsecondary {
-  background-color: #2bc7c0 !important; }
+  background-color: #4caf50 !important; }
 
 /* =========================================================================
  * BORDER RADIUS UTILITIES
@@ -2577,11 +2534,7 @@ input[type="number"] {
   border: solid 1px; }
 
 ._bdgreen {
-  border-color: #2bc7c0 !important;
-  border: solid 1px; }
-
-._bdhardBlue {
-  border-color: #7281a0 !important;
+  border-color: #4caf50 !important;
   border: solid 1px; }
 
 ._bdblue {
@@ -2621,7 +2574,7 @@ input[type="number"] {
   border: solid 1px; }
 
 ._bdsecondary {
-  border-color: #2bc7c0 !important;
+  border-color: #4caf50 !important;
   border: solid 1px; }
 
 ._bd2 {
