@@ -32,7 +32,8 @@
   /* [4] */
   cursor: pointer;
   /* [5] */
-  padding: $globalSpacingXxs $globalSpacingXs;
+  padding: $globalSpacingXxs $globalSpacing;
+  text-transform: uppercase;
   border: none;
   border-radius: 4px;
   transition: all 0.2s ease;
