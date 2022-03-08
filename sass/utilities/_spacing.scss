@@ -64,6 +64,14 @@ $spacingFactors: $globalSpacingFactors !default;
       }
     }
   }
+
+  .#{$utilityPrefix}mla#{$breakpoint} {
+    margin-left: auto; 
+  }
+
+  .#{$utilityPrefix}mra#{$breakpoint} {
+    margin-right: auto; 
+  }
 }
 
 /**

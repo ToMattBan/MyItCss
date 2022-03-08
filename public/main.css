@@ -2064,6 +2064,12 @@ input[type="number"] {
   margin-top: -128px !important;
   margin-bottom: -128px !important; }
 
+._mla {
+  margin-left: auto; }
+
+._mra {
+  margin-right: auto; }
+
 /* ==========================================================================
  * TYPOGRAPHY UTILITY
  * ========================================================================== */
@@ -3414,6 +3420,10 @@ input[type="number"] {
   ._mvnxxl\@tabletV {
     margin-top: -128px !important;
     margin-bottom: -128px !important; }
+  ._mla\@tabletV {
+    margin-left: auto; }
+  ._mra\@tabletV {
+    margin-right: auto; }
   /* Font Sizes
    * ======================================================================== */
   ._fz48\@tabletV {
@@ -4374,6 +4384,10 @@ input[type="number"] {
   ._mvnxxl\@tabletH {
     margin-top: -128px !important;
     margin-bottom: -128px !important; }
+  ._mla\@tabletH {
+    margin-left: auto; }
+  ._mra\@tabletH {
+    margin-right: auto; }
   /* Font Sizes
    * ======================================================================== */
   ._fz48\@tabletH {
@@ -5334,6 +5348,10 @@ input[type="number"] {
   ._mvnxxl\@laptop {
     margin-top: -128px !important;
     margin-bottom: -128px !important; }
+  ._mla\@laptop {
+    margin-left: auto; }
+  ._mra\@laptop {
+    margin-right: auto; }
   /* Font Sizes
    * ======================================================================== */
   ._fz48\@laptop {
@@ -6288,6 +6306,10 @@ input[type="number"] {
   ._mvnxxl\@desktop {
     margin-top: -128px !important;
     margin-bottom: -128px !important; }
+  ._mla\@desktop {
+    margin-left: auto; }
+  ._mra\@desktop {
+    margin-right: auto; }
   /* Font Sizes
    * ======================================================================== */
   ._fz48\@desktop {
