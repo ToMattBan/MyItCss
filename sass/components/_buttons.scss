@@ -33,6 +33,7 @@
   cursor: pointer;
   /* [5] */
   padding: $globalSpacingXxs $globalSpacing;
+  background: transparent;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
@@ -42,6 +43,7 @@
   &:hover,
   &:focus {
     filter: brightness(0.8);
+    background-color: transparent;
   }
 }
 
@@ -55,6 +57,7 @@
   &:hover,
   &:active,
   &:focus {
+    background-color: getColor("primary");
     text-decoration: none;
     /* [4] */
     color: #fff;
@@ -68,6 +71,7 @@
   &:hover,
   &:active,
   &:focus {
+    background-color: getColor("secondary");
     text-decoration: none;
     color: getColor("black");
   }
@@ -76,11 +80,25 @@
 .c-btn--confirm {
   background-color: getColor("green");
   color: white;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: getColor("green");
+  }
 }
 
 .c-btn--deny {
   background-color: getColor("red");
   color: white;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: getColor("red");
+  }
 }
 
 .c-btn--inverted {

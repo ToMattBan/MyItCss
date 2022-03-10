@@ -9,6 +9,7 @@ $_colorCache: (
   "green": #4caf50,
   "blue": #2196f3,
   "yellow": #ffe000,
+  "orange": #ff9800,
 );
 
 $colors: (
@@ -18,6 +19,7 @@ $colors: (
   "green": map_get($_colorCache, "green"),
   "blue": map_get($_colorCache, "blue"),
   "yellow": map_get($_colorCache, "yellow"),
+  "orange": map_get($_colorCache, "orange"),
   "textGray": #555555,
   "mediumGray": #707070,
   "strokeGray": #d8d8d8,

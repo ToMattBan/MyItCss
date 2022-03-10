@@ -740,18 +740,21 @@
   cursor: pointer;
   /* [5] */
   padding: 8px 32px;
+  background: transparent;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
   transition: all 0.2s ease; }
   .c-btn:hover, .c-btn:focus {
-    filter: brightness(0.8); }
+    filter: brightness(0.8);
+    background-color: transparent; }
 
 /* Style variants
  * ========================================================================== */
 .c-btn--primary {
   background-color: #2196f3; }
   .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus {
+    background-color: #2196f3;
     text-decoration: none;
     /* [4] */
     color: #fff; }
@@ -759,16 +762,21 @@
 .c-btn--secondary {
   background-color: #4caf50; }
   .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
+    background-color: #4caf50;
     text-decoration: none;
     color: #333; }
 
 .c-btn--confirm {
   background-color: #4caf50;
   color: white; }
+  .c-btn--confirm, .c-btn--confirm:hover, .c-btn--confirm:active, .c-btn--confirm:focus {
+    background-color: #4caf50; }
 
 .c-btn--deny {
   background-color: #f44336;
   color: white; }
+  .c-btn--deny, .c-btn--deny:hover, .c-btn--deny:active, .c-btn--deny:focus {
+    background-color: #f44336; }
 
 .c-btn--inverted:hover, .c-btn--inverted:focus {
   filter: brightness(1); }
@@ -2468,6 +2476,9 @@ input[type="number"] {
 ._yellow {
   color: #ffe000 !important; }
 
+._orange {
+  color: #ff9800 !important; }
+
 ._textGray {
   color: #555555 !important; }
 
@@ -2527,6 +2538,9 @@ input[type="number"] {
 
 ._bgyellow {
   background-color: #ffe000 !important; }
+
+._bgorange {
+  background-color: #ff9800 !important; }
 
 ._bgtextGray {
   background-color: #555555 !important; }
@@ -2595,6 +2609,10 @@ input[type="number"] {
 
 ._bdyellow {
   border-color: #ffe000 !important;
+  border: solid 1px; }
+
+._bdorange {
+  border-color: #ff9800 !important;
   border: solid 1px; }
 
 ._bdtextGray {
