@@ -53,49 +53,21 @@
 // commenting out whitespace or minifying HTML.
 $enableLayoutMarkupFix: false !default;
 
-/* Default/mandatory Classes
- * ========================================================================== */
-
-/**
- * 1. Allows us to use the layout object on any type of element.
- * 2. We need to defensively reset any box-model properties.
- * 3. The layout object and child items include padded gutters equal to half
- *    a spacing unit because they sit up against each other resulting in a
- *    gutter of a full spacing unit both for inner and outer gutters:
- *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
- * 4. Use negative margins on the layout object to cause the inner grid
- *    items to sit flush against the edges of the wrapping layout object,
- *    i.e. the outer gutters are set to bleed by default leaving only inner
- *    gutters between grid items.
- * 5. Use `font-size: 0;` trick to remove whitespace between items
- */
 .o-layout {
-  display: block; /* [1] */
-  margin: 0 (($globalSpacing / 2) * -1); /* [2] [4] */
-  padding: 0; /* [2] */
-  list-style: none; /* [1] */
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 0 (($globalSpacing / 2) * -1);
+  padding: 0;
+  list-style: none;
 
   @if ($enableLayoutMarkupFix == false) {
-    font-size: 0; /* [5] */
+    font-size: 0;
   }
 }
 
-/**
- * 1. Required in order to combine fluid widths with fixed gutters.
- * 2. Allows us to manipulate grids vertically, with text-level properties,
- *    etc.
- * 3. Default item alignment is with the tops of each other, like most
- *    traditional grid/layout systems.
- * 4. By default, all layout items are full-width (mobile first).
- * 5. The layout object and child items include padded gutters equal to half
- *    a spacing unit because they sit up against each other resulting in a
- *    gutter of a full spacing unit both for inner and outer gutters:
- *    http://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design/
- * 6. Set base font size to revert 'font-size: 0;' setting above
- */
 .o-layout__item {
   box-sizing: border-box; /* [1] */
-  display: inline-block; /* [2] */
+  display: flex; /* [2] */
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
   padding-right: ($globalSpacing / 2); /* [5] */
@@ -103,6 +75,10 @@ $enableLayoutMarkupFix: false !default;
 
   @if ($enableLayoutMarkupFix == false) {
     font-size: 1rem; /* [6] */
+  }
+
+  & > * {
+    width: 100%;
   }
 }
 

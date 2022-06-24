@@ -65,12 +65,30 @@ $spacingFactors: $globalSpacingFactors !default;
     }
   }
 
+  .#{$utilityPrefix}mta#{$breakpoint} {
+    margin-top: auto; 
+  }
+  
+  .#{$utilityPrefix}mba#{$breakpoint} {
+    margin-bottom: auto; 
+  }
+  
+  .#{$utilityPrefix}mva#{$breakpoint} {
+    margin-top: auto; 
+    margin-bottom: auto; 
+  }
+  
   .#{$utilityPrefix}mla#{$breakpoint} {
     margin-left: auto; 
   }
-
+  
   .#{$utilityPrefix}mra#{$breakpoint} {
     margin-right: auto; 
+  }
+  
+  .#{$utilityPrefix}mha#{$breakpoint} {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
