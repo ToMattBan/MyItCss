@@ -1,16 +1,16 @@
 /* 
     USAGE:
 
-    <div class="c-floatBtn">
+    <div class="_c-floatBtn">
         <button>
             <i class="material-icons" (Ou outro pacote de ícones) >
                 done
             </i>
-        </button
+        </button>
     </div>
 */
 
-.c-floatBtn {
+._c-floatBtn {
     position: fixed;
     right: 24px;
     bottom: 24px;

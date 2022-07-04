@@ -5,9 +5,9 @@
  *
  * Classes that can be used on an `<a>`, `<button>` or `<input>` element.
  *
- * .c-btn--primary - Use this class to indicate that the button is the primary
+ * ._c-btn--primary - Use this class to indicate that the button is the primary
  *                   feature of this form.
- * .c-btn--remove  - Use this class to indicate that the button will remove a
+ * ._c-btn--remove  - Use this class to indicate that the button will remove a
  *                   feature, or other negative connotations.
  * ========================================================================== */
 
@@ -19,7 +19,7 @@
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.c-btn {
+._c-btn {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -50,7 +50,7 @@
 /* Style variants
  * ========================================================================== */
 
-.c-btn--primary {
+._c-btn--primary {
   background-color: getColor("primary");
 
   &,
@@ -64,7 +64,7 @@
   }
 }
 
-.c-btn--secondary {
+._c-btn--secondary {
   background-color: getColor("secondary");
 
   &,
@@ -77,7 +77,7 @@
   }
 }
 
-.c-btn--confirm {
+._c-btn--confirm {
   background-color: getColor("green");
   color: white;
 
@@ -89,7 +89,7 @@
   }
 }
 
-.c-btn--deny {
+._c-btn--deny {
   background-color: getColor("red");
   color: white;
 
@@ -101,14 +101,14 @@
   }
 }
 
-.c-btn--inverted {
+._c-btn--inverted {
   &:hover,
   &:focus {
     filter: brightness(1);
   }
 }
 
-.c-btn--primary.c-btn--inverted {
+._c-btn--primary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("primary");
 
@@ -130,7 +130,7 @@
   }
 }
 
-.c-btn--secondary.c-btn--inverted {
+._c-btn--secondary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("secondary");
 
@@ -152,7 +152,7 @@
   }
 }
 
-.c-btn--confirm.c-btn--inverted {
+._c-btn--confirm._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("green");
   color: getColor("green");
@@ -164,7 +164,7 @@
   }
 }
 
-.c-btn--deny.c-btn--inverted {
+._c-btn--deny._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("red");
   color: getColor("red");
@@ -179,11 +179,11 @@
 /* Size variants
  * ========================================================================== */
 
-.c-btn--small {
+._c-btn--small {
   padding: 4px 12px;
 }
 
-.c-btn--large {
+._c-btn--large {
   padding: $globalSpacingXs $globalSpacingXl;
 }
 
@@ -194,7 +194,7 @@
 
 $btnGhostBorderWidth: 2px;
 
-.c-btn--ghost {
+._c-btn--ghost {
   border: $btnGhostBorderWidth solid currentColor;
   padding: ($globalSpacingSm - $btnGhostBorderWidth)
     ($globalSpacing - $btnGhostBorderWidth);
@@ -206,17 +206,17 @@ $btnGhostBorderWidth: 2px;
     background: none;
   }
 
-  &.c-btn--small {
+  &._c-btn--small {
     padding: ($globalSpacingXs - $btnGhostBorderWidth)
       ($globalSpacingSm - $btnGhostBorderWidth);
   }
 
-  &.c-btn--large {
+  &._c-btn--large {
     padding: ($globalSpacing - $btnGhostBorderWidth)
       ($globalSpacingLg - $btnGhostBorderWidth);
   }
 
-  &.c-btn--primary {
+  &._c-btn--primary {
     color: #4a8ec2;
 
     &:hover,
@@ -225,7 +225,7 @@ $btnGhostBorderWidth: 2px;
     }
   }
 
-  &.c-btn--secondary {
+  &._c-btn--secondary {
     color: #2f4054;
 
     &:hover,

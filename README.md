@@ -9,4 +9,5 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 ## Changelog
 
 ### 1.3.3
-- Objects are now using _ before the class. Example: _o-layout
+- Objects are now using _ before the class. Example: _o-layout;
+- Components are now using _ before the class. Example: _c-floatBtn;
