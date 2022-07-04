@@ -8,6 +8,10 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 
 ## Changelog
 
+### 1.3.6
+- Fix some issues on _c-card when we don't want the actions
+- Fix some flex issues on _o-layout__item
+
 ### 1.3.5
 - Added _c-card component;
 - Created boxShape() to use as a elevation alternative;

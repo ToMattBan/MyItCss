@@ -15,6 +15,7 @@ $enableLayoutMarkupFix: false !default;
 ._o-layout__item {
   box-sizing: border-box; /* [1] */
   display: flex; /* [2] */
+  flex-wrap: wrap;
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
   padding-right: ($globalSpacing / 2); /* [5] */

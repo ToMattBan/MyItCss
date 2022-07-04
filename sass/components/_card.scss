@@ -19,7 +19,7 @@
     @include boxShape();
     margin: 12px 0;
 
-    > div:first-child {
+    > div:nth-child(1) {
         padding: 24px;
 
         p {
@@ -27,7 +27,7 @@
         }
     }
 
-    > div:last-child {
+    > div:nth-child(2) {
         padding: 16px 24px;
         text-transform: uppercase;
         border-top: 1px solid getColor('strokeGray');
