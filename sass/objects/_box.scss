@@ -10,7 +10,7 @@
  * 2. Applies default padding. Override with size modifier classes.
  *    <div class="o-box o-box--xs">
  */
-.o-box {
+._o-box {
   @include clearfix();
   display: block; /* [1] */
   padding: $globalSpacing; /* [2] */
@@ -24,7 +24,7 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  .o-box#{$spacingName} {
+  ._o-box#{$spacingName} {
     padding: ($globalSpacing * $spacingFactor);
   }
 }

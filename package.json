@@ -1,6 +1,6 @@
 {
   "name": "my-itcss",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Biblioteca baseada no ItCss para ajudar a escrever CSS",
   "scripts": {
     "build": "node-sass sass/main.scss public/main.css && npm run minify",

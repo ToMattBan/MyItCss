@@ -2,9 +2,9 @@
  * FORM COMPONENT
  * ========================================================================= */
 
-//.o-form {}
+//._o-form {}
 
-.o-form__fields {
+._o-form__fields {
   margin: 0 ($globalSpacingXs * -1);
   padding: 0;
   list-style-type: none;
@@ -15,7 +15,7 @@
   }
 }
 
-.o-form__field {
+._o-form__field {
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -27,11 +27,11 @@
   border: solid 1px getColor("strokeGray");
 }
 
-.o-form__field--center {
+._o-form__field--center {
   text-align: center;
 }
 
-.o-form__label {
+._o-form__label {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: 600;
@@ -39,29 +39,29 @@
   cursor: text;
 }
 
-.o-form__required {
+._o-form__required {
   display: inline-block;
   font-style: normal;
   color: getColor("secondary");
   margin-left: 4px;
 }
 
-.o-form__field--checkbox {
+._o-form__field--checkbox {
   width: auto;
 }
 
 /* Labels
    ===================================================================== */
 
-.o-form__label {
+._o-form__label {
   font-weight: 500;
 }
 
 /* Inputs
    ========================================================================= */
 
-.o-form__input,
-.o-form__textarea {
+._o-form__input,
+._o-form__textarea {
   padding: 9px 16px;
   width: 100%;
   background-color: getColor("gray");
@@ -77,27 +77,27 @@
   }
 }
 
-.o-form__input {
+._o-form__input {
   &:focus {
     outline: 0;
     border-color: getColor("primary");
   }
 }
 
-.o-form__textarea:focus {
+._o-form__textarea:focus {
   outline: 0;
 }
 
 /* Checkbox
    ========================================================================= */
 
-.o-form__checkbox,
-.o-form__radio {
+._o-form__checkbox,
+._o-form__radio {
   display: none;
 }
 
-.o-form__label--checkbox,
-.o-form__label--radio {
+._o-form__label--checkbox,
+._o-form__label--radio {
   cursor: pointer;
 
   &:before {
@@ -116,16 +116,16 @@
   }
 }
 
-.o-form__checkbox:checked + .o-form__label--checkbox:before {
+._o-form__checkbox:checked + ._o-form__label--checkbox:before {
   content: "\f14a";
   color: getColor("secondary");
 }
 
-.o-form__label--radio:before {
+._o-form__label--radio:before {
   content: "\f111";
 }
 
-.o-form__radio:checked + .o-form__label--radio:before {
+._o-form__radio:checked + ._o-form__label--radio:before {
   content: "\f058";
   color: getColor("secondary");
 }
@@ -133,18 +133,18 @@
 /* Validation
    ========================================================================= */
 
-.o-form__formValidationMessage {
+._o-form__formValidationMessage {
   margin-bottom: $globalSpacingXs;
   font-size: getFontSize(16);
   color: getColor("secondary");
 }
 
-.o-form__fieldValidationMessage {
+._o-form__fieldValidationMessage {
   font-size: getFontSize(16);
   color: getColor("secondary");
 }
 
-.o-form__confirmationMessage {
+._o-form__confirmationMessage {
   padding: $globalSpacingSm $globalSpacingXs;
   background: getColor("primary");
   font-weight: 700;
@@ -155,14 +155,14 @@
 /* Footer
    ========================================================================= */
 
-.o-form__footer {
+._o-form__footer {
   text-align: left;
 }
 
 /* Cadastro 
 	========================================================================= */
 
-.o-form--cadastro .o-form__field {
+._o-form--cadastro ._o-form__field {
   border: solid 2px getColor("strokeGray");
   padding: 14px 11px;
 

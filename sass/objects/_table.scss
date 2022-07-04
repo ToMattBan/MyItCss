@@ -5,7 +5,7 @@
 /**
  * A simple object for manipulating the structure of HTML `table`s.
  */
-.o-table {
+._o-table {
   width: 100%;
 }
 
@@ -18,7 +18,7 @@
  * https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
  * ========================================================================== */
 
-.o-table--fixed {
+._o-table--fixed {
   table-layout: fixed;
 }
 
@@ -26,7 +26,7 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  .o-table--#{$spacingName} {
+  ._o-table--#{$spacingName} {
     th,
     td {
       padding: ($globalSpacing * $spacingFactor);
