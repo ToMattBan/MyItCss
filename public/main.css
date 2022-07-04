@@ -635,9 +635,9 @@
  *
  * Classes that can be used on an `<a>`, `<button>` or `<input>` element.
  *
- * .c-btn--primary - Use this class to indicate that the button is the primary
+ * ._c-btn--primary - Use this class to indicate that the button is the primary
  *                   feature of this form.
- * .c-btn--remove  - Use this class to indicate that the button will remove a
+ * ._c-btn--remove  - Use this class to indicate that the button will remove a
  *                   feature, or other negative connotations.
  * ========================================================================== */
 /**
@@ -648,7 +648,7 @@
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.c-btn {
+._c-btn {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -667,131 +667,157 @@
   border: none;
   border-radius: 4px;
   transition: all 0.2s ease; }
-  .c-btn:hover, .c-btn:focus {
+  ._c-btn:hover, ._c-btn:focus {
     filter: brightness(0.8);
     background-color: transparent; }
 
 /* Style variants
  * ========================================================================== */
-.c-btn--primary {
+._c-btn--primary {
   background-color: #2196f3; }
-  .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus {
+  ._c-btn--primary, ._c-btn--primary:hover, ._c-btn--primary:active, ._c-btn--primary:focus {
     background-color: #2196f3;
     text-decoration: none;
     /* [4] */
     color: #fff; }
 
-.c-btn--secondary {
+._c-btn--secondary {
   background-color: #4caf50; }
-  .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
+  ._c-btn--secondary, ._c-btn--secondary:hover, ._c-btn--secondary:active, ._c-btn--secondary:focus {
     background-color: #4caf50;
     text-decoration: none;
     color: #333; }
 
-.c-btn--confirm {
+._c-btn--confirm {
   background-color: #4caf50;
   color: white; }
-  .c-btn--confirm, .c-btn--confirm:hover, .c-btn--confirm:active, .c-btn--confirm:focus {
+  ._c-btn--confirm, ._c-btn--confirm:hover, ._c-btn--confirm:active, ._c-btn--confirm:focus {
     background-color: #4caf50; }
 
-.c-btn--deny {
+._c-btn--deny {
   background-color: #f44336;
   color: white; }
-  .c-btn--deny, .c-btn--deny:hover, .c-btn--deny:active, .c-btn--deny:focus {
+  ._c-btn--deny, ._c-btn--deny:hover, ._c-btn--deny:active, ._c-btn--deny:focus {
     background-color: #f44336; }
 
-.c-btn--inverted:hover, .c-btn--inverted:focus {
+._c-btn--inverted:hover, ._c-btn--inverted:focus {
   filter: brightness(1); }
 
-.c-btn--primary.c-btn--inverted {
+._c-btn--primary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #2196f3; }
-  .c-btn--primary.c-btn--inverted, .c-btn--primary.c-btn--inverted:hover, .c-btn--primary.c-btn--inverted:active, .c-btn--primary.c-btn--inverted:focus {
+  ._c-btn--primary._c-btn--inverted, ._c-btn--primary._c-btn--inverted:hover, ._c-btn--primary._c-btn--inverted:active, ._c-btn--primary._c-btn--inverted:focus {
     text-decoration: none;
     /* [4] */
     color: #2196f3;
     font-weight: normal; }
-  .c-btn--primary.c-btn--inverted:hover, .c-btn--primary.c-btn--inverted:focus {
+  ._c-btn--primary._c-btn--inverted:hover, ._c-btn--primary._c-btn--inverted:focus {
     background-color: #2196f3;
     color: #fff;
     font-weight: normal; }
 
-.c-btn--secondary.c-btn--inverted {
+._c-btn--secondary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #4caf50; }
-  .c-btn--secondary.c-btn--inverted, .c-btn--secondary.c-btn--inverted:hover, .c-btn--secondary.c-btn--inverted:active, .c-btn--secondary.c-btn--inverted:focus {
+  ._c-btn--secondary._c-btn--inverted, ._c-btn--secondary._c-btn--inverted:hover, ._c-btn--secondary._c-btn--inverted:active, ._c-btn--secondary._c-btn--inverted:focus {
     text-decoration: none;
     /* [4] */
     color: #4caf50;
     font-weight: normal; }
-  .c-btn--secondary.c-btn--inverted:hover, .c-btn--secondary.c-btn--inverted:focus {
+  ._c-btn--secondary._c-btn--inverted:hover, ._c-btn--secondary._c-btn--inverted:focus {
     background-color: #4caf50;
     color: #333;
     font-weight: normal; }
 
-.c-btn--confirm.c-btn--inverted {
+._c-btn--confirm._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #4caf50;
   color: #4caf50; }
-  .c-btn--confirm.c-btn--inverted:hover, .c-btn--confirm.c-btn--inverted:focus {
+  ._c-btn--confirm._c-btn--inverted:hover, ._c-btn--confirm._c-btn--inverted:focus {
     background-color: #4caf50;
     color: #fff; }
 
-.c-btn--deny.c-btn--inverted {
+._c-btn--deny._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #f44336;
   color: #f44336; }
-  .c-btn--deny.c-btn--inverted:hover, .c-btn--deny.c-btn--inverted:focus {
+  ._c-btn--deny._c-btn--inverted:hover, ._c-btn--deny._c-btn--inverted:focus {
     background-color: #f44336;
     color: #fff; }
 
 /* Size variants
  * ========================================================================== */
-.c-btn--small {
+._c-btn--small {
   padding: 4px 12px; }
 
-.c-btn--large {
+._c-btn--large {
   padding: 16px 64px; }
 
 /* Ghost buttons
  *
  * Ghost buttons have see-through backgrounds and are bordered.
  * ========================================================================== */
-.c-btn--ghost {
+._c-btn--ghost {
   border: 2px solid currentColor;
   padding: 22px 30px; }
-  .c-btn--ghost, .c-btn--ghost:hover, .c-btn--ghost:active, .c-btn--ghost:focus {
+  ._c-btn--ghost, ._c-btn--ghost:hover, ._c-btn--ghost:active, ._c-btn--ghost:focus {
     background: none; }
-  .c-btn--ghost.c-btn--small {
+  ._c-btn--ghost._c-btn--small {
     padding: 14px 22px; }
-  .c-btn--ghost.c-btn--large {
+  ._c-btn--ghost._c-btn--large {
     padding: 30px 46px; }
-  .c-btn--ghost.c-btn--primary {
+  ._c-btn--ghost._c-btn--primary {
     color: #4a8ec2; }
-    .c-btn--ghost.c-btn--primary:hover, .c-btn--ghost.c-btn--primary:focus {
+    ._c-btn--ghost._c-btn--primary:hover, ._c-btn--ghost._c-btn--primary:focus {
       color: #3774a2; }
-  .c-btn--ghost.c-btn--secondary {
+  ._c-btn--ghost._c-btn--secondary {
     color: #2f4054; }
-    .c-btn--ghost.c-btn--secondary:hover, .c-btn--ghost.c-btn--secondary:focus {
+    ._c-btn--ghost._c-btn--secondary:hover, ._c-btn--ghost._c-btn--secondary:focus {
       color: #1d2733; }
 
 /* 
     USAGE:
 
-    <div class="c-floatBtn">
+    <div class="_c-card">
+        <div>
+            <p>Content here</p>
+        </div>
+
+        <div> --> This is opcional, you can use just the content
+            <a class="_blue">Action here</a>
+        </div>
+    </div>
+*/
+._c-card {
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  margin: 12px 0; }
+  ._c-card > div:first-child {
+    padding: 24px; }
+    ._c-card > div:first-child p {
+      margin: 0; }
+  ._c-card > div:last-child {
+    padding: 16px 24px;
+    text-transform: uppercase;
+    border-top: 1px solid #d8d8d8; }
+
+/* 
+    USAGE:
+
+    <div class="_c-floatBtn">
         <button>
             <i class="material-icons" (Ou outro pacote de ícones) >
                 done
             </i>
-        </button
+        </button>
     </div>
 */
-.c-floatBtn {
+._c-floatBtn {
   position: fixed;
   right: 24px;
   bottom: 24px;
   z-index: 100; }
-  .c-floatBtn button {
+  ._c-floatBtn button {
     width: 56px;
     height: 56px;
     background-color: #2196f3;
@@ -802,11 +828,11 @@
     cursor: pointer;
     display: inline-block;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.02), 0px 1px 5px 0px rgba(0, 0, 0, 0.1); }
-    .c-floatBtn button:hover {
+    ._c-floatBtn button:hover {
       box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
-    .c-floatBtn button:focus {
+    ._c-floatBtn button:focus {
       background-color: #2196f3; }
-    .c-floatBtn button i {
+    ._c-floatBtn button i {
       line-height: 56px;
       width: inherit;
       display: inline-block;
