@@ -1,6 +1,6 @@
 # MyItCss
 
-O MyItCss é uma ferramenta cosntruída para facilitar a vida dos front-ends
+O MyItCss é uma ferramenta construída para facilitar a vida dos front-ends
 
 Diferente das bibliotecas convencionais, aqui você terá o controle de seus componentes, objetos, configurações e tudo.
 
