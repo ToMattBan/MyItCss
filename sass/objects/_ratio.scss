@@ -24,7 +24,7 @@ $ratios: (
   )
 ) !default;
 
-.o-ratio {
+._o-ratio {
   position: relative;
   display: block;
   overflow: hidden;
@@ -37,10 +37,10 @@ $ratios: (
   }
 }
 
-.o-ratio__content,
-.o-ratio > iframe,
-.o-ratio > embed,
-.o-ratio > object {
+._o-ratio__content,
+._o-ratio > iframe,
+._o-ratio > embed,
+._o-ratio > object {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -55,7 +55,7 @@ $ratios: (
  *
  * Generate a series of ratio classes to be used like so:
  *
- * <div class="o-ratio  o-ratio--16:9">
+ * <div class="_o-ratio  _o-ratio--16:9">
  * ========================================================================== */
 
 @each $ratio in $ratios {
@@ -68,7 +68,7 @@ $ratios: (
       @error "`#{$consequent}` needs to be a number.";
     }
 
-    .o-ratio--#{$antecedent}\:#{$consequent}:before {
+    ._o-ratio--#{$antecedent}\:#{$consequent}:before {
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
   }

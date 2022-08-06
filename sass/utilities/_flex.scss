@@ -150,6 +150,9 @@
   .#{$utilityPrefix}fxd#{$utilityValueSeparator}rr#{$breakpoint} {
     flex-direction: row-reverse !important;
   }
+
+  /* Gap
+	 * --------------------------- */
 }
 
 @include flexUtility();

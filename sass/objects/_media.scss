@@ -5,20 +5,20 @@
  * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
  * Examples: http://v4-alpha.getbootstrap.com/layout/media-object/
  *
- * <div class="o-media">
- *   <img class="o-media__img">
- *   <div class="o-media__body">
+ * <div class="_o-media">
+ *   <img class="_o-media__img">
+ *   <div class="_o-media__body">
  *     <p>Body Content</p>
  *   </div>
  * </div>
  * ========================================================================== */
 
-.o-media {
+._o-media {
   @include clearfix();
   display: block;
 }
 
-.o-media__img {
+._o-media__img {
   float: left;
   margin-right: $globalSpacing;
 
@@ -27,7 +27,7 @@
   }
 }
 
-.o-media__body {
+._o-media__body {
   overflow: hidden;
   display: block;
 
@@ -40,8 +40,8 @@
 /* Reversed media objects
  * ========================================================================== */
 
-.o-media--reverse {
-  > .o-media__img {
+._o-media--reverse {
+  > ._o-media__img {
     float: right;
     margin-right: 0;
     margin-left: $globalSpacing;
@@ -51,8 +51,8 @@
 /* Gutterless media objects
  * ========================================================================== */
 
-.o-media--flush {
-  > .o-media__img {
+._o-media--flush {
+  > ._o-media__img {
     margin-right: 0;
     margin-left: 0;
   }
@@ -65,13 +65,13 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  .o-media--#{$spacingName} {
-    > .o-media__img {
+  ._o-media--#{$spacingName} {
+    > ._o-media__img {
       padding-right: ($globalSpacing * $spacingFactor);
     }
 
-    &.o-media--reverse {
-      > .o-media__img {
+    &._o-media--reverse {
+      > ._o-media__img {
         padding-right: 0;
         padding-left: ($globalSpacing * $spacingFactor);
       }

@@ -8,8 +8,8 @@
  * Includes modifiers for applying auto-widths and gutter sizes to
  * pack items, useful for generating tabs UIs.
  *
- * <ul class="o-pack o-pack--xs o-pack--auto">
- *   <li class="o-pack__item"></li>
+ * <ul class="_o-pack _o-pack--xs _o-pack--auto">
+ *   <li class="_o-pack__item"></li>
  * </ul>
  *
  * 1. Fill all available space.
@@ -17,7 +17,7 @@
  * 3. Cause children to be automatically equally sized.
  * ========================================================================== */
 
-.o-pack {
+._o-pack {
   width: 100%; /* [1] */
   margin-left: 0; /* [2] */
   display: table;
@@ -28,18 +28,18 @@
  * 1. Cause children to adopt table-like structure.
  * 2. Default item alignment is with the tops of each other.
  */
-.o-pack__item {
+._o-pack__item {
   display: table-cell; /* [1] */
   vertical-align: top; /* [2] */
 
   /* Vertical Alignment Variants
    * --------------------------- */
 
-  .o-pack--middle > & {
+  ._o-pack--middle > & {
     vertical-align: middle;
   }
 
-  .o-pack--bottom > & {
+  ._o-pack--bottom > & {
     vertical-align: bottom;
   }
 }
@@ -47,7 +47,7 @@
 /* Unequal-width items.
  * ========================================================================== */
 
-.o-pack--auto {
+._o-pack--auto {
   table-layout: auto;
 }
 
@@ -55,7 +55,7 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  .o-pack--#{$spacingName} {
+  ._o-pack--#{$spacingName} {
     border-spacing: ($globalSpacing * $spacingFactor);
   }
 }
@@ -63,10 +63,10 @@
 /* Reversed order packs
  * ========================================================================== */
 
-.o-pack--reverse {
+._o-pack--reverse {
   direction: rtl;
 
-  > .o-pack__item {
+  > ._o-pack__item {
     direction: ltr;
   }
 }
