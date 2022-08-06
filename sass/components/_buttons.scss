@@ -19,7 +19,7 @@
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-._c-btn {
+.c-btn, ._c-btn {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -50,7 +50,7 @@
 /* Style variants
  * ========================================================================== */
 
-._c-btn--primary {
+.c-btn--primary, ._c-btn--primary {
   background-color: getColor("primary");
 
   &,
@@ -64,7 +64,7 @@
   }
 }
 
-._c-btn--secondary {
+.c-btn--secondary, ._c-btn--secondary {
   background-color: getColor("secondary");
 
   &,
@@ -77,7 +77,7 @@
   }
 }
 
-._c-btn--confirm {
+.c-btn--confirm, ._c-btn--confirm {
   background-color: getColor("green");
   color: white;
 
@@ -89,7 +89,7 @@
   }
 }
 
-._c-btn--deny {
+.c-btn--deny, ._c-btn--deny {
   background-color: getColor("red");
   color: white;
 
@@ -101,14 +101,14 @@
   }
 }
 
-._c-btn--inverted {
+.c-btn--inverted, ._c-btn--inverted {
   &:hover,
   &:focus {
     filter: brightness(1);
   }
 }
 
-._c-btn--primary._c-btn--inverted {
+.c-btn--primary.c-btn--inverted, ._c-btn--primary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("primary");
 
@@ -130,7 +130,7 @@
   }
 }
 
-._c-btn--secondary._c-btn--inverted {
+.c-btn--secondary.c-btn--inverted, ._c-btn--secondary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("secondary");
 
@@ -152,7 +152,7 @@
   }
 }
 
-._c-btn--confirm._c-btn--inverted {
+.c-btn--confirm.c-btn--inverted, ._c-btn--confirm._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("green");
   color: getColor("green");
@@ -164,7 +164,7 @@
   }
 }
 
-._c-btn--deny._c-btn--inverted {
+.c-btn--deny.c-btn--inverted, ._c-btn--deny._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("red");
   color: getColor("red");
@@ -179,11 +179,11 @@
 /* Size variants
  * ========================================================================== */
 
-._c-btn--small {
+.c-btn--small, ._c-btn--small {
   padding: 4px 12px;
 }
 
-._c-btn--large {
+.c-btn--large, ._c-btn--large {
   padding: $globalSpacingXs $globalSpacingXl;
 }
 
@@ -194,7 +194,7 @@
 
 $btnGhostBorderWidth: 2px;
 
-._c-btn--ghost {
+.c-btn--ghost, ._c-btn--ghost {
   border: $btnGhostBorderWidth solid currentColor;
   padding: ($globalSpacingSm - $btnGhostBorderWidth)
     ($globalSpacing - $btnGhostBorderWidth);
@@ -206,17 +206,17 @@ $btnGhostBorderWidth: 2px;
     background: none;
   }
 
-  &._c-btn--small {
+  &.c-btn--small, &._c-btn--small {
     padding: ($globalSpacingXs - $btnGhostBorderWidth)
       ($globalSpacingSm - $btnGhostBorderWidth);
   }
 
-  &._c-btn--large {
+  &.c-btn--large, &._c-btn--large {
     padding: ($globalSpacing - $btnGhostBorderWidth)
       ($globalSpacingLg - $btnGhostBorderWidth);
   }
 
-  &._c-btn--primary {
+  &.c-btn--primary, &._c-btn--primary {
     color: #4a8ec2;
 
     &:hover,
@@ -225,7 +225,7 @@ $btnGhostBorderWidth: 2px;
     }
   }
 
-  &._c-btn--secondary {
+  &.c-btn--secondary, &._c-btn--secondary {
     color: #2f4054;
 
     &:hover,

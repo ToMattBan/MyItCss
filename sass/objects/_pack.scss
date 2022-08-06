@@ -17,7 +17,7 @@
  * 3. Cause children to be automatically equally sized.
  * ========================================================================== */
 
-._o-pack {
+.o-pack, ._o-pack {
   width: 100%; /* [1] */
   margin-left: 0; /* [2] */
   display: table;
@@ -28,18 +28,18 @@
  * 1. Cause children to adopt table-like structure.
  * 2. Default item alignment is with the tops of each other.
  */
-._o-pack__item {
+.o-pack__item, ._o-pack__item {
   display: table-cell; /* [1] */
   vertical-align: top; /* [2] */
 
   /* Vertical Alignment Variants
    * --------------------------- */
 
-  ._o-pack--middle > & {
+  .o-pack--middle > &, ._o-pack--middle > & {
     vertical-align: middle;
   }
 
-  ._o-pack--bottom > & {
+  .o-pack--bottom > &, ._o-pack--bottom > & {
     vertical-align: bottom;
   }
 }
@@ -47,7 +47,7 @@
 /* Unequal-width items.
  * ========================================================================== */
 
-._o-pack--auto {
+.o-pack--auto, ._o-pack--auto {
   table-layout: auto;
 }
 
@@ -55,7 +55,7 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  ._o-pack--#{$spacingName} {
+  .o-pack--#{$spacingName}, ._o-pack--#{$spacingName} {
     border-spacing: ($globalSpacing * $spacingFactor);
   }
 }
@@ -63,10 +63,10 @@
 /* Reversed order packs
  * ========================================================================== */
 
-._o-pack--reverse {
+.o-pack--reverse, ._o-pack--reverse {
   direction: rtl;
 
-  > ._o-pack__item {
+  > .o-pack__item, > ._o-pack__item {
     direction: ltr;
   }
 }

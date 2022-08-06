@@ -8,7 +8,7 @@
 // o-grid.scss
 // Defines our grid object, no styling beyond layout
 //
-._o-grid {
+.o-grid, ._o-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -49,7 +49,7 @@
 // Defines our order utility classes to re-order columns for different browser sizes
 //
 @for $number from 1 through 10 {
-  ._order-#{$number} {
+  .order-#{$number}, ._order-#{$number} {
     order: $number;
 
     @each $key, $size in $mq-breakpoints {

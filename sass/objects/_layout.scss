@@ -1,6 +1,6 @@
 $enableLayoutMarkupFix: false !default;
 
-._o-layout {
+.o-layout, ._o-layout {
   display: flex; 
   flex-wrap: wrap;
   margin: 0 (($globalSpacing / 2) * -1);
@@ -12,7 +12,7 @@ $enableLayoutMarkupFix: false !default;
   }
 }
 
-._o-layout__item {
+.o-layout__item, ._o-layout__item {
   box-sizing: border-box; /* [1] */
   display: flex; /* [2] */
   flex-wrap: wrap;
@@ -37,10 +37,10 @@ $enableLayoutMarkupFix: false !default;
   /* Flush
    * --------------------------- */
 
-  ._o-layout--flush#{$breakpoint} {
+  .o-layout--flush#{$breakpoint}, ._o-layout--flush#{$breakpoint} {
     margin: 0;
 
-    > ._o-layout__item {
+    > .o-layout__item, > ._o-layout__item {
       padding-right: 0;
       padding-left: 0;
     }
@@ -52,7 +52,7 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-  ._o-layout--auto#{$breakpoint} > ._o-layout__item {
+  .o-layout--auto#{$breakpoint} > .o-layout__item, ._o-layout--auto#{$breakpoint} > ._o-layout__item {
     width: auto;
   }
 
@@ -60,10 +60,10 @@ $enableLayoutMarkupFix: false !default;
    * --------------------------- */
 
   @each $spacingName, $spacingFactor in $globalSpacingFactors {
-    ._o-layout--#{$spacingName}#{$breakpoint} {
+    .o-layout--#{$spacingName}#{$breakpoint}, ._o-layout--#{$spacingName}#{$breakpoint} {
       margin: (0 (($globalSpacing * $spacingFactor) / 2) * -1);
 
-      > ._o-layout__item {
+      > .o-layout__item, > ._o-layout__item {
         padding-right: (($globalSpacing * $spacingFactor) / 2);
         padding-left: (($globalSpacing * $spacingFactor) / 2);
       }
@@ -76,21 +76,21 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Align all grid items to the tops of each other.
    */
-  ._o-layout--top#{$breakpoint} > ._o-layout__item {
+  .o-layout--top#{$breakpoint} > .o-layout__item, ._o-layout--top#{$breakpoint} > ._o-layout__item {
     vertical-align: top;
   }
 
   /**
    * Align all grid items to the middles of each other.
    */
-  ._o-layout--middle#{$breakpoint} > ._o-layout__item {
+  .o-layout--middle#{$breakpoint} > .o-layout__item, ._o-layout--middle#{$breakpoint} > ._o-layout__item {
     vertical-align: middle;
   }
 
   /**
    * Align all grid items to the bottoms of each other.
    */
-  ._o-layout--bottom#{$breakpoint} > ._o-layout__item {
+  .o-layout--bottom#{$breakpoint} > .o-layout__item, ._o-layout--bottom#{$breakpoint} > ._o-layout__item {
     vertical-align: bottom;
   }
 
@@ -100,17 +100,17 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Fill up the layout system from the left.
    */
-  ._o-layout--left#{$breakpoint} {
+  .o-layout--left#{$breakpoint}, ._o-layout--left#{$breakpoint} {
     text-align: left;
   }
 
   /**
    * Fill up the layout system from the center.
    */
-  ._o-layout--center#{$breakpoint} {
+  .o-layout--center#{$breakpoint}, ._o-layout--center#{$breakpoint} {
     text-align: center;
 
-    > ._o-layout__item {
+    > .o-layout__item, > ._o-layout__item {
       text-align: left;
     }
   }
@@ -118,10 +118,10 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Fill up the layout system from the right.
    */
-  ._o-layout--right#{$breakpoint} {
+  .o-layout--right#{$breakpoint}, ._o-layout--right#{$breakpoint} {
     text-align: right;
 
-    > ._o-layout__item {
+    > .o-layout__item, > ._o-layout__item {
       text-align: left;
     }
   }
@@ -129,10 +129,10 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Reverse the rendered order of the grid system.
    */
-  ._o-layout--reverse#{$breakpoint} {
+  .o-layout--reverse#{$breakpoint}, ._o-layout--reverse#{$breakpoint} {
     direction: rtl;
 
-    > ._o-layout__item {
+    > .o-layout__item, > ._o-layout__item {
       direction: ltr;
       text-align: left;
     }
@@ -141,7 +141,7 @@ $enableLayoutMarkupFix: false !default;
   /**
    * Bring back rendered order of the grid system.
    */
-  ._o-layout--forward#{$breakpoint} {
+  .o-layout--forward#{$breakpoint}, ._o-layout--forward#{$breakpoint} {
     direction: ltr;
   }
 
@@ -155,7 +155,7 @@ $enableLayoutMarkupFix: false !default;
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
    */
-  ._o-layout--inset {
+  .o-layout--inset, ._o-layout--inset {
     margin: 0; /* [1] */
   }
 }

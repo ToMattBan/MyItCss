@@ -14,7 +14,7 @@
 
 
 
-._c-card {
+.c-card, ._c-card {
     background-color: getColor("white");
     @include boxShape();
     margin: 12px 0;

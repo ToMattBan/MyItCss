@@ -13,12 +13,12 @@
  * </div>
  * ========================================================================== */
 
-._o-media {
+.o-media, ._o-media {
   @include clearfix();
   display: block;
 }
 
-._o-media__img {
+.o-media__img, ._o-media__img {
   float: left;
   margin-right: $globalSpacing;
 
@@ -27,7 +27,7 @@
   }
 }
 
-._o-media__body {
+.o-media__body, ._o-media__body {
   overflow: hidden;
   display: block;
 
@@ -40,8 +40,8 @@
 /* Reversed media objects
  * ========================================================================== */
 
-._o-media--reverse {
-  > ._o-media__img {
+.o-media--reverse, ._o-media--reverse {
+  > .o-media__img, > ._o-media__img {
     float: right;
     margin-right: 0;
     margin-left: $globalSpacing;
@@ -51,8 +51,8 @@
 /* Gutterless media objects
  * ========================================================================== */
 
-._o-media--flush {
-  > ._o-media__img {
+.o-media--flush, ._o-media--flush {
+  > .o-media__img, > ._o-media__img {
     margin-right: 0;
     margin-left: 0;
   }
@@ -65,13 +65,13 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  ._o-media--#{$spacingName} {
-    > ._o-media__img {
+  .o-media--#{$spacingName}, ._o-media--#{$spacingName} {
+    > .o-media__img, > ._o-media__img {
       padding-right: ($globalSpacing * $spacingFactor);
     }
 
-    &._o-media--reverse {
-      > ._o-media__img {
+    &.o-media--reverse, &._o-media--reverse {
+      > .o-media__img, > ._o-media__img {
         padding-right: 0;
         padding-left: ($globalSpacing * $spacingFactor);
       }

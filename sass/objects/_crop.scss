@@ -24,7 +24,7 @@ $cropRatios: (
  * 1. Set up a positioning context in which the image can sit.
  * 2. This is the crucial part: where the cropping happens.
  */
-._o-crop {
+.o-crop, ._o-crop {
   position: relative; /* [1] */
   display: block;
   overflow: hidden; /* [2] */
@@ -36,7 +36,7 @@ $cropRatios: (
  * 1. Image's default positioning is top-left in the cropping box.
  * 2. Make sure the media doesn't stop itself too soon.
  */
-._o-crop__content {
+.o-crop__content, ._o-crop__content {
   position: absolute;
   top: 0; /* [1] */
   left: 0; /* [1] */
@@ -48,17 +48,17 @@ $cropRatios: (
  * We can position the media in different locations within the cropping area
  * ========================================================================== */
 
-._o-crop__content--right {
+.o-crop__content--right, ._o-crop__content--right {
   right: 0;
   left: auto;
 }
 
-._o-crop__content--bottom {
+.o-crop__content--bottom, ._o-crop__content--bottom {
   top: auto;
   bottom: 0;
 }
 
-._o-crop__content--center {
+.o-crop__content--center, ._o-crop__content--center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -82,7 +82,7 @@ $cropRatios: (
       @error "`#{$consequent}` needs to be a number.";
     }
 
-    ._o-crop--#{$antecedent}\:#{$consequent} {
+    .o-crop--#{$antecedent}\:#{$consequent}, ._o-crop--#{$antecedent}\:#{$consequent} {
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
   }

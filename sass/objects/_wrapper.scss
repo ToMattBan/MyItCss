@@ -12,7 +12,7 @@ $wrapperMaxWidth: 1360px !default;
 }
 /* stylelint-enable */
 
-._o-wrapper {
+.o-wrapper, ._o-wrapper {
   @include clearfix();
   padding-right: ($globalSpacing / 2);
   padding-left: ($globalSpacing / 2);
@@ -28,7 +28,7 @@ $wrapperMaxWidth: 1360px !default;
   /* Flush
    * --------------------------- */
 
-  ._o-wrapper--flush#{$breakpoint} {
+  .o-wrapper--flush#{$breakpoint}, ._o-wrapper--flush#{$breakpoint} {
     max-width: none;
   }
 
@@ -36,7 +36,7 @@ $wrapperMaxWidth: 1360px !default;
    * --------------------------- */
 
   @each $spacingName, $spacingFactor in $globalSpacingFactors {
-    ._o-wrapper--#{$spacingName}#{$breakpoint} {
+    .o-wrapper--#{$spacingName}#{$breakpoint}, ._o-wrapper--#{$spacingName}#{$breakpoint} {
       padding-right: (($globalSpacing * $spacingFactor) / 2);
       padding-left: (($globalSpacing * $spacingFactor) / 2);
     }
@@ -60,13 +60,13 @@ $customWrapperSpacing: (
   $spacing: map-get($customWrapperSpacing, $breakpointName);
 
   @if ($spacing != null) {
-    ._o-wrapper {
+    .o-wrapper, ._o-wrapper {
       padding-right: $spacing;
       padding-left: $spacing;
       max-width: $wrapperMaxWidth + ($spacing * 2);
     }
 
-    ._o-wrapper._o-wrapper--flush {
+    .o-wrapper.o-wrapper--flush, ._o-wrapper._o-wrapper--flush {
       max-width: none;
     }
   }

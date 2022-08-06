@@ -120,13 +120,13 @@
 /* stylelint-disable */
 /* stylelint-enable */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,600,700&display=swap");
-._o-wrapper {
+.o-wrapper, ._o-wrapper {
   padding-right: 16px;
   padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
   max-width: 1360px; }
-  ._o-wrapper:after {
+  .o-wrapper:after, ._o-wrapper:after {
     content: "" !important;
     display: block !important;
     clear: both !important; }
@@ -135,58 +135,58 @@
  * ========================================================================= */
 /* Flush
    * --------------------------- */
-._o-wrapper--flush {
+.o-wrapper--flush, ._o-wrapper--flush {
   max-width: none; }
 
 /* Size Variants
    * --------------------------- */
-._o-wrapper--xxxs {
+.o-wrapper--xxxs, ._o-wrapper--xxxs {
   padding-right: 2px;
   padding-left: 2px; }
 
-._o-wrapper--xxs {
+.o-wrapper--xxs, ._o-wrapper--xxs {
   padding-right: 4px;
   padding-left: 4px; }
 
-._o-wrapper--xs {
+.o-wrapper--xs, ._o-wrapper--xs {
   padding-right: 8px;
   padding-left: 8px; }
 
-._o-wrapper--sm {
+.o-wrapper--sm, ._o-wrapper--sm {
   padding-right: 12px;
   padding-left: 12px; }
 
-._o-wrapper--lg {
+.o-wrapper--lg, ._o-wrapper--lg {
   padding-right: 24px;
   padding-left: 24px; }
 
-._o-wrapper--xl {
+.o-wrapper--xl, ._o-wrapper--xl {
   padding-right: 32px;
   padding-left: 32px; }
 
-._o-wrapper--xxl {
+.o-wrapper--xxl, ._o-wrapper--xxl {
   padding-right: 64px;
   padding-left: 64px; }
 
 /* =========================================================================
  * WRAPPER OBJECT MEDIA QUERIES
  * ========================================================================= */
-._o-wrapper {
+.o-wrapper, ._o-wrapper {
   padding-right: 16px;
   padding-left: 16px;
   max-width: 1392px; }
 
-._o-wrapper._o-wrapper--flush {
+.o-wrapper.o-wrapper--flush, ._o-wrapper._o-wrapper--flush {
   max-width: none; }
 
-._o-layout {
+.o-layout, ._o-layout {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -16px;
   padding: 0;
   list-style: none; }
 
-._o-layout__item {
+.o-layout__item, ._o-layout__item {
   box-sizing: border-box;
   /* [1] */
   display: flex;
@@ -200,16 +200,16 @@
   /* [5] */
   padding-left: 16px;
   /* [5] */ }
-  ._o-layout__item > * {
+  .o-layout__item > *, ._o-layout__item > * {
     width: 100%; }
 
 /* Modifiers
  * ========================================================================== */
 /* Flush
    * --------------------------- */
-._o-layout--flush {
+.o-layout--flush, ._o-layout--flush {
   margin: 0; }
-  ._o-layout--flush > ._o-layout__item {
+  .o-layout--flush > .o-layout__item, .o-layout--flush > ._o-layout__item, ._o-layout--flush > .o-layout__item, ._o-layout--flush > ._o-layout__item {
     padding-right: 0;
     padding-left: 0; }
 
@@ -218,50 +218,50 @@
 /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-._o-layout--auto > ._o-layout__item {
+.o-layout--auto > .o-layout__item, ._o-layout--auto > ._o-layout__item {
   width: auto; }
 
 /* Spacing
    * --------------------------- */
-._o-layout--xxxs {
+.o-layout--xxxs, ._o-layout--xxxs {
   margin: 0 -2px; }
-  ._o-layout--xxxs > ._o-layout__item {
+  .o-layout--xxxs > .o-layout__item, .o-layout--xxxs > ._o-layout__item, ._o-layout--xxxs > .o-layout__item, ._o-layout--xxxs > ._o-layout__item {
     padding-right: 2px;
     padding-left: 2px; }
 
-._o-layout--xxs {
+.o-layout--xxs, ._o-layout--xxs {
   margin: 0 -4px; }
-  ._o-layout--xxs > ._o-layout__item {
+  .o-layout--xxs > .o-layout__item, .o-layout--xxs > ._o-layout__item, ._o-layout--xxs > .o-layout__item, ._o-layout--xxs > ._o-layout__item {
     padding-right: 4px;
     padding-left: 4px; }
 
-._o-layout--xs {
+.o-layout--xs, ._o-layout--xs {
   margin: 0 -8px; }
-  ._o-layout--xs > ._o-layout__item {
+  .o-layout--xs > .o-layout__item, .o-layout--xs > ._o-layout__item, ._o-layout--xs > .o-layout__item, ._o-layout--xs > ._o-layout__item {
     padding-right: 8px;
     padding-left: 8px; }
 
-._o-layout--sm {
+.o-layout--sm, ._o-layout--sm {
   margin: 0 -12px; }
-  ._o-layout--sm > ._o-layout__item {
+  .o-layout--sm > .o-layout__item, .o-layout--sm > ._o-layout__item, ._o-layout--sm > .o-layout__item, ._o-layout--sm > ._o-layout__item {
     padding-right: 12px;
     padding-left: 12px; }
 
-._o-layout--lg {
+.o-layout--lg, ._o-layout--lg {
   margin: 0 -24px; }
-  ._o-layout--lg > ._o-layout__item {
+  .o-layout--lg > .o-layout__item, .o-layout--lg > ._o-layout__item, ._o-layout--lg > .o-layout__item, ._o-layout--lg > ._o-layout__item {
     padding-right: 24px;
     padding-left: 24px; }
 
-._o-layout--xl {
+.o-layout--xl, ._o-layout--xl {
   margin: 0 -32px; }
-  ._o-layout--xl > ._o-layout__item {
+  .o-layout--xl > .o-layout__item, .o-layout--xl > ._o-layout__item, ._o-layout--xl > .o-layout__item, ._o-layout--xl > ._o-layout__item {
     padding-right: 32px;
     padding-left: 32px; }
 
-._o-layout--xxl {
+.o-layout--xxl, ._o-layout--xxl {
   margin: 0 -64px; }
-  ._o-layout--xxl > ._o-layout__item {
+  .o-layout--xxl > .o-layout__item, .o-layout--xxl > ._o-layout__item, ._o-layout--xxl > .o-layout__item, ._o-layout--xxl > ._o-layout__item {
     padding-right: 64px;
     padding-left: 64px; }
 
@@ -270,19 +270,19 @@
 /**
    * Align all grid items to the tops of each other.
    */
-._o-layout--top > ._o-layout__item {
+.o-layout--top > .o-layout__item, ._o-layout--top > ._o-layout__item {
   vertical-align: top; }
 
 /**
    * Align all grid items to the middles of each other.
    */
-._o-layout--middle > ._o-layout__item {
+.o-layout--middle > .o-layout__item, ._o-layout--middle > ._o-layout__item {
   vertical-align: middle; }
 
 /**
    * Align all grid items to the bottoms of each other.
    */
-._o-layout--bottom > ._o-layout__item {
+.o-layout--bottom > .o-layout__item, ._o-layout--bottom > ._o-layout__item {
   vertical-align: bottom; }
 
 /* Horizontal Alignment
@@ -290,38 +290,38 @@
 /**
    * Fill up the layout system from the left.
    */
-._o-layout--left {
+.o-layout--left, ._o-layout--left {
   text-align: left; }
 
 /**
    * Fill up the layout system from the center.
    */
-._o-layout--center {
+.o-layout--center, ._o-layout--center {
   text-align: center; }
-  ._o-layout--center > ._o-layout__item {
+  .o-layout--center > .o-layout__item, .o-layout--center > ._o-layout__item, ._o-layout--center > .o-layout__item, ._o-layout--center > ._o-layout__item {
     text-align: left; }
 
 /**
    * Fill up the layout system from the right.
    */
-._o-layout--right {
+.o-layout--right, ._o-layout--right {
   text-align: right; }
-  ._o-layout--right > ._o-layout__item {
+  .o-layout--right > .o-layout__item, .o-layout--right > ._o-layout__item, ._o-layout--right > .o-layout__item, ._o-layout--right > ._o-layout__item {
     text-align: left; }
 
 /**
    * Reverse the rendered order of the grid system.
    */
-._o-layout--reverse {
+.o-layout--reverse, ._o-layout--reverse {
   direction: rtl; }
-  ._o-layout--reverse > ._o-layout__item {
+  .o-layout--reverse > .o-layout__item, .o-layout--reverse > ._o-layout__item, ._o-layout--reverse > .o-layout__item, ._o-layout--reverse > ._o-layout__item {
     direction: ltr;
     text-align: left; }
 
 /**
    * Bring back rendered order of the grid system.
    */
-._o-layout--forward {
+.o-layout--forward, ._o-layout--forward {
   direction: ltr; }
 
 /* Inset
@@ -333,288 +333,288 @@
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
    */
-._o-layout--inset {
+.o-layout--inset, ._o-layout--inset {
   margin: 0;
   /* [1] */ }
 
-._o-grid {
+.o-grid, ._o-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch; }
-  ._o-grid__item {
+  .o-grid__item, ._o-grid__item {
     min-width: 100%;
     max-width: 100%;
     flex: 1 1 100%; }
-    ._o-grid__item--1\/2 {
+    .o-grid__item--1\/2, ._o-grid__item--1\/2 {
       min-width: 34.33333%;
       max-width: 50%;
       flex-basis: 50%; }
       @media (min-width: 600px) {
-        ._o-grid__item--1\/2\@tabletV {
+        .o-grid__item--1\/2\@tabletV, ._o-grid__item--1\/2\@tabletV {
           min-width: 34.33333%;
           max-width: 50%;
           flex-basis: 50%; } }
       @media (min-width: 900px) {
-        ._o-grid__item--1\/2\@tabletH {
+        .o-grid__item--1\/2\@tabletH, ._o-grid__item--1\/2\@tabletH {
           min-width: 34.33333%;
           max-width: 50%;
           flex-basis: 50%; } }
       @media (min-width: 1200px) {
-        ._o-grid__item--1\/2\@laptop {
+        .o-grid__item--1\/2\@laptop, ._o-grid__item--1\/2\@laptop {
           min-width: 34.33333%;
           max-width: 50%;
           flex-basis: 50%; } }
       @media (min-width: 1600px) {
-        ._o-grid__item--1\/2\@desktop {
+        .o-grid__item--1\/2\@desktop, ._o-grid__item--1\/2\@desktop {
           min-width: 34.33333%;
           max-width: 50%;
           flex-basis: 50%; } }
-    ._o-grid__item--1\/3 {
+    .o-grid__item--1\/3, ._o-grid__item--1\/3 {
       min-width: 26%;
       max-width: 33.33333%;
       flex-basis: 33.33333%; }
       @media (min-width: 600px) {
-        ._o-grid__item--1\/3\@tabletV {
+        .o-grid__item--1\/3\@tabletV, ._o-grid__item--1\/3\@tabletV {
           min-width: 26%;
           max-width: 33.33333%;
           flex-basis: 33.33333%; } }
       @media (min-width: 900px) {
-        ._o-grid__item--1\/3\@tabletH {
+        .o-grid__item--1\/3\@tabletH, ._o-grid__item--1\/3\@tabletH {
           min-width: 26%;
           max-width: 33.33333%;
           flex-basis: 33.33333%; } }
       @media (min-width: 1200px) {
-        ._o-grid__item--1\/3\@laptop {
+        .o-grid__item--1\/3\@laptop, ._o-grid__item--1\/3\@laptop {
           min-width: 26%;
           max-width: 33.33333%;
           flex-basis: 33.33333%; } }
       @media (min-width: 1600px) {
-        ._o-grid__item--1\/3\@desktop {
+        .o-grid__item--1\/3\@desktop, ._o-grid__item--1\/3\@desktop {
           min-width: 26%;
           max-width: 33.33333%;
           flex-basis: 33.33333%; } }
-    ._o-grid__item--2\/3 {
+    .o-grid__item--2\/3, ._o-grid__item--2\/3 {
       min-width: 51%;
       max-width: 66.66667%;
       flex-basis: 66.66667%; }
       @media (min-width: 600px) {
-        ._o-grid__item--2\/3\@tabletV {
+        .o-grid__item--2\/3\@tabletV, ._o-grid__item--2\/3\@tabletV {
           min-width: 51%;
           max-width: 66.66667%;
           flex-basis: 66.66667%; } }
       @media (min-width: 900px) {
-        ._o-grid__item--2\/3\@tabletH {
+        .o-grid__item--2\/3\@tabletH, ._o-grid__item--2\/3\@tabletH {
           min-width: 51%;
           max-width: 66.66667%;
           flex-basis: 66.66667%; } }
       @media (min-width: 1200px) {
-        ._o-grid__item--2\/3\@laptop {
+        .o-grid__item--2\/3\@laptop, ._o-grid__item--2\/3\@laptop {
           min-width: 51%;
           max-width: 66.66667%;
           flex-basis: 66.66667%; } }
       @media (min-width: 1600px) {
-        ._o-grid__item--2\/3\@desktop {
+        .o-grid__item--2\/3\@desktop, ._o-grid__item--2\/3\@desktop {
           min-width: 51%;
           max-width: 66.66667%;
           flex-basis: 66.66667%; } }
-    ._o-grid__item--3\/4 {
+    .o-grid__item--3\/4, ._o-grid__item--3\/4 {
       min-width: 61%;
       max-width: 75%;
       flex-basis: 75%; }
       @media (min-width: 600px) {
-        ._o-grid__item--3\/4\@tabletV {
+        .o-grid__item--3\/4\@tabletV, ._o-grid__item--3\/4\@tabletV {
           min-width: 61%;
           max-width: 75%;
           flex-basis: 75%; } }
       @media (min-width: 900px) {
-        ._o-grid__item--3\/4\@tabletH {
+        .o-grid__item--3\/4\@tabletH, ._o-grid__item--3\/4\@tabletH {
           min-width: 61%;
           max-width: 75%;
           flex-basis: 75%; } }
       @media (min-width: 1200px) {
-        ._o-grid__item--3\/4\@laptop {
+        .o-grid__item--3\/4\@laptop, ._o-grid__item--3\/4\@laptop {
           min-width: 61%;
           max-width: 75%;
           flex-basis: 75%; } }
       @media (min-width: 1600px) {
-        ._o-grid__item--3\/4\@desktop {
+        .o-grid__item--3\/4\@desktop, ._o-grid__item--3\/4\@desktop {
           min-width: 61%;
           max-width: 75%;
           flex-basis: 75%; } }
-    ._o-grid__item--1\/4 {
+    .o-grid__item--1\/4, ._o-grid__item--1\/4 {
       min-width: 21%;
       max-width: 25%;
       flex-basis: 25%; }
       @media (min-width: 600px) {
-        ._o-grid__item--1\/4\@tabletV {
+        .o-grid__item--1\/4\@tabletV, ._o-grid__item--1\/4\@tabletV {
           min-width: 21%;
           max-width: 25%;
           flex-basis: 25%; } }
       @media (min-width: 900px) {
-        ._o-grid__item--1\/4\@tabletH {
+        .o-grid__item--1\/4\@tabletH, ._o-grid__item--1\/4\@tabletH {
           min-width: 21%;
           max-width: 25%;
           flex-basis: 25%; } }
       @media (min-width: 1200px) {
-        ._o-grid__item--1\/4\@laptop {
+        .o-grid__item--1\/4\@laptop, ._o-grid__item--1\/4\@laptop {
           min-width: 21%;
           max-width: 25%;
           flex-basis: 25%; } }
       @media (min-width: 1600px) {
-        ._o-grid__item--1\/4\@desktop {
+        .o-grid__item--1\/4\@desktop, ._o-grid__item--1\/4\@desktop {
           min-width: 21%;
           max-width: 25%;
           flex-basis: 25%; } }
 
-._order-1 {
+.order-1, ._order-1 {
   order: 1; }
   @media (min-width: 600px) {
-    ._order-1\@tabletV {
+    .order-1\@tabletV, ._order-1\@tabletV {
       order: 1; } }
   @media (min-width: 900px) {
-    ._order-1\@tabletH {
+    .order-1\@tabletH, ._order-1\@tabletH {
       order: 1; } }
   @media (min-width: 1200px) {
-    ._order-1\@laptop {
+    .order-1\@laptop, ._order-1\@laptop {
       order: 1; } }
   @media (min-width: 1600px) {
-    ._order-1\@desktop {
+    .order-1\@desktop, ._order-1\@desktop {
       order: 1; } }
 
-._order-2 {
+.order-2, ._order-2 {
   order: 2; }
   @media (min-width: 600px) {
-    ._order-2\@tabletV {
+    .order-2\@tabletV, ._order-2\@tabletV {
       order: 2; } }
   @media (min-width: 900px) {
-    ._order-2\@tabletH {
+    .order-2\@tabletH, ._order-2\@tabletH {
       order: 2; } }
   @media (min-width: 1200px) {
-    ._order-2\@laptop {
+    .order-2\@laptop, ._order-2\@laptop {
       order: 2; } }
   @media (min-width: 1600px) {
-    ._order-2\@desktop {
+    .order-2\@desktop, ._order-2\@desktop {
       order: 2; } }
 
-._order-3 {
+.order-3, ._order-3 {
   order: 3; }
   @media (min-width: 600px) {
-    ._order-3\@tabletV {
+    .order-3\@tabletV, ._order-3\@tabletV {
       order: 3; } }
   @media (min-width: 900px) {
-    ._order-3\@tabletH {
+    .order-3\@tabletH, ._order-3\@tabletH {
       order: 3; } }
   @media (min-width: 1200px) {
-    ._order-3\@laptop {
+    .order-3\@laptop, ._order-3\@laptop {
       order: 3; } }
   @media (min-width: 1600px) {
-    ._order-3\@desktop {
+    .order-3\@desktop, ._order-3\@desktop {
       order: 3; } }
 
-._order-4 {
+.order-4, ._order-4 {
   order: 4; }
   @media (min-width: 600px) {
-    ._order-4\@tabletV {
+    .order-4\@tabletV, ._order-4\@tabletV {
       order: 4; } }
   @media (min-width: 900px) {
-    ._order-4\@tabletH {
+    .order-4\@tabletH, ._order-4\@tabletH {
       order: 4; } }
   @media (min-width: 1200px) {
-    ._order-4\@laptop {
+    .order-4\@laptop, ._order-4\@laptop {
       order: 4; } }
   @media (min-width: 1600px) {
-    ._order-4\@desktop {
+    .order-4\@desktop, ._order-4\@desktop {
       order: 4; } }
 
-._order-5 {
+.order-5, ._order-5 {
   order: 5; }
   @media (min-width: 600px) {
-    ._order-5\@tabletV {
+    .order-5\@tabletV, ._order-5\@tabletV {
       order: 5; } }
   @media (min-width: 900px) {
-    ._order-5\@tabletH {
+    .order-5\@tabletH, ._order-5\@tabletH {
       order: 5; } }
   @media (min-width: 1200px) {
-    ._order-5\@laptop {
+    .order-5\@laptop, ._order-5\@laptop {
       order: 5; } }
   @media (min-width: 1600px) {
-    ._order-5\@desktop {
+    .order-5\@desktop, ._order-5\@desktop {
       order: 5; } }
 
-._order-6 {
+.order-6, ._order-6 {
   order: 6; }
   @media (min-width: 600px) {
-    ._order-6\@tabletV {
+    .order-6\@tabletV, ._order-6\@tabletV {
       order: 6; } }
   @media (min-width: 900px) {
-    ._order-6\@tabletH {
+    .order-6\@tabletH, ._order-6\@tabletH {
       order: 6; } }
   @media (min-width: 1200px) {
-    ._order-6\@laptop {
+    .order-6\@laptop, ._order-6\@laptop {
       order: 6; } }
   @media (min-width: 1600px) {
-    ._order-6\@desktop {
+    .order-6\@desktop, ._order-6\@desktop {
       order: 6; } }
 
-._order-7 {
+.order-7, ._order-7 {
   order: 7; }
   @media (min-width: 600px) {
-    ._order-7\@tabletV {
+    .order-7\@tabletV, ._order-7\@tabletV {
       order: 7; } }
   @media (min-width: 900px) {
-    ._order-7\@tabletH {
+    .order-7\@tabletH, ._order-7\@tabletH {
       order: 7; } }
   @media (min-width: 1200px) {
-    ._order-7\@laptop {
+    .order-7\@laptop, ._order-7\@laptop {
       order: 7; } }
   @media (min-width: 1600px) {
-    ._order-7\@desktop {
+    .order-7\@desktop, ._order-7\@desktop {
       order: 7; } }
 
-._order-8 {
+.order-8, ._order-8 {
   order: 8; }
   @media (min-width: 600px) {
-    ._order-8\@tabletV {
+    .order-8\@tabletV, ._order-8\@tabletV {
       order: 8; } }
   @media (min-width: 900px) {
-    ._order-8\@tabletH {
+    .order-8\@tabletH, ._order-8\@tabletH {
       order: 8; } }
   @media (min-width: 1200px) {
-    ._order-8\@laptop {
+    .order-8\@laptop, ._order-8\@laptop {
       order: 8; } }
   @media (min-width: 1600px) {
-    ._order-8\@desktop {
+    .order-8\@desktop, ._order-8\@desktop {
       order: 8; } }
 
-._order-9 {
+.order-9, ._order-9 {
   order: 9; }
   @media (min-width: 600px) {
-    ._order-9\@tabletV {
+    .order-9\@tabletV, ._order-9\@tabletV {
       order: 9; } }
   @media (min-width: 900px) {
-    ._order-9\@tabletH {
+    .order-9\@tabletH, ._order-9\@tabletH {
       order: 9; } }
   @media (min-width: 1200px) {
-    ._order-9\@laptop {
+    .order-9\@laptop, ._order-9\@laptop {
       order: 9; } }
   @media (min-width: 1600px) {
-    ._order-9\@desktop {
+    .order-9\@desktop, ._order-9\@desktop {
       order: 9; } }
 
-._order-10 {
+.order-10, ._order-10 {
   order: 10; }
   @media (min-width: 600px) {
-    ._order-10\@tabletV {
+    .order-10\@tabletV, ._order-10\@tabletV {
       order: 10; } }
   @media (min-width: 900px) {
-    ._order-10\@tabletH {
+    .order-10\@tabletH, ._order-10\@tabletH {
       order: 10; } }
   @media (min-width: 1200px) {
-    ._order-10\@laptop {
+    .order-10\@laptop, ._order-10\@laptop {
       order: 10; } }
   @media (min-width: 1600px) {
-    ._order-10\@desktop {
+    .order-10\@desktop, ._order-10\@desktop {
       order: 10; } }
 
 /* ==========================================================================
@@ -623,7 +623,7 @@
  * Strip list-like appearance from lists by removing their bullets, and any
  * indentation.
  * ========================================================================== */
-._o-bareList {
+.o-bareList, ._o-bareList {
   list-style: none;
   margin-left: 0; }
 
@@ -649,7 +649,7 @@
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-._c-btn {
+.c-btn, ._c-btn {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -668,112 +668,112 @@
   border: none;
   border-radius: 4px;
   transition: all 0.2s ease; }
-  ._c-btn:hover, ._c-btn:focus {
+  .c-btn:hover, .c-btn:focus, ._c-btn:hover, ._c-btn:focus {
     filter: brightness(0.8);
     background-color: transparent; }
 
 /* Style variants
  * ========================================================================== */
-._c-btn--primary {
+.c-btn--primary, ._c-btn--primary {
   background-color: #2196f3; }
-  ._c-btn--primary, ._c-btn--primary:hover, ._c-btn--primary:active, ._c-btn--primary:focus {
+  .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus, ._c-btn--primary, ._c-btn--primary:hover, ._c-btn--primary:active, ._c-btn--primary:focus {
     background-color: #2196f3;
     text-decoration: none;
     /* [4] */
     color: #fff; }
 
-._c-btn--secondary {
+.c-btn--secondary, ._c-btn--secondary {
   background-color: #4caf50; }
-  ._c-btn--secondary, ._c-btn--secondary:hover, ._c-btn--secondary:active, ._c-btn--secondary:focus {
+  .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus, ._c-btn--secondary, ._c-btn--secondary:hover, ._c-btn--secondary:active, ._c-btn--secondary:focus {
     background-color: #4caf50;
     text-decoration: none;
     color: #333; }
 
-._c-btn--confirm {
+.c-btn--confirm, ._c-btn--confirm {
   background-color: #4caf50;
   color: white; }
-  ._c-btn--confirm, ._c-btn--confirm:hover, ._c-btn--confirm:active, ._c-btn--confirm:focus {
+  .c-btn--confirm, .c-btn--confirm:hover, .c-btn--confirm:active, .c-btn--confirm:focus, ._c-btn--confirm, ._c-btn--confirm:hover, ._c-btn--confirm:active, ._c-btn--confirm:focus {
     background-color: #4caf50; }
 
-._c-btn--deny {
+.c-btn--deny, ._c-btn--deny {
   background-color: #f44336;
   color: white; }
-  ._c-btn--deny, ._c-btn--deny:hover, ._c-btn--deny:active, ._c-btn--deny:focus {
+  .c-btn--deny, .c-btn--deny:hover, .c-btn--deny:active, .c-btn--deny:focus, ._c-btn--deny, ._c-btn--deny:hover, ._c-btn--deny:active, ._c-btn--deny:focus {
     background-color: #f44336; }
 
-._c-btn--inverted:hover, ._c-btn--inverted:focus {
+.c-btn--inverted:hover, .c-btn--inverted:focus, ._c-btn--inverted:hover, ._c-btn--inverted:focus {
   filter: brightness(1); }
 
-._c-btn--primary._c-btn--inverted {
+.c-btn--primary.c-btn--inverted, ._c-btn--primary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #2196f3; }
-  ._c-btn--primary._c-btn--inverted, ._c-btn--primary._c-btn--inverted:hover, ._c-btn--primary._c-btn--inverted:active, ._c-btn--primary._c-btn--inverted:focus {
+  .c-btn--primary.c-btn--inverted, .c-btn--primary.c-btn--inverted:hover, .c-btn--primary.c-btn--inverted:active, .c-btn--primary.c-btn--inverted:focus, ._c-btn--primary._c-btn--inverted, ._c-btn--primary._c-btn--inverted:hover, ._c-btn--primary._c-btn--inverted:active, ._c-btn--primary._c-btn--inverted:focus {
     text-decoration: none;
     /* [4] */
     color: #2196f3;
     font-weight: normal; }
-  ._c-btn--primary._c-btn--inverted:hover, ._c-btn--primary._c-btn--inverted:focus {
+  .c-btn--primary.c-btn--inverted:hover, .c-btn--primary.c-btn--inverted:focus, ._c-btn--primary._c-btn--inverted:hover, ._c-btn--primary._c-btn--inverted:focus {
     background-color: #2196f3;
     color: #fff;
     font-weight: normal; }
 
-._c-btn--secondary._c-btn--inverted {
+.c-btn--secondary.c-btn--inverted, ._c-btn--secondary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #4caf50; }
-  ._c-btn--secondary._c-btn--inverted, ._c-btn--secondary._c-btn--inverted:hover, ._c-btn--secondary._c-btn--inverted:active, ._c-btn--secondary._c-btn--inverted:focus {
+  .c-btn--secondary.c-btn--inverted, .c-btn--secondary.c-btn--inverted:hover, .c-btn--secondary.c-btn--inverted:active, .c-btn--secondary.c-btn--inverted:focus, ._c-btn--secondary._c-btn--inverted, ._c-btn--secondary._c-btn--inverted:hover, ._c-btn--secondary._c-btn--inverted:active, ._c-btn--secondary._c-btn--inverted:focus {
     text-decoration: none;
     /* [4] */
     color: #4caf50;
     font-weight: normal; }
-  ._c-btn--secondary._c-btn--inverted:hover, ._c-btn--secondary._c-btn--inverted:focus {
+  .c-btn--secondary.c-btn--inverted:hover, .c-btn--secondary.c-btn--inverted:focus, ._c-btn--secondary._c-btn--inverted:hover, ._c-btn--secondary._c-btn--inverted:focus {
     background-color: #4caf50;
     color: #333;
     font-weight: normal; }
 
-._c-btn--confirm._c-btn--inverted {
+.c-btn--confirm.c-btn--inverted, ._c-btn--confirm._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #4caf50;
   color: #4caf50; }
-  ._c-btn--confirm._c-btn--inverted:hover, ._c-btn--confirm._c-btn--inverted:focus {
+  .c-btn--confirm.c-btn--inverted:hover, .c-btn--confirm.c-btn--inverted:focus, ._c-btn--confirm._c-btn--inverted:hover, ._c-btn--confirm._c-btn--inverted:focus {
     background-color: #4caf50;
     color: #fff; }
 
-._c-btn--deny._c-btn--inverted {
+.c-btn--deny.c-btn--inverted, ._c-btn--deny._c-btn--inverted {
   background-color: transparent;
   border: solid 1px #f44336;
   color: #f44336; }
-  ._c-btn--deny._c-btn--inverted:hover, ._c-btn--deny._c-btn--inverted:focus {
+  .c-btn--deny.c-btn--inverted:hover, .c-btn--deny.c-btn--inverted:focus, ._c-btn--deny._c-btn--inverted:hover, ._c-btn--deny._c-btn--inverted:focus {
     background-color: #f44336;
     color: #fff; }
 
 /* Size variants
  * ========================================================================== */
-._c-btn--small {
+.c-btn--small, ._c-btn--small {
   padding: 4px 12px; }
 
-._c-btn--large {
+.c-btn--large, ._c-btn--large {
   padding: 16px 64px; }
 
 /* Ghost buttons
  *
  * Ghost buttons have see-through backgrounds and are bordered.
  * ========================================================================== */
-._c-btn--ghost {
+.c-btn--ghost, ._c-btn--ghost {
   border: 2px solid currentColor;
   padding: 22px 30px; }
-  ._c-btn--ghost, ._c-btn--ghost:hover, ._c-btn--ghost:active, ._c-btn--ghost:focus {
+  .c-btn--ghost, .c-btn--ghost:hover, .c-btn--ghost:active, .c-btn--ghost:focus, ._c-btn--ghost, ._c-btn--ghost:hover, ._c-btn--ghost:active, ._c-btn--ghost:focus {
     background: none; }
-  ._c-btn--ghost._c-btn--small {
+  .c-btn--ghost.c-btn--small, .c-btn--ghost._c-btn--small, ._c-btn--ghost.c-btn--small, ._c-btn--ghost._c-btn--small {
     padding: 14px 22px; }
-  ._c-btn--ghost._c-btn--large {
+  .c-btn--ghost.c-btn--large, .c-btn--ghost._c-btn--large, ._c-btn--ghost.c-btn--large, ._c-btn--ghost._c-btn--large {
     padding: 30px 46px; }
-  ._c-btn--ghost._c-btn--primary {
+  .c-btn--ghost.c-btn--primary, .c-btn--ghost._c-btn--primary, ._c-btn--ghost.c-btn--primary, ._c-btn--ghost._c-btn--primary {
     color: #4a8ec2; }
-    ._c-btn--ghost._c-btn--primary:hover, ._c-btn--ghost._c-btn--primary:focus {
+    .c-btn--ghost.c-btn--primary:hover, .c-btn--ghost.c-btn--primary:focus, .c-btn--ghost._c-btn--primary:hover, .c-btn--ghost._c-btn--primary:focus, ._c-btn--ghost.c-btn--primary:hover, ._c-btn--ghost.c-btn--primary:focus, ._c-btn--ghost._c-btn--primary:hover, ._c-btn--ghost._c-btn--primary:focus {
       color: #3774a2; }
-  ._c-btn--ghost._c-btn--secondary {
+  .c-btn--ghost.c-btn--secondary, .c-btn--ghost._c-btn--secondary, ._c-btn--ghost.c-btn--secondary, ._c-btn--ghost._c-btn--secondary {
     color: #2f4054; }
-    ._c-btn--ghost._c-btn--secondary:hover, ._c-btn--ghost._c-btn--secondary:focus {
+    .c-btn--ghost.c-btn--secondary:hover, .c-btn--ghost.c-btn--secondary:focus, .c-btn--ghost._c-btn--secondary:hover, .c-btn--ghost._c-btn--secondary:focus, ._c-btn--ghost.c-btn--secondary:hover, ._c-btn--ghost.c-btn--secondary:focus, ._c-btn--ghost._c-btn--secondary:hover, ._c-btn--ghost._c-btn--secondary:focus {
       color: #1d2733; }
 
 /* 
@@ -789,15 +789,15 @@
         </div>
     </div>
 */
-._c-card {
+.c-card, ._c-card {
   background-color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   margin: 12px 0; }
-  ._c-card > div:nth-child(1) {
+  .c-card > div:nth-child(1), ._c-card > div:nth-child(1) {
     padding: 24px; }
-    ._c-card > div:nth-child(1) p {
+    .c-card > div:nth-child(1) p, ._c-card > div:nth-child(1) p {
       margin: 0; }
-  ._c-card > div:nth-child(2) {
+  .c-card > div:nth-child(2), ._c-card > div:nth-child(2) {
     padding: 16px 24px;
     text-transform: uppercase;
     border-top: 1px solid #d8d8d8; }
@@ -813,12 +813,12 @@
         </button>
     </div>
 */
-._c-floatBtn {
+.c-floatBtn, ._c-floatBtn {
   position: fixed;
   right: 24px;
   bottom: 24px;
   z-index: 100; }
-  ._c-floatBtn button {
+  .c-floatBtn button, ._c-floatBtn button {
     width: 56px;
     height: 56px;
     background-color: #2196f3;
@@ -829,11 +829,11 @@
     cursor: pointer;
     display: inline-block;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.02), 0px 1px 5px 0px rgba(0, 0, 0, 0.1); }
-    ._c-floatBtn button:hover {
+    .c-floatBtn button:hover, ._c-floatBtn button:hover {
       box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
-    ._c-floatBtn button:focus {
+    .c-floatBtn button:focus, ._c-floatBtn button:focus {
       background-color: #2196f3; }
-    ._c-floatBtn button i {
+    .c-floatBtn button i, ._c-floatBtn button i {
       line-height: 56px;
       width: inherit;
       display: inline-block;
@@ -2620,17 +2620,17 @@ input[type="number"] {
  * RESPONSIVE INCLUDES
  * ============================================================================================== */
 @media (min-width: 37.5em) {
-  ._o-wrapper {
+  .o-wrapper, ._o-wrapper {
     padding-right: 32px;
     padding-left: 32px;
     max-width: 1424px; }
-  ._o-wrapper._o-wrapper--flush {
+  .o-wrapper.o-wrapper--flush, ._o-wrapper._o-wrapper--flush {
     max-width: none; }
   /* Flush
    * --------------------------- */
-  ._o-layout--flush\@tabletV {
+  .o-layout--flush\@tabletV, ._o-layout--flush\@tabletV {
     margin: 0; }
-    ._o-layout--flush\@tabletV > ._o-layout__item {
+    .o-layout--flush\@tabletV > .o-layout__item, .o-layout--flush\@tabletV > ._o-layout__item, ._o-layout--flush\@tabletV > .o-layout__item, ._o-layout--flush\@tabletV > ._o-layout__item {
       padding-right: 0;
       padding-left: 0; }
   /* Auto Width
@@ -2638,43 +2638,43 @@ input[type="number"] {
   /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-  ._o-layout--auto\@tabletV > ._o-layout__item {
+  .o-layout--auto\@tabletV > .o-layout__item, ._o-layout--auto\@tabletV > ._o-layout__item {
     width: auto; }
   /* Spacing
    * --------------------------- */
-  ._o-layout--xxxs\@tabletV {
+  .o-layout--xxxs\@tabletV, ._o-layout--xxxs\@tabletV {
     margin: 0 -2px; }
-    ._o-layout--xxxs\@tabletV > ._o-layout__item {
+    .o-layout--xxxs\@tabletV > .o-layout__item, .o-layout--xxxs\@tabletV > ._o-layout__item, ._o-layout--xxxs\@tabletV > .o-layout__item, ._o-layout--xxxs\@tabletV > ._o-layout__item {
       padding-right: 2px;
       padding-left: 2px; }
-  ._o-layout--xxs\@tabletV {
+  .o-layout--xxs\@tabletV, ._o-layout--xxs\@tabletV {
     margin: 0 -4px; }
-    ._o-layout--xxs\@tabletV > ._o-layout__item {
+    .o-layout--xxs\@tabletV > .o-layout__item, .o-layout--xxs\@tabletV > ._o-layout__item, ._o-layout--xxs\@tabletV > .o-layout__item, ._o-layout--xxs\@tabletV > ._o-layout__item {
       padding-right: 4px;
       padding-left: 4px; }
-  ._o-layout--xs\@tabletV {
+  .o-layout--xs\@tabletV, ._o-layout--xs\@tabletV {
     margin: 0 -8px; }
-    ._o-layout--xs\@tabletV > ._o-layout__item {
+    .o-layout--xs\@tabletV > .o-layout__item, .o-layout--xs\@tabletV > ._o-layout__item, ._o-layout--xs\@tabletV > .o-layout__item, ._o-layout--xs\@tabletV > ._o-layout__item {
       padding-right: 8px;
       padding-left: 8px; }
-  ._o-layout--sm\@tabletV {
+  .o-layout--sm\@tabletV, ._o-layout--sm\@tabletV {
     margin: 0 -12px; }
-    ._o-layout--sm\@tabletV > ._o-layout__item {
+    .o-layout--sm\@tabletV > .o-layout__item, .o-layout--sm\@tabletV > ._o-layout__item, ._o-layout--sm\@tabletV > .o-layout__item, ._o-layout--sm\@tabletV > ._o-layout__item {
       padding-right: 12px;
       padding-left: 12px; }
-  ._o-layout--lg\@tabletV {
+  .o-layout--lg\@tabletV, ._o-layout--lg\@tabletV {
     margin: 0 -24px; }
-    ._o-layout--lg\@tabletV > ._o-layout__item {
+    .o-layout--lg\@tabletV > .o-layout__item, .o-layout--lg\@tabletV > ._o-layout__item, ._o-layout--lg\@tabletV > .o-layout__item, ._o-layout--lg\@tabletV > ._o-layout__item {
       padding-right: 24px;
       padding-left: 24px; }
-  ._o-layout--xl\@tabletV {
+  .o-layout--xl\@tabletV, ._o-layout--xl\@tabletV {
     margin: 0 -32px; }
-    ._o-layout--xl\@tabletV > ._o-layout__item {
+    .o-layout--xl\@tabletV > .o-layout__item, .o-layout--xl\@tabletV > ._o-layout__item, ._o-layout--xl\@tabletV > .o-layout__item, ._o-layout--xl\@tabletV > ._o-layout__item {
       padding-right: 32px;
       padding-left: 32px; }
-  ._o-layout--xxl\@tabletV {
+  .o-layout--xxl\@tabletV, ._o-layout--xxl\@tabletV {
     margin: 0 -64px; }
-    ._o-layout--xxl\@tabletV > ._o-layout__item {
+    .o-layout--xxl\@tabletV > .o-layout__item, .o-layout--xxl\@tabletV > ._o-layout__item, ._o-layout--xxl\@tabletV > .o-layout__item, ._o-layout--xxl\@tabletV > ._o-layout__item {
       padding-right: 64px;
       padding-left: 64px; }
   /* Vertical Alignment
@@ -2682,51 +2682,51 @@ input[type="number"] {
   /**
    * Align all grid items to the tops of each other.
    */
-  ._o-layout--top\@tabletV > ._o-layout__item {
+  .o-layout--top\@tabletV > .o-layout__item, ._o-layout--top\@tabletV > ._o-layout__item {
     vertical-align: top; }
   /**
    * Align all grid items to the middles of each other.
    */
-  ._o-layout--middle\@tabletV > ._o-layout__item {
+  .o-layout--middle\@tabletV > .o-layout__item, ._o-layout--middle\@tabletV > ._o-layout__item {
     vertical-align: middle; }
   /**
    * Align all grid items to the bottoms of each other.
    */
-  ._o-layout--bottom\@tabletV > ._o-layout__item {
+  .o-layout--bottom\@tabletV > .o-layout__item, ._o-layout--bottom\@tabletV > ._o-layout__item {
     vertical-align: bottom; }
   /* Horizontal Alignment
    * --------------------------- */
   /**
    * Fill up the layout system from the left.
    */
-  ._o-layout--left\@tabletV {
+  .o-layout--left\@tabletV, ._o-layout--left\@tabletV {
     text-align: left; }
   /**
    * Fill up the layout system from the center.
    */
-  ._o-layout--center\@tabletV {
+  .o-layout--center\@tabletV, ._o-layout--center\@tabletV {
     text-align: center; }
-    ._o-layout--center\@tabletV > ._o-layout__item {
+    .o-layout--center\@tabletV > .o-layout__item, .o-layout--center\@tabletV > ._o-layout__item, ._o-layout--center\@tabletV > .o-layout__item, ._o-layout--center\@tabletV > ._o-layout__item {
       text-align: left; }
   /**
    * Fill up the layout system from the right.
    */
-  ._o-layout--right\@tabletV {
+  .o-layout--right\@tabletV, ._o-layout--right\@tabletV {
     text-align: right; }
-    ._o-layout--right\@tabletV > ._o-layout__item {
+    .o-layout--right\@tabletV > .o-layout__item, .o-layout--right\@tabletV > ._o-layout__item, ._o-layout--right\@tabletV > .o-layout__item, ._o-layout--right\@tabletV > ._o-layout__item {
       text-align: left; }
   /**
    * Reverse the rendered order of the grid system.
    */
-  ._o-layout--reverse\@tabletV {
+  .o-layout--reverse\@tabletV, ._o-layout--reverse\@tabletV {
     direction: rtl; }
-    ._o-layout--reverse\@tabletV > ._o-layout__item {
+    .o-layout--reverse\@tabletV > .o-layout__item, .o-layout--reverse\@tabletV > ._o-layout__item, ._o-layout--reverse\@tabletV > .o-layout__item, ._o-layout--reverse\@tabletV > ._o-layout__item {
       direction: ltr;
       text-align: left; }
   /**
    * Bring back rendered order of the grid system.
    */
-  ._o-layout--forward\@tabletV {
+  .o-layout--forward\@tabletV, ._o-layout--forward\@tabletV {
     direction: ltr; }
   /* Inset
    * --------------------------- */
@@ -2737,34 +2737,34 @@ input[type="number"] {
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
    */
-  ._o-layout--inset {
+  .o-layout--inset, ._o-layout--inset {
     margin: 0;
     /* [1] */ }
   /* Flush
    * --------------------------- */
-  ._o-wrapper--flush\@tabletV {
+  .o-wrapper--flush\@tabletV, ._o-wrapper--flush\@tabletV {
     max-width: none; }
   /* Size Variants
    * --------------------------- */
-  ._o-wrapper--xxxs\@tabletV {
+  .o-wrapper--xxxs\@tabletV, ._o-wrapper--xxxs\@tabletV {
     padding-right: 2px;
     padding-left: 2px; }
-  ._o-wrapper--xxs\@tabletV {
+  .o-wrapper--xxs\@tabletV, ._o-wrapper--xxs\@tabletV {
     padding-right: 4px;
     padding-left: 4px; }
-  ._o-wrapper--xs\@tabletV {
+  .o-wrapper--xs\@tabletV, ._o-wrapper--xs\@tabletV {
     padding-right: 8px;
     padding-left: 8px; }
-  ._o-wrapper--sm\@tabletV {
+  .o-wrapper--sm\@tabletV, ._o-wrapper--sm\@tabletV {
     padding-right: 12px;
     padding-left: 12px; }
-  ._o-wrapper--lg\@tabletV {
+  .o-wrapper--lg\@tabletV, ._o-wrapper--lg\@tabletV {
     padding-right: 24px;
     padding-left: 24px; }
-  ._o-wrapper--xl\@tabletV {
+  .o-wrapper--xl\@tabletV, ._o-wrapper--xl\@tabletV {
     padding-right: 32px;
     padding-left: 32px; }
-  ._o-wrapper--xxl\@tabletV {
+  .o-wrapper--xxl\@tabletV, ._o-wrapper--xxl\@tabletV {
     padding-right: 64px;
     padding-left: 64px; }
   /**
@@ -3594,17 +3594,17 @@ input[type="number"] {
     width: auto !important; } }
 
 @media (min-width: 56.25em) {
-  ._o-wrapper {
+  .o-wrapper, ._o-wrapper {
     padding-right: 64px;
     padding-left: 64px;
     max-width: 1488px; }
-  ._o-wrapper._o-wrapper--flush {
+  .o-wrapper.o-wrapper--flush, ._o-wrapper._o-wrapper--flush {
     max-width: none; }
   /* Flush
    * --------------------------- */
-  ._o-layout--flush\@tabletH {
+  .o-layout--flush\@tabletH, ._o-layout--flush\@tabletH {
     margin: 0; }
-    ._o-layout--flush\@tabletH > ._o-layout__item {
+    .o-layout--flush\@tabletH > .o-layout__item, .o-layout--flush\@tabletH > ._o-layout__item, ._o-layout--flush\@tabletH > .o-layout__item, ._o-layout--flush\@tabletH > ._o-layout__item {
       padding-right: 0;
       padding-left: 0; }
   /* Auto Width
@@ -3612,43 +3612,43 @@ input[type="number"] {
   /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-  ._o-layout--auto\@tabletH > ._o-layout__item {
+  .o-layout--auto\@tabletH > .o-layout__item, ._o-layout--auto\@tabletH > ._o-layout__item {
     width: auto; }
   /* Spacing
    * --------------------------- */
-  ._o-layout--xxxs\@tabletH {
+  .o-layout--xxxs\@tabletH, ._o-layout--xxxs\@tabletH {
     margin: 0 -2px; }
-    ._o-layout--xxxs\@tabletH > ._o-layout__item {
+    .o-layout--xxxs\@tabletH > .o-layout__item, .o-layout--xxxs\@tabletH > ._o-layout__item, ._o-layout--xxxs\@tabletH > .o-layout__item, ._o-layout--xxxs\@tabletH > ._o-layout__item {
       padding-right: 2px;
       padding-left: 2px; }
-  ._o-layout--xxs\@tabletH {
+  .o-layout--xxs\@tabletH, ._o-layout--xxs\@tabletH {
     margin: 0 -4px; }
-    ._o-layout--xxs\@tabletH > ._o-layout__item {
+    .o-layout--xxs\@tabletH > .o-layout__item, .o-layout--xxs\@tabletH > ._o-layout__item, ._o-layout--xxs\@tabletH > .o-layout__item, ._o-layout--xxs\@tabletH > ._o-layout__item {
       padding-right: 4px;
       padding-left: 4px; }
-  ._o-layout--xs\@tabletH {
+  .o-layout--xs\@tabletH, ._o-layout--xs\@tabletH {
     margin: 0 -8px; }
-    ._o-layout--xs\@tabletH > ._o-layout__item {
+    .o-layout--xs\@tabletH > .o-layout__item, .o-layout--xs\@tabletH > ._o-layout__item, ._o-layout--xs\@tabletH > .o-layout__item, ._o-layout--xs\@tabletH > ._o-layout__item {
       padding-right: 8px;
       padding-left: 8px; }
-  ._o-layout--sm\@tabletH {
+  .o-layout--sm\@tabletH, ._o-layout--sm\@tabletH {
     margin: 0 -12px; }
-    ._o-layout--sm\@tabletH > ._o-layout__item {
+    .o-layout--sm\@tabletH > .o-layout__item, .o-layout--sm\@tabletH > ._o-layout__item, ._o-layout--sm\@tabletH > .o-layout__item, ._o-layout--sm\@tabletH > ._o-layout__item {
       padding-right: 12px;
       padding-left: 12px; }
-  ._o-layout--lg\@tabletH {
+  .o-layout--lg\@tabletH, ._o-layout--lg\@tabletH {
     margin: 0 -24px; }
-    ._o-layout--lg\@tabletH > ._o-layout__item {
+    .o-layout--lg\@tabletH > .o-layout__item, .o-layout--lg\@tabletH > ._o-layout__item, ._o-layout--lg\@tabletH > .o-layout__item, ._o-layout--lg\@tabletH > ._o-layout__item {
       padding-right: 24px;
       padding-left: 24px; }
-  ._o-layout--xl\@tabletH {
+  .o-layout--xl\@tabletH, ._o-layout--xl\@tabletH {
     margin: 0 -32px; }
-    ._o-layout--xl\@tabletH > ._o-layout__item {
+    .o-layout--xl\@tabletH > .o-layout__item, .o-layout--xl\@tabletH > ._o-layout__item, ._o-layout--xl\@tabletH > .o-layout__item, ._o-layout--xl\@tabletH > ._o-layout__item {
       padding-right: 32px;
       padding-left: 32px; }
-  ._o-layout--xxl\@tabletH {
+  .o-layout--xxl\@tabletH, ._o-layout--xxl\@tabletH {
     margin: 0 -64px; }
-    ._o-layout--xxl\@tabletH > ._o-layout__item {
+    .o-layout--xxl\@tabletH > .o-layout__item, .o-layout--xxl\@tabletH > ._o-layout__item, ._o-layout--xxl\@tabletH > .o-layout__item, ._o-layout--xxl\@tabletH > ._o-layout__item {
       padding-right: 64px;
       padding-left: 64px; }
   /* Vertical Alignment
@@ -3656,51 +3656,51 @@ input[type="number"] {
   /**
    * Align all grid items to the tops of each other.
    */
-  ._o-layout--top\@tabletH > ._o-layout__item {
+  .o-layout--top\@tabletH > .o-layout__item, ._o-layout--top\@tabletH > ._o-layout__item {
     vertical-align: top; }
   /**
    * Align all grid items to the middles of each other.
    */
-  ._o-layout--middle\@tabletH > ._o-layout__item {
+  .o-layout--middle\@tabletH > .o-layout__item, ._o-layout--middle\@tabletH > ._o-layout__item {
     vertical-align: middle; }
   /**
    * Align all grid items to the bottoms of each other.
    */
-  ._o-layout--bottom\@tabletH > ._o-layout__item {
+  .o-layout--bottom\@tabletH > .o-layout__item, ._o-layout--bottom\@tabletH > ._o-layout__item {
     vertical-align: bottom; }
   /* Horizontal Alignment
    * --------------------------- */
   /**
    * Fill up the layout system from the left.
    */
-  ._o-layout--left\@tabletH {
+  .o-layout--left\@tabletH, ._o-layout--left\@tabletH {
     text-align: left; }
   /**
    * Fill up the layout system from the center.
    */
-  ._o-layout--center\@tabletH {
+  .o-layout--center\@tabletH, ._o-layout--center\@tabletH {
     text-align: center; }
-    ._o-layout--center\@tabletH > ._o-layout__item {
+    .o-layout--center\@tabletH > .o-layout__item, .o-layout--center\@tabletH > ._o-layout__item, ._o-layout--center\@tabletH > .o-layout__item, ._o-layout--center\@tabletH > ._o-layout__item {
       text-align: left; }
   /**
    * Fill up the layout system from the right.
    */
-  ._o-layout--right\@tabletH {
+  .o-layout--right\@tabletH, ._o-layout--right\@tabletH {
     text-align: right; }
-    ._o-layout--right\@tabletH > ._o-layout__item {
+    .o-layout--right\@tabletH > .o-layout__item, .o-layout--right\@tabletH > ._o-layout__item, ._o-layout--right\@tabletH > .o-layout__item, ._o-layout--right\@tabletH > ._o-layout__item {
       text-align: left; }
   /**
    * Reverse the rendered order of the grid system.
    */
-  ._o-layout--reverse\@tabletH {
+  .o-layout--reverse\@tabletH, ._o-layout--reverse\@tabletH {
     direction: rtl; }
-    ._o-layout--reverse\@tabletH > ._o-layout__item {
+    .o-layout--reverse\@tabletH > .o-layout__item, .o-layout--reverse\@tabletH > ._o-layout__item, ._o-layout--reverse\@tabletH > .o-layout__item, ._o-layout--reverse\@tabletH > ._o-layout__item {
       direction: ltr;
       text-align: left; }
   /**
    * Bring back rendered order of the grid system.
    */
-  ._o-layout--forward\@tabletH {
+  .o-layout--forward\@tabletH, ._o-layout--forward\@tabletH {
     direction: ltr; }
   /* Inset
    * --------------------------- */
@@ -3711,34 +3711,34 @@ input[type="number"] {
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
    */
-  ._o-layout--inset {
+  .o-layout--inset, ._o-layout--inset {
     margin: 0;
     /* [1] */ }
   /* Flush
    * --------------------------- */
-  ._o-wrapper--flush\@tabletH {
+  .o-wrapper--flush\@tabletH, ._o-wrapper--flush\@tabletH {
     max-width: none; }
   /* Size Variants
    * --------------------------- */
-  ._o-wrapper--xxxs\@tabletH {
+  .o-wrapper--xxxs\@tabletH, ._o-wrapper--xxxs\@tabletH {
     padding-right: 2px;
     padding-left: 2px; }
-  ._o-wrapper--xxs\@tabletH {
+  .o-wrapper--xxs\@tabletH, ._o-wrapper--xxs\@tabletH {
     padding-right: 4px;
     padding-left: 4px; }
-  ._o-wrapper--xs\@tabletH {
+  .o-wrapper--xs\@tabletH, ._o-wrapper--xs\@tabletH {
     padding-right: 8px;
     padding-left: 8px; }
-  ._o-wrapper--sm\@tabletH {
+  .o-wrapper--sm\@tabletH, ._o-wrapper--sm\@tabletH {
     padding-right: 12px;
     padding-left: 12px; }
-  ._o-wrapper--lg\@tabletH {
+  .o-wrapper--lg\@tabletH, ._o-wrapper--lg\@tabletH {
     padding-right: 24px;
     padding-left: 24px; }
-  ._o-wrapper--xl\@tabletH {
+  .o-wrapper--xl\@tabletH, ._o-wrapper--xl\@tabletH {
     padding-right: 32px;
     padding-left: 32px; }
-  ._o-wrapper--xxl\@tabletH {
+  .o-wrapper--xxl\@tabletH, ._o-wrapper--xxl\@tabletH {
     padding-right: 64px;
     padding-left: 64px; }
   /**
@@ -4568,17 +4568,17 @@ input[type="number"] {
     width: auto !important; } }
 
 @media (min-width: 75em) {
-  ._o-wrapper {
+  .o-wrapper, ._o-wrapper {
     padding-right: 64px;
     padding-left: 64px;
     max-width: 1488px; }
-  ._o-wrapper._o-wrapper--flush {
+  .o-wrapper.o-wrapper--flush, ._o-wrapper._o-wrapper--flush {
     max-width: none; }
   /* Flush
    * --------------------------- */
-  ._o-layout--flush\@laptop {
+  .o-layout--flush\@laptop, ._o-layout--flush\@laptop {
     margin: 0; }
-    ._o-layout--flush\@laptop > ._o-layout__item {
+    .o-layout--flush\@laptop > .o-layout__item, .o-layout--flush\@laptop > ._o-layout__item, ._o-layout--flush\@laptop > .o-layout__item, ._o-layout--flush\@laptop > ._o-layout__item {
       padding-right: 0;
       padding-left: 0; }
   /* Auto Width
@@ -4586,43 +4586,43 @@ input[type="number"] {
   /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-  ._o-layout--auto\@laptop > ._o-layout__item {
+  .o-layout--auto\@laptop > .o-layout__item, ._o-layout--auto\@laptop > ._o-layout__item {
     width: auto; }
   /* Spacing
    * --------------------------- */
-  ._o-layout--xxxs\@laptop {
+  .o-layout--xxxs\@laptop, ._o-layout--xxxs\@laptop {
     margin: 0 -2px; }
-    ._o-layout--xxxs\@laptop > ._o-layout__item {
+    .o-layout--xxxs\@laptop > .o-layout__item, .o-layout--xxxs\@laptop > ._o-layout__item, ._o-layout--xxxs\@laptop > .o-layout__item, ._o-layout--xxxs\@laptop > ._o-layout__item {
       padding-right: 2px;
       padding-left: 2px; }
-  ._o-layout--xxs\@laptop {
+  .o-layout--xxs\@laptop, ._o-layout--xxs\@laptop {
     margin: 0 -4px; }
-    ._o-layout--xxs\@laptop > ._o-layout__item {
+    .o-layout--xxs\@laptop > .o-layout__item, .o-layout--xxs\@laptop > ._o-layout__item, ._o-layout--xxs\@laptop > .o-layout__item, ._o-layout--xxs\@laptop > ._o-layout__item {
       padding-right: 4px;
       padding-left: 4px; }
-  ._o-layout--xs\@laptop {
+  .o-layout--xs\@laptop, ._o-layout--xs\@laptop {
     margin: 0 -8px; }
-    ._o-layout--xs\@laptop > ._o-layout__item {
+    .o-layout--xs\@laptop > .o-layout__item, .o-layout--xs\@laptop > ._o-layout__item, ._o-layout--xs\@laptop > .o-layout__item, ._o-layout--xs\@laptop > ._o-layout__item {
       padding-right: 8px;
       padding-left: 8px; }
-  ._o-layout--sm\@laptop {
+  .o-layout--sm\@laptop, ._o-layout--sm\@laptop {
     margin: 0 -12px; }
-    ._o-layout--sm\@laptop > ._o-layout__item {
+    .o-layout--sm\@laptop > .o-layout__item, .o-layout--sm\@laptop > ._o-layout__item, ._o-layout--sm\@laptop > .o-layout__item, ._o-layout--sm\@laptop > ._o-layout__item {
       padding-right: 12px;
       padding-left: 12px; }
-  ._o-layout--lg\@laptop {
+  .o-layout--lg\@laptop, ._o-layout--lg\@laptop {
     margin: 0 -24px; }
-    ._o-layout--lg\@laptop > ._o-layout__item {
+    .o-layout--lg\@laptop > .o-layout__item, .o-layout--lg\@laptop > ._o-layout__item, ._o-layout--lg\@laptop > .o-layout__item, ._o-layout--lg\@laptop > ._o-layout__item {
       padding-right: 24px;
       padding-left: 24px; }
-  ._o-layout--xl\@laptop {
+  .o-layout--xl\@laptop, ._o-layout--xl\@laptop {
     margin: 0 -32px; }
-    ._o-layout--xl\@laptop > ._o-layout__item {
+    .o-layout--xl\@laptop > .o-layout__item, .o-layout--xl\@laptop > ._o-layout__item, ._o-layout--xl\@laptop > .o-layout__item, ._o-layout--xl\@laptop > ._o-layout__item {
       padding-right: 32px;
       padding-left: 32px; }
-  ._o-layout--xxl\@laptop {
+  .o-layout--xxl\@laptop, ._o-layout--xxl\@laptop {
     margin: 0 -64px; }
-    ._o-layout--xxl\@laptop > ._o-layout__item {
+    .o-layout--xxl\@laptop > .o-layout__item, .o-layout--xxl\@laptop > ._o-layout__item, ._o-layout--xxl\@laptop > .o-layout__item, ._o-layout--xxl\@laptop > ._o-layout__item {
       padding-right: 64px;
       padding-left: 64px; }
   /* Vertical Alignment
@@ -4630,51 +4630,51 @@ input[type="number"] {
   /**
    * Align all grid items to the tops of each other.
    */
-  ._o-layout--top\@laptop > ._o-layout__item {
+  .o-layout--top\@laptop > .o-layout__item, ._o-layout--top\@laptop > ._o-layout__item {
     vertical-align: top; }
   /**
    * Align all grid items to the middles of each other.
    */
-  ._o-layout--middle\@laptop > ._o-layout__item {
+  .o-layout--middle\@laptop > .o-layout__item, ._o-layout--middle\@laptop > ._o-layout__item {
     vertical-align: middle; }
   /**
    * Align all grid items to the bottoms of each other.
    */
-  ._o-layout--bottom\@laptop > ._o-layout__item {
+  .o-layout--bottom\@laptop > .o-layout__item, ._o-layout--bottom\@laptop > ._o-layout__item {
     vertical-align: bottom; }
   /* Horizontal Alignment
    * --------------------------- */
   /**
    * Fill up the layout system from the left.
    */
-  ._o-layout--left\@laptop {
+  .o-layout--left\@laptop, ._o-layout--left\@laptop {
     text-align: left; }
   /**
    * Fill up the layout system from the center.
    */
-  ._o-layout--center\@laptop {
+  .o-layout--center\@laptop, ._o-layout--center\@laptop {
     text-align: center; }
-    ._o-layout--center\@laptop > ._o-layout__item {
+    .o-layout--center\@laptop > .o-layout__item, .o-layout--center\@laptop > ._o-layout__item, ._o-layout--center\@laptop > .o-layout__item, ._o-layout--center\@laptop > ._o-layout__item {
       text-align: left; }
   /**
    * Fill up the layout system from the right.
    */
-  ._o-layout--right\@laptop {
+  .o-layout--right\@laptop, ._o-layout--right\@laptop {
     text-align: right; }
-    ._o-layout--right\@laptop > ._o-layout__item {
+    .o-layout--right\@laptop > .o-layout__item, .o-layout--right\@laptop > ._o-layout__item, ._o-layout--right\@laptop > .o-layout__item, ._o-layout--right\@laptop > ._o-layout__item {
       text-align: left; }
   /**
    * Reverse the rendered order of the grid system.
    */
-  ._o-layout--reverse\@laptop {
+  .o-layout--reverse\@laptop, ._o-layout--reverse\@laptop {
     direction: rtl; }
-    ._o-layout--reverse\@laptop > ._o-layout__item {
+    .o-layout--reverse\@laptop > .o-layout__item, .o-layout--reverse\@laptop > ._o-layout__item, ._o-layout--reverse\@laptop > .o-layout__item, ._o-layout--reverse\@laptop > ._o-layout__item {
       direction: ltr;
       text-align: left; }
   /**
    * Bring back rendered order of the grid system.
    */
-  ._o-layout--forward\@laptop {
+  .o-layout--forward\@laptop, ._o-layout--forward\@laptop {
     direction: ltr; }
   /* Inset
    * --------------------------- */
@@ -4685,34 +4685,34 @@ input[type="number"] {
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
    */
-  ._o-layout--inset {
+  .o-layout--inset, ._o-layout--inset {
     margin: 0;
     /* [1] */ }
   /* Flush
    * --------------------------- */
-  ._o-wrapper--flush\@laptop {
+  .o-wrapper--flush\@laptop, ._o-wrapper--flush\@laptop {
     max-width: none; }
   /* Size Variants
    * --------------------------- */
-  ._o-wrapper--xxxs\@laptop {
+  .o-wrapper--xxxs\@laptop, ._o-wrapper--xxxs\@laptop {
     padding-right: 2px;
     padding-left: 2px; }
-  ._o-wrapper--xxs\@laptop {
+  .o-wrapper--xxs\@laptop, ._o-wrapper--xxs\@laptop {
     padding-right: 4px;
     padding-left: 4px; }
-  ._o-wrapper--xs\@laptop {
+  .o-wrapper--xs\@laptop, ._o-wrapper--xs\@laptop {
     padding-right: 8px;
     padding-left: 8px; }
-  ._o-wrapper--sm\@laptop {
+  .o-wrapper--sm\@laptop, ._o-wrapper--sm\@laptop {
     padding-right: 12px;
     padding-left: 12px; }
-  ._o-wrapper--lg\@laptop {
+  .o-wrapper--lg\@laptop, ._o-wrapper--lg\@laptop {
     padding-right: 24px;
     padding-left: 24px; }
-  ._o-wrapper--xl\@laptop {
+  .o-wrapper--xl\@laptop, ._o-wrapper--xl\@laptop {
     padding-right: 32px;
     padding-left: 32px; }
-  ._o-wrapper--xxl\@laptop {
+  .o-wrapper--xxl\@laptop, ._o-wrapper--xxl\@laptop {
     padding-right: 64px;
     padding-left: 64px; }
   /**
@@ -5544,9 +5544,9 @@ input[type="number"] {
 @media (min-width: 100em) {
   /* Flush
    * --------------------------- */
-  ._o-layout--flush\@desktop {
+  .o-layout--flush\@desktop, ._o-layout--flush\@desktop {
     margin: 0; }
-    ._o-layout--flush\@desktop > ._o-layout__item {
+    .o-layout--flush\@desktop > .o-layout__item, .o-layout--flush\@desktop > ._o-layout__item, ._o-layout--flush\@desktop > .o-layout__item, ._o-layout--flush\@desktop > ._o-layout__item {
       padding-right: 0;
       padding-left: 0; }
   /* Auto Width
@@ -5554,43 +5554,43 @@ input[type="number"] {
   /**
    * Cause layout items to take up a non-explicit amount of width.
    */
-  ._o-layout--auto\@desktop > ._o-layout__item {
+  .o-layout--auto\@desktop > .o-layout__item, ._o-layout--auto\@desktop > ._o-layout__item {
     width: auto; }
   /* Spacing
    * --------------------------- */
-  ._o-layout--xxxs\@desktop {
+  .o-layout--xxxs\@desktop, ._o-layout--xxxs\@desktop {
     margin: 0 -2px; }
-    ._o-layout--xxxs\@desktop > ._o-layout__item {
+    .o-layout--xxxs\@desktop > .o-layout__item, .o-layout--xxxs\@desktop > ._o-layout__item, ._o-layout--xxxs\@desktop > .o-layout__item, ._o-layout--xxxs\@desktop > ._o-layout__item {
       padding-right: 2px;
       padding-left: 2px; }
-  ._o-layout--xxs\@desktop {
+  .o-layout--xxs\@desktop, ._o-layout--xxs\@desktop {
     margin: 0 -4px; }
-    ._o-layout--xxs\@desktop > ._o-layout__item {
+    .o-layout--xxs\@desktop > .o-layout__item, .o-layout--xxs\@desktop > ._o-layout__item, ._o-layout--xxs\@desktop > .o-layout__item, ._o-layout--xxs\@desktop > ._o-layout__item {
       padding-right: 4px;
       padding-left: 4px; }
-  ._o-layout--xs\@desktop {
+  .o-layout--xs\@desktop, ._o-layout--xs\@desktop {
     margin: 0 -8px; }
-    ._o-layout--xs\@desktop > ._o-layout__item {
+    .o-layout--xs\@desktop > .o-layout__item, .o-layout--xs\@desktop > ._o-layout__item, ._o-layout--xs\@desktop > .o-layout__item, ._o-layout--xs\@desktop > ._o-layout__item {
       padding-right: 8px;
       padding-left: 8px; }
-  ._o-layout--sm\@desktop {
+  .o-layout--sm\@desktop, ._o-layout--sm\@desktop {
     margin: 0 -12px; }
-    ._o-layout--sm\@desktop > ._o-layout__item {
+    .o-layout--sm\@desktop > .o-layout__item, .o-layout--sm\@desktop > ._o-layout__item, ._o-layout--sm\@desktop > .o-layout__item, ._o-layout--sm\@desktop > ._o-layout__item {
       padding-right: 12px;
       padding-left: 12px; }
-  ._o-layout--lg\@desktop {
+  .o-layout--lg\@desktop, ._o-layout--lg\@desktop {
     margin: 0 -24px; }
-    ._o-layout--lg\@desktop > ._o-layout__item {
+    .o-layout--lg\@desktop > .o-layout__item, .o-layout--lg\@desktop > ._o-layout__item, ._o-layout--lg\@desktop > .o-layout__item, ._o-layout--lg\@desktop > ._o-layout__item {
       padding-right: 24px;
       padding-left: 24px; }
-  ._o-layout--xl\@desktop {
+  .o-layout--xl\@desktop, ._o-layout--xl\@desktop {
     margin: 0 -32px; }
-    ._o-layout--xl\@desktop > ._o-layout__item {
+    .o-layout--xl\@desktop > .o-layout__item, .o-layout--xl\@desktop > ._o-layout__item, ._o-layout--xl\@desktop > .o-layout__item, ._o-layout--xl\@desktop > ._o-layout__item {
       padding-right: 32px;
       padding-left: 32px; }
-  ._o-layout--xxl\@desktop {
+  .o-layout--xxl\@desktop, ._o-layout--xxl\@desktop {
     margin: 0 -64px; }
-    ._o-layout--xxl\@desktop > ._o-layout__item {
+    .o-layout--xxl\@desktop > .o-layout__item, .o-layout--xxl\@desktop > ._o-layout__item, ._o-layout--xxl\@desktop > .o-layout__item, ._o-layout--xxl\@desktop > ._o-layout__item {
       padding-right: 64px;
       padding-left: 64px; }
   /* Vertical Alignment
@@ -5598,51 +5598,51 @@ input[type="number"] {
   /**
    * Align all grid items to the tops of each other.
    */
-  ._o-layout--top\@desktop > ._o-layout__item {
+  .o-layout--top\@desktop > .o-layout__item, ._o-layout--top\@desktop > ._o-layout__item {
     vertical-align: top; }
   /**
    * Align all grid items to the middles of each other.
    */
-  ._o-layout--middle\@desktop > ._o-layout__item {
+  .o-layout--middle\@desktop > .o-layout__item, ._o-layout--middle\@desktop > ._o-layout__item {
     vertical-align: middle; }
   /**
    * Align all grid items to the bottoms of each other.
    */
-  ._o-layout--bottom\@desktop > ._o-layout__item {
+  .o-layout--bottom\@desktop > .o-layout__item, ._o-layout--bottom\@desktop > ._o-layout__item {
     vertical-align: bottom; }
   /* Horizontal Alignment
    * --------------------------- */
   /**
    * Fill up the layout system from the left.
    */
-  ._o-layout--left\@desktop {
+  .o-layout--left\@desktop, ._o-layout--left\@desktop {
     text-align: left; }
   /**
    * Fill up the layout system from the center.
    */
-  ._o-layout--center\@desktop {
+  .o-layout--center\@desktop, ._o-layout--center\@desktop {
     text-align: center; }
-    ._o-layout--center\@desktop > ._o-layout__item {
+    .o-layout--center\@desktop > .o-layout__item, .o-layout--center\@desktop > ._o-layout__item, ._o-layout--center\@desktop > .o-layout__item, ._o-layout--center\@desktop > ._o-layout__item {
       text-align: left; }
   /**
    * Fill up the layout system from the right.
    */
-  ._o-layout--right\@desktop {
+  .o-layout--right\@desktop, ._o-layout--right\@desktop {
     text-align: right; }
-    ._o-layout--right\@desktop > ._o-layout__item {
+    .o-layout--right\@desktop > .o-layout__item, .o-layout--right\@desktop > ._o-layout__item, ._o-layout--right\@desktop > .o-layout__item, ._o-layout--right\@desktop > ._o-layout__item {
       text-align: left; }
   /**
    * Reverse the rendered order of the grid system.
    */
-  ._o-layout--reverse\@desktop {
+  .o-layout--reverse\@desktop, ._o-layout--reverse\@desktop {
     direction: rtl; }
-    ._o-layout--reverse\@desktop > ._o-layout__item {
+    .o-layout--reverse\@desktop > .o-layout__item, .o-layout--reverse\@desktop > ._o-layout__item, ._o-layout--reverse\@desktop > .o-layout__item, ._o-layout--reverse\@desktop > ._o-layout__item {
       direction: ltr;
       text-align: left; }
   /**
    * Bring back rendered order of the grid system.
    */
-  ._o-layout--forward\@desktop {
+  .o-layout--forward\@desktop, ._o-layout--forward\@desktop {
     direction: ltr; }
   /* Inset
    * --------------------------- */
@@ -5653,34 +5653,34 @@ input[type="number"] {
    *    items. Note: when using the inset modifier, you'd like use a wrapper
    *    object with the flush modifier.
    */
-  ._o-layout--inset {
+  .o-layout--inset, ._o-layout--inset {
     margin: 0;
     /* [1] */ }
   /* Flush
    * --------------------------- */
-  ._o-wrapper--flush\@desktop {
+  .o-wrapper--flush\@desktop, ._o-wrapper--flush\@desktop {
     max-width: none; }
   /* Size Variants
    * --------------------------- */
-  ._o-wrapper--xxxs\@desktop {
+  .o-wrapper--xxxs\@desktop, ._o-wrapper--xxxs\@desktop {
     padding-right: 2px;
     padding-left: 2px; }
-  ._o-wrapper--xxs\@desktop {
+  .o-wrapper--xxs\@desktop, ._o-wrapper--xxs\@desktop {
     padding-right: 4px;
     padding-left: 4px; }
-  ._o-wrapper--xs\@desktop {
+  .o-wrapper--xs\@desktop, ._o-wrapper--xs\@desktop {
     padding-right: 8px;
     padding-left: 8px; }
-  ._o-wrapper--sm\@desktop {
+  .o-wrapper--sm\@desktop, ._o-wrapper--sm\@desktop {
     padding-right: 12px;
     padding-left: 12px; }
-  ._o-wrapper--lg\@desktop {
+  .o-wrapper--lg\@desktop, ._o-wrapper--lg\@desktop {
     padding-right: 24px;
     padding-left: 24px; }
-  ._o-wrapper--xl\@desktop {
+  .o-wrapper--xl\@desktop, ._o-wrapper--xl\@desktop {
     padding-right: 32px;
     padding-left: 32px; }
-  ._o-wrapper--xxl\@desktop {
+  .o-wrapper--xxl\@desktop, ._o-wrapper--xxl\@desktop {
     padding-right: 64px;
     padding-left: 64px; }
   /**

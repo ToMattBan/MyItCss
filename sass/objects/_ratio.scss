@@ -24,7 +24,7 @@ $ratios: (
   )
 ) !default;
 
-._o-ratio {
+.o-ratio, ._o-ratio {
   position: relative;
   display: block;
   overflow: hidden;
@@ -37,10 +37,10 @@ $ratios: (
   }
 }
 
-._o-ratio__content,
-._o-ratio > iframe,
-._o-ratio > embed,
-._o-ratio > object {
+.o-ratio__content, ._o-ratio__content,
+.o-ratio > iframe, ._o-ratio > iframe,
+.o-ratio > embed, ._o-ratio > embed,
+.o-ratio > object, ._o-ratio > object {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -68,7 +68,7 @@ $ratios: (
       @error "`#{$consequent}` needs to be a number.";
     }
 
-    ._o-ratio--#{$antecedent}\:#{$consequent}:before {
+    .o-ratio--#{$antecedent}\:#{$consequent}:before, ._o-ratio--#{$antecedent}\:#{$consequent}:before {
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
   }
