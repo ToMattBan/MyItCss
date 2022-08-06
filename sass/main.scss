@@ -1,44 +1,3 @@
-/*------------------------------------*\
-    #MAIN
-\*------------------------------------*/
-
-/**
- * SETTINGS
- * Config...............Project-level config.
- * Global...............Project-specific, globally available settings.
- *
- * TOOLS
- * Mixins...............Global mixins.
- *
- * GENERIC
- * Normalize.css........Normalise browser defaults…
- * Reset................…and zero them out.
- * Box-sizing...........More manageable box-model.
- * Shared...............Share certain high-level styles as broadly as possible.
- *
- * ELEMENTS
- * Headings.............H1–H6
- * Forms................Element-level form styling.
- *
- * OBJECTS
- * Layout...............Simple Layout abstraction tool.
- * List-bare............‘Unstyled’ lists: bullets and indent removed.
- * List-pair............Simple key–value pair list.
- * Pack.................Force elements to pack up into all available space.
- *
- * COMPONENTS
- * Forms................Component-level form styling.
- * Buttons..............Element-agnostic button styles.
- * Comments.............Comment styles.
- * Messaging............User feedback messaging.
- *
- * TRUMPS
- * Typography...........Utilities for manipulating text.
- * Display..............Helper classes for showing or hiding content.
- * Widths...............Width helper classes for use with our Layout system.
- *
- */
-
 /* Settings
  * --------------------------- */
 
@@ -55,27 +14,17 @@
 @import "tools/clearfix";
 @import "tools/elevation";
 @import "tools/hide";
-@import "tools/inputReset";
-@import "tools/position";
-@import "tools/fontAwesome";
 @import "node_modules/sass-mq/mq";
 
 /* Generic
  * --------------------------- */
 
-@import "generic/normalize";
-@import "generic/reset";
-@import "generic/backgroundImages";
-@import "generic/boxSizing";
-@import "generic/margins";
-@import "generic/base";
+
 
 /* Elements
  * --------------------------- */
 
-@import "elements/headings";
-@import "elements/images";
-@import "elements/tables";
+
 
 /* Objects
  * --------------------------- */
@@ -84,28 +33,15 @@
 @import "objects/layout";
 @import "objects/grid";
 @import "objects/bareList";
-// @import "objects/box";
-// @import "objects/crop";
-// @import "objects/inlineList";
-// @import "objects/media";
-// @import "objects/pack";
-// @import "objects/ratio";
-// @import "objects/stackedMedia";
-// @import "objects/table";
-// @import "objects/vAlignMedia";
-// @import "objects/form";
-// @import "objects/tabs";
+
 
 /* Components
  * --------------------------- */
 
 @import "components/buttons";
-//@import "components/carousel";
-//@import "components/tags";
-//@import "components/loading";
-//@import "components/colorBall";
+@import "components/card";
+@import "components/floatButton";
 @import "components/override";
-//@import "components/promotions";
 
 /* Utilities
  * --------------------------- */

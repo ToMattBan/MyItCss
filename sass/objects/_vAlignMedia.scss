@@ -7,11 +7,11 @@
  *
  * http://csswizardry.com/2013/05/the-flag-object/
  *
- * <div class="o-vAlignMedia">
- *   <div class="o-vAlignMedia__img">
+ * <div class="_o-vAlignMedia">
+ *   <div class="_o-vAlignMedia__img">
  *     <img />
  *   </div>
- *   <div class="o-vAlignMedia__body">
+ *   <div class="_o-vAlignMedia__body">
  *     <p>Body Content</p>
  *   </div>
  * </div>
@@ -22,7 +22,7 @@
  * 3. Reset inherited 'border-spacing' declarations.
  * ========================================================================== */
 
-.o-vAlignMedia {
+._o-vAlignMedia {
   display: table; /* [1] */
   width: 100%; /* [2] */
   border-spacing: 0; /* [3] */
@@ -33,8 +33,8 @@
  *
  * 1. Default valign to middle, otherwise just use o-media instead.
  */
-.o-vAlignMedia__img,
-.o-vAlignMedia__body {
+._o-vAlignMedia__img,
+._o-vAlignMedia__body {
   display: table-cell;
   vertical-align: middle; /* [1] */
 }
@@ -45,7 +45,7 @@
  * 1. Forces `.vAlignMedia__img` cell to shrink-wrap the image:
  *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
  */
-.o-vAlignMedia__img {
+._o-vAlignMedia__img {
   width: 1px; /* [1] */
   padding-right: $globalSpacing;
 
@@ -62,7 +62,7 @@
  *
  * 1. Forces '.vAlignMedia__body' cell to fill remaining horizontal space.
  */
-.o-vAlignMedia__body {
+._o-vAlignMedia__body {
   width: auto; /* [1] */
 
   &,
@@ -79,15 +79,15 @@
  * 2. Reset rendered direction of child item inner content.
  * 3. Reassign margins to the correct sides.
  */
-.o-vAlignMedia--reverse {
+._o-vAlignMedia--reverse {
   direction: rtl; /* [1] */
 
-  > .o-vAlignMedia__img,
-  > .o-vAlignMedia__body {
+  > ._o-vAlignMedia__img,
+  > ._o-vAlignMedia__body {
     direction: ltr; /* [2] */
   }
 
-  > .o-vAlignMedia__img {
+  > ._o-vAlignMedia__img {
     padding-right: 0; /* [3] */
     padding-left: $globalSpacing; /* [3] */
   }
@@ -98,16 +98,16 @@
  * Vertically align the image and body-content. Defaults to middle.
  * ========================================================================== */
 
-.o-vAlignMedia--top {
-  > .o-vAlignMedia__img,
-  > .o-vAlignMedia__body {
+._o-vAlignMedia--top {
+  > ._o-vAlignMedia__img,
+  > ._o-vAlignMedia__body {
     vertical-align: top;
   }
 }
 
-.o-vAlignMedia--bottom {
-  > .o-vAlignMedia__img,
-  > .o-vAlignMedia__body {
+._o-vAlignMedia--bottom {
+  > ._o-vAlignMedia__img,
+  > ._o-vAlignMedia__body {
     vertical-align: bottom;
   }
 }
@@ -119,13 +119,13 @@
  * ========================================================================== */
 
 @each $spacingName, $spacingFactor in $globalSpacingFactors {
-  .o-vAlignMedia--#{$spacingName} {
-    > .o-vAlignMedia__img {
+  ._o-vAlignMedia--#{$spacingName} {
+    > ._o-vAlignMedia__img {
       padding-right: ($globalSpacing * $spacingFactor);
     }
 
-    &.o-vAlignMedia--reverse {
-      > .o-vAlignMedia__img {
+    &._o-vAlignMedia--reverse {
+      > ._o-vAlignMedia__img {
         padding-right: 0;
         padding-left: ($globalSpacing * $spacingFactor);
       }

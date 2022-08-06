@@ -1,0 +1,35 @@
+/* 
+    USAGE:
+
+    <div class="_c-card">
+        <div>
+            <p>Content here</p>
+        </div>
+
+        <div> --> This is opcional, you can use just the content
+            <a class="_blue">Action here</a>
+        </div>
+    </div>
+*/
+
+
+
+._c-card {
+    background-color: getColor("white");
+    @include boxShape();
+    margin: 12px 0;
+
+    > div:nth-child(1) {
+        padding: 24px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    > div:nth-child(2) {
+        padding: 16px 24px;
+        text-transform: uppercase;
+        border-top: 1px solid getColor('strokeGray');
+    }
+}

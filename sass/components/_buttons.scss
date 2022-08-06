@@ -5,9 +5,9 @@
  *
  * Classes that can be used on an `<a>`, `<button>` or `<input>` element.
  *
- * .c-btn--primary - Use this class to indicate that the button is the primary
+ * ._c-btn--primary - Use this class to indicate that the button is the primary
  *                   feature of this form.
- * .c-btn--remove  - Use this class to indicate that the button will remove a
+ * ._c-btn--remove  - Use this class to indicate that the button will remove a
  *                   feature, or other negative connotations.
  * ========================================================================== */
 
@@ -19,7 +19,7 @@
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.c-btn {
+._c-btn {
   display: inline-block;
   /* [1] */
   vertical-align: middle;
@@ -32,70 +32,83 @@
   /* [4] */
   cursor: pointer;
   /* [5] */
-  padding: $globalSpacingXxs $globalSpacingXs;
+  padding: $globalSpacingXxs $globalSpacing;
+  background: transparent;
+  text-transform: uppercase;
   border: none;
   border-radius: 4px;
   transition: all 0.2s ease;
   // @include elevation(2);
+
+  &:hover,
+  &:focus {
+    filter: brightness(0.8);
+    background-color: transparent;
+  }
 }
 
 /* Style variants
  * ========================================================================== */
 
-.c-btn--primary {
+._c-btn--primary {
   background-color: getColor("primary");
 
   &,
   &:hover,
   &:active,
   &:focus {
+    background-color: getColor("primary");
     text-decoration: none;
     /* [4] */
     color: #fff;
   }
-
-  &:hover,
-  &:focus {
-    background-color: mix(getColor("primary"), #000, 80%);
-  }
 }
 
-.c-btn--secondary {
+._c-btn--secondary {
   background-color: getColor("secondary");
 
   &,
   &:hover,
   &:active,
   &:focus {
+    background-color: getColor("secondary");
     text-decoration: none;
     color: getColor("black");
   }
-
-  &:hover,
-  &:focus {
-    background-color: getColor("secondary");
-  }
 }
 
-.c-btn--tertiary {
-  background-color: getColor("black");
-  color: getColor("primary");
+._c-btn--confirm {
+  background-color: getColor("green");
+  color: white;
 
   &,
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
-    color: getColor("primary");
-  }
-
-  &:hover,
-  &:focus {
-    color: getColor("black");
+    background-color: getColor("green");
   }
 }
 
-.c-btn--primary.c-btn--inverted {
+._c-btn--deny {
+  background-color: getColor("red");
+  color: white;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: getColor("red");
+  }
+}
+
+._c-btn--inverted {
+  &:hover,
+  &:focus {
+    filter: brightness(1);
+  }
+}
+
+._c-btn--primary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("primary");
 
@@ -117,7 +130,7 @@
   }
 }
 
-.c-btn--secondary.c-btn--inverted {
+._c-btn--secondary._c-btn--inverted {
   background-color: transparent;
   border: solid 1px getColor("secondary");
 
@@ -139,15 +152,39 @@
   }
 }
 
+._c-btn--confirm._c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px getColor("green");
+  color: getColor("green");
+
+  &:hover,
+  &:focus {
+    background-color: getColor("green");
+    color: getColor("white");
+  }
+}
+
+._c-btn--deny._c-btn--inverted {
+  background-color: transparent;
+  border: solid 1px getColor("red");
+  color: getColor("red");
+
+  &:hover,
+  &:focus {
+    background-color: getColor("red");
+    color: getColor("white");
+  }
+}
+
 /* Size variants
  * ========================================================================== */
 
-.c-btn--small {
+._c-btn--small {
   padding: 4px 12px;
 }
 
-.c-btn--large {
-  padding: $globalSpacingXs $globalSpacing;
+._c-btn--large {
+  padding: $globalSpacingXs $globalSpacingXl;
 }
 
 /* Ghost buttons
@@ -157,7 +194,7 @@
 
 $btnGhostBorderWidth: 2px;
 
-.c-btn--ghost {
+._c-btn--ghost {
   border: $btnGhostBorderWidth solid currentColor;
   padding: ($globalSpacingSm - $btnGhostBorderWidth)
     ($globalSpacing - $btnGhostBorderWidth);
@@ -169,17 +206,17 @@ $btnGhostBorderWidth: 2px;
     background: none;
   }
 
-  &.c-btn--small {
+  &._c-btn--small {
     padding: ($globalSpacingXs - $btnGhostBorderWidth)
       ($globalSpacingSm - $btnGhostBorderWidth);
   }
 
-  &.c-btn--large {
+  &._c-btn--large {
     padding: ($globalSpacing - $btnGhostBorderWidth)
       ($globalSpacingLg - $btnGhostBorderWidth);
   }
 
-  &.c-btn--primary {
+  &._c-btn--primary {
     color: #4a8ec2;
 
     &:hover,
@@ -188,21 +225,12 @@ $btnGhostBorderWidth: 2px;
     }
   }
 
-  &.c-btn--secondary {
+  &._c-btn--secondary {
     color: #2f4054;
 
     &:hover,
     &:focus {
       color: #1d2733;
-    }
-  }
-
-  &.c-btn--tertiary {
-    color: #fff;
-
-    &:hover,
-    &:focus {
-      color: #fff;
     }
   }
 }
