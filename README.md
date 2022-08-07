@@ -8,7 +8,8 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 
 ## Changelog
 
-### 1.3.6
+### 1.3.7
+- Color realBlack with hexa #000 added
 - Added retrocompatibility with v1.3.2 and before
 
 ### 1.3.6
