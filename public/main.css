@@ -2455,6 +2455,9 @@ input[type="number"] {
 ._lightGray {
   color: #f3f3f3 !important; }
 
+._realBlack {
+  color: #000 !important; }
+
 ._black {
   color: #333 !important; }
 
@@ -2517,6 +2520,9 @@ input[type="number"] {
 
 ._bglightGray {
   background-color: #f3f3f3 !important; }
+
+._bgrealBlack {
+  background-color: #000 !important; }
 
 ._bgblack {
   background-color: #333 !important; }
@@ -2593,6 +2599,10 @@ input[type="number"] {
 
 ._bdlightGray {
   border-color: #f3f3f3 !important;
+  border: solid 1px; }
+
+._bdrealBlack {
+  border-color: #000 !important;
   border: solid 1px; }
 
 ._bdblack {
