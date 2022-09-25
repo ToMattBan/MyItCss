@@ -8,6 +8,10 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 
 ## Changelog
 
+### 1.3.9
+- Added Cyan (#00bcd4)
+- Added 'border-radius: 5px'
+
 ### 1.3.8
 - Color realBlack with hexa #000 added
 - Added retrocompatibility with v1.3.2 and before
