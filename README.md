@@ -8,6 +8,8 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 
 ## Changelog
 
+### 1.4.0
+- Added ._o-wrapper--ignore (Use in childrens of ._o-wrapper which you want to not have the spaces from the borders)
 
 ### 1.3.9
 - Added Cyan (#00bcd4)
