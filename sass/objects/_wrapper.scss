@@ -19,6 +19,11 @@ $wrapperMaxWidth: 1360px !default;
   margin-right: auto;
   margin-left: auto;
   max-width: $wrapperMaxWidth;
+
+  .o-wrapper--ignore, ._o-wrapper--ignore {
+    margin-right: -($globalSpacing / 2);
+    margin-left: -($globalSpacing / 2);
+  }
 }
 
 /* Modifiers
@@ -39,6 +44,11 @@ $wrapperMaxWidth: 1360px !default;
     .o-wrapper--#{$spacingName}#{$breakpoint}, ._o-wrapper--#{$spacingName}#{$breakpoint} {
       padding-right: (($globalSpacing * $spacingFactor) / 2);
       padding-left: (($globalSpacing * $spacingFactor) / 2);
+
+      .o-wrapper--ignore, ._o-wrapper--ignore {
+        margin-right: -(($globalSpacing * $spacingFactor) / 2);
+        margin-left: -(($globalSpacing * $spacingFactor) / 2);
+      }
     }
   }
 }
@@ -64,6 +74,11 @@ $customWrapperSpacing: (
       padding-right: $spacing;
       padding-left: $spacing;
       max-width: $wrapperMaxWidth + ($spacing * 2);
+
+      .o-wrapper--ignore, ._o-wrapper--ignore {
+        margin-right: -$spacing;
+        margin-left: -$spacing;
+      }
     }
 
     .o-wrapper.o-wrapper--flush, ._o-wrapper._o-wrapper--flush {

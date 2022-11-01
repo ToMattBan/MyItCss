@@ -8,6 +8,10 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 
 ## Changelog
 
+### 2022.11.01
+- Added ._o-wrapper--ignore (Use in childrens of ._o-wrapper which you want to not have the spaces from the borders)
+- Change version name to track better
+
 ### 1.3.9
 - Added Cyan (#00bcd4)
 - Added 'border-radius: 5px'
