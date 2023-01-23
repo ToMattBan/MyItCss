@@ -10,7 +10,7 @@
   },
   "type": "module",
   "dependencies": {
-    "node-sass": "^7.0.0",
+    "node-sass": "^7.0.3",
     "sass-mq": "^5.0.1"
   },
   "devDependencies": {
