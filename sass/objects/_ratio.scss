@@ -12,6 +12,8 @@
 /**
  * A list of aspect ratios that get generated as modifier classes.
  */
+@use "sass:math";
+
 $ratios: (
   (
     2: 1,
@@ -69,7 +71,7 @@ $ratios: (
     }
 
     .o-ratio--#{$antecedent}\:#{$consequent}:before, ._o-ratio--#{$antecedent}\:#{$consequent}:before {
-      padding-bottom: ($consequent/$antecedent) * 100%;
+      padding-bottom: math.div($consequent, $antecedent) * 100%;
     }
   }
 }

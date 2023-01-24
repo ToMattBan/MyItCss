@@ -8,6 +8,8 @@
 // o-grid.scss
 // Defines our grid object, no styling beyond layout
 //
+@use "sass:math";
+
 .o-grid, ._o-grid {
   display: flex;
   flex-wrap: wrap;
@@ -20,8 +22,8 @@
     flex: 1 1 100%;
 
     @mixin grid-size($numerator, $denominator) {
-      $min-width: (100% / (($denominator + 1) / $numerator)) + 1%;
-      $max-width: 100% / ($denominator / $numerator);
+      $min-width: math.div(100%, math.div($denominator + 1, $numerator)) + 1%;
+      $max-width: math.div(100%, math.div($denominator, $numerator));
       min-width: $min-width;
       max-width: $max-width;
       flex-basis: $max-width;

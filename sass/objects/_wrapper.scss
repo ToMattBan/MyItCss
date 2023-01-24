@@ -14,15 +14,15 @@ $wrapperMaxWidth: 1360px !default;
 
 .o-wrapper, ._o-wrapper {
   @include clearfix();
-  padding-right: ($globalSpacing / 2);
-  padding-left: ($globalSpacing / 2);
+  padding-right: ($globalSpacing * 0.5);
+  padding-left: ($globalSpacing * 0.5);
   margin-right: auto;
   margin-left: auto;
   max-width: $wrapperMaxWidth;
 
   .o-wrapper--ignore, ._o-wrapper--ignore {
-    margin-right: -($globalSpacing / 2);
-    margin-left: -($globalSpacing / 2);
+    margin-right: -($globalSpacing * 0.5);
+    margin-left: -($globalSpacing * 0.5);
   }
 }
 
@@ -42,12 +42,12 @@ $wrapperMaxWidth: 1360px !default;
 
   @each $spacingName, $spacingFactor in $globalSpacingFactors {
     .o-wrapper--#{$spacingName}#{$breakpoint}, ._o-wrapper--#{$spacingName}#{$breakpoint} {
-      padding-right: (($globalSpacing * $spacingFactor) / 2);
-      padding-left: (($globalSpacing * $spacingFactor) / 2);
+      padding-right: (($globalSpacing * $spacingFactor) * 0.5);
+      padding-left: (($globalSpacing * $spacingFactor) * 0.5);
 
       .o-wrapper--ignore, ._o-wrapper--ignore {
-        margin-right: -(($globalSpacing * $spacingFactor) / 2);
-        margin-left: -(($globalSpacing * $spacingFactor) / 2);
+        margin-right: -(($globalSpacing * $spacingFactor) * 0.5);
+        margin-left: -(($globalSpacing * $spacingFactor) * 0.5);
       }
     }
   }

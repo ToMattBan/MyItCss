@@ -33,6 +33,8 @@
 //   ._2/5
 //   ._3/4
 //   ._2/3
+@use "sass:math";
+
 $widthFractions: 1 2 3 4 5 12 !default;
 
 // Optionally, can generate classes to offset items by a certain width.
@@ -58,7 +60,7 @@ $widthDelimiter: \/ !default;
       @if ($numerator != $denominator) {
         // Build a class in the format `._3/4[@<breakpoint>]`.
         .#{$utilityPrefix}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
-          width: ($numerator / $denominator) * 100% !important;
+          width: math.div($numerator, $denominator) * 100% !important;
         }
       }
 
@@ -66,13 +68,13 @@ $widthDelimiter: \/ !default;
         // Build a class in the format `._push1/2[@<breakpoint>]`.
         .#{$utilityPrefix}push#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
-          margin-left: ($numerator / $denominator) * 100% !important;
+          margin-left: math.div($numerator, $denominator) * 100% !important;
         }
 
         // Build a class in the format `._pull5/6[@<breakpoint>]`.
         .#{$utilityPrefix}pull#{$utilityValueSeparator}#{$numerator}#{$widthDelimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
-          margin-right: ($numerator / $denominator) * 100% !important;
+          margin-right: math.div($numerator, $denominator) * 100% !important;
         }
       }
     }

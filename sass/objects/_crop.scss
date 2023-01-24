@@ -5,6 +5,8 @@
 /**
  * A list of cropping ratios that get generated as modifier classes.
  */
+@use "sass:math";
+
 $cropRatios: (
   (
     2: 1,
@@ -83,7 +85,7 @@ $cropRatios: (
     }
 
     .o-crop--#{$antecedent}\:#{$consequent}, ._o-crop--#{$antecedent}\:#{$consequent} {
-      padding-bottom: ($consequent/$antecedent) * 100%;
+      padding-bottom: math.div($consequent, $antecedent) * 100%;
     }
   }
 }

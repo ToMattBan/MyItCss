@@ -3,7 +3,7 @@ $enableLayoutMarkupFix: false !default;
 .o-layout, ._o-layout {
   display: flex; 
   flex-wrap: wrap;
-  margin: 0 (($globalSpacing / 2) * -1);
+  margin: 0 (($globalSpacing * 0.5) * -1);
   padding: 0;
   list-style: none;
 
@@ -18,8 +18,8 @@ $enableLayoutMarkupFix: false !default;
   flex-wrap: wrap;
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
-  padding-right: ($globalSpacing / 2); /* [5] */
-  padding-left: ($globalSpacing / 2); /* [5] */
+  padding-right: ($globalSpacing * 0.5); /* [5] */
+  padding-left: ($globalSpacing * 0.5); /* [5] */
 
   @if ($enableLayoutMarkupFix == false) {
     font-size: 1rem; /* [6] */
@@ -61,11 +61,11 @@ $enableLayoutMarkupFix: false !default;
 
   @each $spacingName, $spacingFactor in $globalSpacingFactors {
     .o-layout--#{$spacingName}#{$breakpoint}, ._o-layout--#{$spacingName}#{$breakpoint} {
-      margin: (0 (($globalSpacing * $spacingFactor) / 2) * -1);
+      margin: (0 (($globalSpacing * $spacingFactor) * 0.5) * -1);
 
       > .o-layout__item, > ._o-layout__item {
-        padding-right: (($globalSpacing * $spacingFactor) / 2);
-        padding-left: (($globalSpacing * $spacingFactor) / 2);
+        padding-right: (($globalSpacing * $spacingFactor) * 0.5);
+        padding-left: (($globalSpacing * $spacingFactor) * 0.5);
       }
     }
   }
