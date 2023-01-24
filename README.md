@@ -8,6 +8,9 @@ O MyItCss é construído em cima da filosofia do Inverted Triangle CSS, o que lh
 
 ## Changelog
 
+### 1.5.0
+- Rewrites the dependencies
+
 ### 1.4.0
 - Added ._o-wrapper--ignore (Use in childrens of ._o-wrapper which you want to not have the spaces from the borders)
 
