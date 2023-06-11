@@ -1,0 +1,46 @@
+/* Settings */
+:root {
+  /* colors */
+  --green: #20ec0d;
+  /* brakpoints */
+  --tabletV: 900px;
+  /* spacements */
+  --small: 8px;
+}
+
+/* Generics */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Elements */
+h1 {
+  font-size: 3rem;
+}
+
+img {
+  height: auto;
+}
+
+/* Objects */
+.o-layout {
+  display: flex;
+}
+
+/* Components */
+.c-card {
+  background-color: white;
+}
+  
+/* Utilities */
+._df {
+  display: flex;
+}
+
+@media (min-width: var(--small)) {
+  ._df\@tabletV {
+    display: flex !important;
+  }
+}

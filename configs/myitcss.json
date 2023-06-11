@@ -1,0 +1,30 @@
+{
+  "settings": {
+    "colors": {
+      "customColors": {
+        "green": "#4caf50"
+      },
+      "primaryColor": {
+        "color": "blue",
+        "isCustomColor": false
+      },
+      "secondaryColor": {
+        "color": "green",
+        "isCustomColor": true
+      }
+    },
+    "spacements": {
+      "sm": "0.75",
+      "lg": "1.5"
+    },
+    "prefixes": {
+      "utilityPrefix": "_",
+      "breakpointPrefix": "@"
+    }
+  },
+  "generics": {},
+  "elements": {},
+  "objects": {},
+  "components": {},
+  "utilities": {}
+}
