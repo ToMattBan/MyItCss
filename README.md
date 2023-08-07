@@ -1,3 +1,5 @@
+# DEPRECATED, WORKING ON A NEW AND BETTER VERSION
+
 # MyItCss
 
 O MyItCss é uma ferramenta construída para facilitar a vida dos front-ends
